@@ -1,0 +1,8 @@
+debug
+bundle exec jekyll serve
+
+categories
+- Blog
+- DL
+- Paper
+- NLP

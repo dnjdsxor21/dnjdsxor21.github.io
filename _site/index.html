@@ -5,12 +5,12 @@
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="ko" class="no-js">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Memoloper</title>
-<meta name="description" content="매일 기록하는 습관">
+<!-- begin _includes/seo.html --><title>Biops</title>
+<meta name="description" content="NLP">
 
 
   <meta name="author" content="Oh WonTaek">
@@ -18,13 +18,13 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="Memoloper">
-<meta property="og:title" content="Memoloper">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Biops">
+<meta property="og:title" content="Biops">
 <meta property="og:url" content="http://localhost:4000/">
 
 
-  <meta property="og:description" content="매일 기록하는 습관">
+  <meta property="og:description" content="NLP">
 
 
 
@@ -51,7 +51,7 @@
     "@context": "https://schema.org",
     
       "@type": "Person",
-      "name": "David Oh",
+      "name": "Biops",
       "url": "http://localhost:4000/"
     
   }
@@ -67,7 +67,7 @@
 
 
 
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Memoloper Feed">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Biops Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -110,10 +110,10 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt="Memoloper"></a>
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt="Biops"></a>
         
         <a class="site-title" href="/">
-          Memoloper
+          Biops
           <span class="site-subtitle">ver 1.0</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
@@ -125,7 +125,7 @@
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">토글 메뉴</span>
+          <span class="visually-hidden">Toggle menu</span>
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
@@ -162,14 +162,14 @@
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>매일 기록하고 있어요</p>
+        <p>BME</p>
 
       </div>
     
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">팔로우</button>
+    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
@@ -203,7 +203,7 @@
         <li>
           <a href="mailto:dnjdsxor21@gmail.com" rel="me" class="u-email">
             <meta itemprop="email" content="dnjdsxor21@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -264,6 +264,103 @@
 </div>
 
   
+
+  
+    
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    <!--전체 글 수-->
+    <li>
+      <span>📂 전체 글 수 6개</span>
+    </li>
+    <li>
+      <!-- 카테고리1 -->
+      <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href='/categories/paper' class=''>Paper(2)</a></li>
+          
+        
+          
+        
+      </ul>
+      <!-- 카테고리2 -->
+      <ul>
+        
+          
+        
+          
+          <li><a href='/categories/dl' class=''>DL(1)</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+      <!-- 카테고리3 -->
+      <ul>
+        
+          
+        
+          
+        
+          
+          <li><a href='/categories/nlp' class=''>NLP(1)</a></li>
+          
+        
+          
+        
+          
+        
+        <!-- 카테고리4 -->
+        <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <li><a href='/categories/python' class=''>Python(1)</a></li>
+            
+          
+          <!-- 카테고리5 -->
+          <ul>
+            
+              
+              <li><a href='/categories/blog' class=''>Blog(1)</a></li>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+      </ul>
+    </li>
+  </ul>
+</nav>
+ 
+  
   </div>
 
 
@@ -274,7 +371,7 @@
     
     
 
-<h3 class="archive__subtitle">최근 포스트</h3>
+<h3 class="archive__subtitle">Recent posts</h3>
 
 
 
@@ -288,35 +385,18 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <span class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/post2/" rel="permalink">[Jekyll] 블로그 포스팅하는 방법
+        <a href="/paper/tf2/" rel="permalink">[Transformer] Attention is all you need #1
 </a>
       
-    </h2>
+    </span>
+    <span class="archive__item-excerpt" itemprop="description">Word Embedding &amp; Positional Encoding
+</span>
+   <small style="font-size:small">
+    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2020.04.02 
+   </small>
     
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">md 파일에 마크다운 문법으로 작성하여 Github 원격 저장소에 업로드 해보자. 에디터는 Visual Studio code 사용! 로컬 서버에서 확인도 해보자.
-</p>
   </article>
 </div>
 
@@ -328,35 +408,110 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <span class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/post1/" rel="permalink">[Test1]
+        <a href="/python/numpy1/" rel="permalink">[Numpy] python numpy
 </a>
       
-    </h2>
+    </span>
+    <span class="archive__item-excerpt" itemprop="description">
+</span>
+   <small style="font-size:small">
+    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2020.04.01 
+   </small>
+    
+  </article>
+</div>
+
+  
     
 
-  <p class="page__meta">
-    
 
-    
 
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
+    <span class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/paper/tf1/" rel="permalink">[Transformer] Attention is all you need #0
+</a>
       
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
+    </span>
+    <span class="archive__item-excerpt" itemprop="description">Attention Mechanism
+</span>
+   <small style="font-size:small">
+    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2020.04.01 
+   </small>
     
-  </p>
+  </article>
+</div>
+
+  
+    
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is tes t t t
-</p>
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <span class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/nlp/token/" rel="permalink">[Tokenize]
+</a>
+      
+    </span>
+    <span class="archive__item-excerpt" itemprop="description">워드 토크나이저
+</span>
+   <small style="font-size:small">
+    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2020.04.01 
+   </small>
+    
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <span class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dl/nn-data1/" rel="permalink">[Pytorch] Dataset, DataLoader
+</a>
+      
+    </span>
+    <span class="archive__item-excerpt" itemprop="description">데이터 구성하기
+</span>
+   <small style="font-size:small">
+    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2020.04.01 
+   </small>
+    
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <span class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog/blog1/" rel="permalink">[Github 블로그] 깃허브 블로그 생성
+</a>
+      
+    </span>
+    <span class="archive__item-excerpt" itemprop="description">
+</span>
+   <small style="font-size:small">
+    <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2020.04.01 
+   </small>
+    
   </article>
 </div>
 
@@ -380,7 +535,7 @@
         <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>팔로우:</strong></li>
+      <li><strong>Follow:</strong></li>
     
 
     
@@ -402,12 +557,12 @@
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 David Oh. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2023 Biops. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

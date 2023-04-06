@@ -1,0 +1,53 @@
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+  {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
+  <ul class="nav__items">
+    <!--전체 글 수-->
+    <li>
+      <span>📂 전체 글 수 {{sum}}개</span>
+    </li>
+    <li>
+      <!-- 카테고리1 -->
+      <ul>
+        {% for category in site.categories %}
+          {% if category[0] == 'Paper' %}
+          <li><a href='/categories/paper' class=''>{{category[0]}}({{category[1].size}})</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <!-- 카테고리2 -->
+      <ul>
+        {% for category in site.categories %}
+          {% if category[0] == 'DL' %}
+          <li><a href='/categories/dl' class=''>{{category[0]}}({{category[1].size}})</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <!-- 카테고리3 -->
+      <ul>
+        {% for category in site.categories %}
+          {% if category[0] == 'NLP' %}
+          <li><a href='/categories/nlp' class=''>{{category[0]}}({{category[1].size}})</a></li>
+          {% endif %}
+        {% endfor %}
+        <!-- 카테고리4 -->
+        <ul>
+          {% for category in site.categories %}
+            {% if category[0] == 'Python' %}
+            <li><a href='/categories/python' class=''>{{category[0]}}({{category[1].size}})</a></li>
+            {% endif %}
+          {% endfor %}
+          <!-- 카테고리5 -->
+          <ul>
+            {% for category in site.categories %}
+              {% if category[0] == 'Blog' %}
+              <li><a href='/categories/blog' class=''>{{category[0]}}({{category[1].size}})</a></li>
+              {% endif %}
+            {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</nav>

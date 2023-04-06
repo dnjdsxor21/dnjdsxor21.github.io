@@ -15,18 +15,18 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR" # 주요 언어
-title                    : "Memoloper"  # 타이틀
+locale                   : "en-US" # 주요 언어
+title                    : "Biops"  # 타이틀
 title_separator          : "-"
 subtitle                 : "ver 1.0"  # 서브타이틀
-name                     : "David Oh"  # 화면 하단의 이름
-description              : "매일 기록하는 습관"  # 설명
+name                     : "Biops"  # 화면 하단의 이름
+description              : "NLP"  # 설명
 url                      : "https://dnjdsxor21.github.io"  # 현재 블로그 url
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "dnjdsxor21/dnjdsxor21.github.io"  # repo 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/logo.png"
-masthead_title           : "Memoloper"  # 화면 title
+masthead_title           : "Biops"  # 화면 title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Oh WonTaek"
   avatar           : "/assets/images/profile.jpeg"
-  bio              : "매일 기록하고 있어요"
+  bio              : "BME"
   location         : "Republic of Korea"
   email            : "dnjdsxor21@gmail.com"
   links:
@@ -290,6 +290,7 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar_main: true
   
   # _pages                      : 해당 하단 영역이 새로 추가되었습니다.
   - scope:
@@ -298,3 +299,4 @@ defaults:
     values:
       layout: single
       author_profile: true
+      sidebar_main: true
