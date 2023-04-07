@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2023-04-01T00:00:00+09:00">
+  <meta property="article:published_time" content="2023-04-07T00:00:00+09:00">
 
 
 
@@ -122,13 +122,17 @@
           Biops
           <span class="site-subtitle">ver 1.0</span>
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
+        <ul class="visible-links">
+<li class="masthead__menu-item">
               <a href="/about/">About</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/categories/">Category</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/tags/">Tags</a>
-            </li></ul>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -276,7 +280,7 @@
 
 <nav class="nav__list">
   
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
   <label for="ac-toc">Toggle menu</label>
   <ul class="nav__items">
     <!--전체 글 수-->
@@ -288,7 +292,7 @@
       <ul>
         
           
-          <li><a href='/categories/paper' class=''>Paper(7)</a></li>
+          <li><a href="/categories/paper" class="">Paper(7)</a></li>
           
         
           
@@ -306,9 +310,9 @@
           
         
           
-        
+          <li><a href="/categories/dl" class="">DL(1)</a></li>
           
-          <li><a href='/categories/dl' class=''>DL(1)</a></li>
+        
           
         
           
@@ -324,9 +328,9 @@
           
         
           
-        
+          <li><a href="/categories/nlp" class="">NLP(2)</a></li>
           
-          <li><a href='/categories/nlp' class=''>NLP(2)</a></li>
+        
           
         
           
@@ -341,9 +345,9 @@
             
           
             
-          
+            <li><a href="/categories/python" class="">Python(1)</a></li>
             
-            <li><a href='/categories/python' class=''>Python(1)</a></li>
+          
             
           
           <!-- 카테고리5 -->
@@ -352,17 +356,19 @@
               
             
               
-              <li><a href='/categories/blog' class=''>Blog(1)</a></li>
-              
             
               
             
               
             
+              
+              <li><a href="/categories/blog" class="">Blog(1)</a></li>
               
             
       </ul>
-    </li>
+    </ul>
+</ul>
+</li>
   </ul>
 </nav>
  
@@ -374,7 +380,7 @@
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[Github Markdown] 깃허브 마크다운 문법">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2023-04-01T00:00:00+09:00">
+    <meta itemprop="datePublished" content="2023-04-07T00:00:00+09:00">
     <meta itemprop="dateModified" content="2023-04-07T00:00:00+09:00">
 
     <div class="page__inner-wrap">
@@ -412,15 +418,61 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Content</h4></header>
-              <ul class="toc__menu"><li><a href="#header-star-star-star">Header :star: :star: :star:</a></li><li><a href="#paragraphs">Paragraphs</a></li><li><a href="#linebreak">Linebreak</a></li><li><a href="#quotes">Quotes</a></li><li><a href="#list-star-star-star-star">List :star: :star: :star: :star:</a><ul><li><a href="#ul">ul</a><ul><li><a href="#ol">ol</a></li></ul></li></ul></li><li><a href="#text-emphasis-star-star">Text Emphasis :star: :star:</a><ul><li><a href="#bold">bold</a></li><li><a href="#italic">italic</a></li><li><a href="#underline">underline</a></li><li><a href="#line-throgh">line-throgh</a></li><li><a href="#highlighting">Highlighting</a></li></ul></li></ul></li><li><a href="#code-star-starstar-star-star">Code :star: :star::star: :star: :star:</a><ul><li><a href="#code-blocks">Code blocks</a></li></ul></li></ul></li><li><a href="#horizontal-rule">Horizontal Rule</a></li><li><a href="#links-star-star-star-star">Links :star: :star: :star: :star:</a><ul><li><a href="#link">link</a></li><li><a href="#url-and-email">URL and Email</a></li></ul></li></ul></li><li><a href="#images">Images</a><ul><li><a href="#linking-images">Linking Images</a></li></ul></li></ul></li><li><a href="#escaping-characters">Escaping Characters</a></li><li><a href="#html">HTML</a></li><li><a href="#tables">Tables</a></li><li><a href="#checkbox">Checkbox</a></li><li><a href="#emoji-star-star-star">Emoji :star: :star: :star:</a></li><li><a href="#math-supportlatex-star-star-star-star-star">Math support(latex) :star: :star: :star: :star: :star:</a></li><li><a href="#reference">Reference</a></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Contents</h4></header>
+              <ul class="toc__menu">
+<li>
+<a href="#what-is-markdown">What is Markdown</a><ul><li><a href="#caution">Caution</a></li></ul>
+</li>
+<li>
+<a href="#basics">Basics</a><ul>
+<li><a href="#header">Header</a></li>
+<li><a href="#paragraphs">Paragraphs</a></li>
+<li><a href="#linebreak">Linebreak</a></li>
+<li><a href="#quotes">Quotes</a></li>
+<li><a href="#list">List</a></li>
+<li><a href="#text-emphasis">Text Emphasis</a></li>
+<li><a href="#horizontal-rule">Horizontal Rule</a></li>
+</ul>
+</li>
+<li><a href="#codepushpin">Code<img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20"></a></li>
+<li><a href="#linkspushpin">Links<img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20"></a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#html">HTML</a></li>
+<li><a href="#tablesjekyllx">Tables(jekyll[X])</a></li>
+<li><a href="#checkboxjekyll-blogx">Checkbox(jekyll blog[X])</a></li>
+<li><a href="#emoji-pushpin1honeybee">Emoji <img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20"><img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"><img class="emoji" title=":honeybee:" alt=":honeybee:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f41d.png" height="20" width="20"></a></li>
+<li><a href="#mathpushpin">Math<img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20"></a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
 
             </nav>
           </aside>
         
-        <h2 id="header-star-star-star">Header :star: :star: :star:</h2>
-<p><strong>글의 제목</strong><br />
-제목들은 <u>Contents</u> 에 자동으로 등록된다</p>
+        <h2 id="what-is-markdown">What is Markdown</h2>
+<blockquote>
+  <p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.</p>
+</blockquote>
+
+<p><small>
+Markdown은 문서를 작성하는 하나의 언어입니다.<br>
+<code class="language-plaintext highlighter-rouge">github</code>,<code class="language-plaintext highlighter-rouge">notion</code>,<code class="language-plaintext highlighter-rouge">tistory</code> 등등 다양한 페이지에서 지원하기 때문에 편리하게 작성이 가능합니다.<br>
+<del>네이버 블로그를 못쓰겠는 이유</del></small></p>
+
+<h3 id="caution">Caution</h3>
+<p><small>
+<img class="emoji" title=":key:" alt=":key:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f511.png" height="20" width="20"> jekyll 블로그에서 작동하지 않는 문법들이 있다. <br>
+<code class="language-plaintext highlighter-rouge">이모지</code>와 <code class="language-plaintext highlighter-rouge">수식작성</code> 기능은 자주 쓰기 때문에, 따로 Plug-in을 추가해서 해결했다.</small></p>
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">jekyll blog</code> uses <code class="language-plaintext highlighter-rouge">kramdown</code> as a default markdown converter from 2.0+. <br>And It doesn’t support the table cell …<br>
+<small><a href="https://stackoverflow.com/questions/26844701/lists-in-markdown-table-with-jekyll">https://stackoverflow.com/questions/26844701/lists-in-markdown-table-with-jekyll</a></small></p>
+</blockquote>
+
+<h2 id="basics">Basics</h2>
+
+<h3 id="header">Header</h3>
+<p><strong>글의 제목</strong><br>
+<small>제목들은 <strong><em>메뉴바</em></strong>에 자동으로 등록된다</small></p>
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp"># h1
 ## h2
 ### h3
@@ -428,34 +480,38 @@
 ##### h5
 ###### h6
 </span></code></pre></div></div>
-<p>특히 minimal-mistakes에서는 h2에 구분선을 포함하고 있다.</p>
+<p><small>특히 minimal-mistakes에서는 h2는 구분선을 포함하고 있다.  </small></p>
 
-<h2 id="paragraphs">Paragraphs</h2>
+<h3 id="paragraphs">Paragraphs</h3>
 <p>문단을 나누기 위해서는 엔터를 두번 사용하면 된다.</p>
 
-<h2 id="linebreak">Linebreak</h2>
+<h3 id="linebreak">Linebreak</h3>
 <p><strong>줄바꿈</strong>이 자동으로 되지 않아서 개인적으로 불편했다.</p>
 <ol>
   <li>공백 2개 + 엔터</li>
-  <li>HTML의 <br />태그
-둘 중에 골라서 사용 할 수 있다.
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello1</span>  
-<span class="n">hello2</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
-<span class="n">hello3</span>
-</code></pre></div>    </div>
-    <p>hello1<br />
-hello2<br />
-hello3</p>
-  </li>
+  <li>HTML의 <code class="language-plaintext highlighter-rouge">&lt;br&gt;</code>태그</li>
 </ol>
 
-<h2 id="quotes">Quotes</h2>
+<p><small>둘 중에 골라서 사용 할 수 있다. </small></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello1</span>  
+<span class="n">hello2</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="n">hello3</span>
+</code></pre></div></div>
+
+<p>hello1<br>
+hello2<br>
+hello3</p>
+
+<h3 id="quotes">Quotes</h3>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="n">인용하는</span> <span class="n">글입니다</span><span class="p">.</span>
 <span class="o">&gt;</span>
 <span class="o">&gt;</span> <span class="n">인용하는</span> <span class="n">글입니다</span><span class="p">.</span>
 <span class="o">&gt;</span>
 <span class="o">&gt;&gt;</span> <span class="n">인용</span> <span class="n">들여쓰기</span>
 </code></pre></div></div>
+
 <blockquote>
   <p>인용하는 글입니다.</p>
 
@@ -466,120 +522,145 @@ hello3</p>
   </blockquote>
 </blockquote>
 
-<h2 id="list-star-star-star-star">List :star: :star: :star: :star:</h2>
-<h3 id="ul">ul</h3>
+<h3 id="list">List</h3>
+
+<p><strong>unordered list</strong> <br></p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">-</span> <span class="n">list1</span>
 <span class="o">-</span> <span class="n">list2</span>
   <span class="o">-</span> <span class="n">list3</span>
 </code></pre></div></div>
+
 <ul>
   <li>list1</li>
   <li>list2
     <ul>
-      <li>list3
-        <h4 id="ol">ol</h4>
-        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="mf">1.</span> <span class="n">list1</span>
-    <span class="mf">2.</span> <span class="n">list2</span>
-    <span class="mf">3.</span> <span class="n">list3</span>
-</code></pre></div>        </div>
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. list1
-2. list2
-3. list3
-</code></pre></div>        </div>
-      </li>
+      <li>list3</li>
     </ul>
   </li>
 </ul>
 
-<h2 id="text-emphasis-star-star">Text Emphasis :star: :star:</h2>
-<h4 id="bold">bold</h4>
+<p><strong>ordered list</strong><br></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">1.</span> <span class="n">list1</span>
+<span class="mf">2.</span> <span class="n">list2</span>
+<span class="mf">3.</span> <span class="n">list3</span>
+</code></pre></div></div>
+
+<ol>
+  <li>list1</li>
+  <li>list2</li>
+  <li>list3</li>
+</ol>
+
+<h3 id="text-emphasis">Text Emphasis</h3>
+<p><strong>bold</strong></p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">**</span><span class="n">텍스트</span> <span class="n">강조</span><span class="o">**</span><span class="n">하기</span>
 </code></pre></div></div>
+
 <p><strong>텍스트 강조</strong>하기</p>
-<h4 id="italic">italic</h4>
+
+<p><strong>italic</strong></p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="n">기울여</span><span class="o">*</span> <span class="n">쓰기</span>
 </code></pre></div></div>
+
 <p><em>기울여</em> 쓰기</p>
-<h4 id="underline">underline</h4>
+
+<p><strong>underline</strong></p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">u</span><span class="o">&gt;</span><span class="n">밑줄</span><span class="o">&lt;/</span><span class="n">u</span><span class="o">&gt;</span><span class="n">긋기</span>
 </code></pre></div></div>
+
 <p><u>밑줄</u>긋기</p>
 
-<h4 id="line-throgh">line-throgh</h4>
+<p>**line-through</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">~~</span><span class="n">취소선</span><span class="o">~~</span><span class="n">긋기</span>
 </code></pre></div></div>
+
 <p><del>취소선</del>긋기</p>
 
-<h4 id="highlighting">Highlighting</h4>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">They</span> <span class="n">are</span> <span class="o">==</span><span class="n">very</span> <span class="n">important</span><span class="p">.</span><span class="o">==</span>
-</code></pre></div></div>
-<p>They are ==very important.==</p>
+<h3 id="horizontal-rule">Horizontal Rule</h3>
+<p>구분선은 dash(<code class="language-plaintext highlighter-rouge">-</code>) 3번으로 그린다.</p>
 
-<h2 id="code-star-starstar-star-star">Code :star: :star::star: :star: :star:</h2>
-<h4 id="code-blocks">Code blocks</h4>
-<p>backticks(`)를 사용한다. <b>Tab키 위에있음</b></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">up</span>
+
+<span class="o">---</span>
+
+<span class="n">down</span>
+</code></pre></div></div>
+
+<p>up</p>
+
+<hr>
+
+<p>down</p>
+
+<h2 id="codepushpin">Code<img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20">
+</h2>
+<p><strong>Code blocks</strong><br>
+backticks(`)를 사용한다. <small><b>Tab키 위에있음</b></small></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ```python
+# import numpy as np
+# x = np.array([1,2,3])
+# ```
+</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </code></pre></div></div>
-<p>```python
-import numpy as np
-x = np.array([1,2,3])</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#### Inline Code Block
-```python
-`Inline code block`
+
+<p><strong>Inline code blocks</strong><br></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sb">`Inline code block`</span><span class="n">입니다</span><span class="p">.</span>
 </code></pre></div></div>
-<p><code class="language-plaintext highlighter-rouge">Inline code block</code></p>
+<p><code class="language-plaintext highlighter-rouge">Inline code block</code>입니다.</p>
 
-<h2 id="horizontal-rule">Horizontal Rule</h2>
-<p>구분선이다.
-dash를 3번 쓴다.<br />
--–
-up
-—
-down</p>
-
-<h2 id="links-star-star-star-star">Links :star: :star: :star: :star:</h2>
-<h4 id="link">link</h4>
-<p>[링크설명](https://www.example.com) 과 같이 작성한다.</p>
+<h2 id="linkspushpin">Links<img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20">
+</h2>
+<p><strong>Link</strong><br>
+[링크설명](https://www.example.com) 과 같이 작성한다.</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">제</span> <span class="p">[</span><span class="n">블로그</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">)</span><span class="n">로</span> <span class="n">놀러오세요</span><span class="err">!</span>
 </code></pre></div></div>
 <p>제 <a href="https://dnjdsxor21.github.io">블로그</a>로 놀러오세요!</p>
 
-<h4 id="url-and-email">URL and Email</h4>
+<p><strong>URL and Email</strong></p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">fake</span><span class="nd">@example.com</span><span class="o">&gt;</span>
 </code></pre></div></div>
-<p><a href="https://dnjdsxor21.github.io">https://dnjdsxor21.github.io</a>
+<p><a href="https://dnjdsxor21.github.io">https://dnjdsxor21.github.io</a><br>
 <a href="mailto:fake@example.com">fake@example.com</a></p>
 
 <h2 id="images">Images</h2>
-<p>!<a href="이미지 링크">이미지설명</a> 처럼 작성 가능.<br />
-이때 이미지 링크는 <code class="language-plaintext highlighter-rouge">local path</code> or <code class="language-plaintext highlighter-rouge">URL</code> 모두 가능한듯?<br />
-<img src="https://i.pinimg.com/564x/2d/cf/63/2dcf63c23e359dd5fec6ced32d4d8805.jpg" alt="고양이" /></p>
+<p><code class="language-plaintext highlighter-rouge">![이미지설명](이미지 링크)</code> 처럼 작성 가능.<br>
+<em>이때 이미지 링크는 <code class="language-plaintext highlighter-rouge">local path</code> or <code class="language-plaintext highlighter-rouge">URL</code> 모두 가능한듯?</em><br>
+<img src="https://i.pinimg.com/564x/2d/cf/63/2dcf63c23e359dd5fec6ced32d4d8805.jpg" alt="고양이"></p>
 
-<h4 id="linking-images">Linking Images</h4>
-<p>이미지에 링크까지 걸 수 있다.
-[<img src="이미지 링크" alt="이미지설명" />](링크)</p>
+<p><strong>Linking Images</strong><br>
+이미지에 링크까지 걸 수 있다.
+<code class="language-plaintext highlighter-rouge">[![이미지설명](이미지 링크)](링크)</code></p>
 
-<h2 id="escaping-characters">Escaping Characters</h2>
-<p>backslash()를 사용하여, 마크다운 문법이 적용되지 않도록 문자 그대로를 보여준다.</p>
+<p><strong>Escaping Characters</strong><br>
+backslash(\)를 사용하여, 마크다운 문법이 적용되지 않은 <strong>문자 그대로</strong>를 보여준다.</p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="c1">## h2  
 </span>\<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">&gt;</span>  
 </code></pre></div></div>
-<p>## h2<br />
+<p>## h2<br>
 &lt;https://dnjdsxor21.github.io&gt;</p>
 
 <h2 id="html">HTML</h2>
-<p>밑줄을 칠 때 사용한 <code class="language-plaintext highlighter-rouge">&lt;u&gt;&lt;/u&gt;</code> 처럼 HTML태그를 안다면, 자유롭게 사용 가능한듯 하다.<br />
-<del>나는 잘 모름</del></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">'#'</span><span class="o">&gt;</span><span class="n">맨위로</span> <span class="n">이동하기</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+<p>밑줄을 칠 때 사용한 <code class="language-plaintext highlighter-rouge">&lt;u&gt;text&lt;/u&gt;</code> 처럼 HTML태그를 안다면, 자유롭게 사용 가능한듯 하다.<br>
+<small><del>나는 잘 모름</del></small></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">'#'</span><span class="o">&gt;</span><span class="n">맨위로</span> <span class="n">이동하기</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">small</span><span class="o">&gt;</span> <span class="n">작은</span> <span class="n">텍스트</span> <span class="o">&lt;/</span><span class="n">small</span><span class="o">&gt;</span>
 </code></pre></div></div>
-<p><a href="#">맨위로 이동하기</a></p>
+<p><a href="#">맨위로 이동하기</a><br>
+<small> 작은 텍스트 </small></p>
 
-<h2 id="tables">Tables</h2>
-<p><code class="language-plaintext highlighter-rouge">|</code>와 <code class="language-plaintext highlighter-rouge">-</code>를 조합하여, 간단한 테이블을 작성할 수 있다.<br />
-<code class="language-plaintext highlighter-rouge">-</code>의 갯수는 3개이상 자유롭게 작성하면 되며,<br />
-<code class="language-plaintext highlighter-rouge">:---</code>는 좌측정렬, <code class="language-plaintext highlighter-rouge">:---:</code>는 중앙정렬, <code class="language-plaintext highlighter-rouge">---:</code>는 우측정렬이다.</p>
+<h2 id="tablesjekyllx">Tables<del>(jekyll[X])</del>
+</h2>
+<p><small><code class="language-plaintext highlighter-rouge">|</code>와 <code class="language-plaintext highlighter-rouge">-</code>를 조합하여, 간단한 테이블을 작성할 수 있다.<br>
+<code class="language-plaintext highlighter-rouge">-</code>의 갯수는 3개이상 자유롭게 작성하면 되며,<br>
+<code class="language-plaintext highlighter-rouge">:---</code>는 좌측정렬, <code class="language-plaintext highlighter-rouge">:---:</code>는 중앙정렬, <code class="language-plaintext highlighter-rouge">---:</code>는 우측정렬이다.  </small></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">|</span> <span class="n">Tables</span>  <span class="o">|</span>     <span class="n">Are</span>     <span class="o">|</span>  <span class="n">Cool</span>   <span class="o">|</span>
 <span class="o">|</span><span class="p">:</span><span class="o">--------|</span><span class="p">:</span><span class="o">-----------</span><span class="p">:</span><span class="o">|--------</span><span class="p">:</span><span class="o">|</span>
@@ -587,51 +668,67 @@ down</p>
 <span class="o">|</span> <span class="n">col2</span> <span class="ow">is</span> <span class="o">|</span>   <span class="n">centered</span>  <span class="o">|</span> <span class="err">$</span><span class="mi">12</span>     <span class="o">|</span>
 <span class="o">|</span> <span class="n">col3</span> <span class="ow">is</span> <span class="o">|</span><span class="n">right</span><span class="o">-</span><span class="n">aligned</span><span class="o">|</span> <span class="err">$</span><span class="mi">1</span>      <span class="o">|</span>
 </code></pre></div></div>
-<p>| Tables  |     Are     |  Cool   |
-|:——–|:———–:|——–:|
-| col1 is | left-aligned| $1600   |
-| col2 is |   centered  | $12     |
-| col3 is |right-aligned| $1      |</p>
 
-<h2 id="checkbox">Checkbox</h2>
-<p>체크박스는 <code class="language-plaintext highlighter-rouge">[ ]</code>, <code class="language-plaintext highlighter-rouge">[x]</code>로 구현 가능하다.</p>
+<h2 id="checkboxjekyll-blogx">Checkbox<del>(jekyll blog[X])</del>
+</h2>
+<p><small>체크박스는 <code class="language-plaintext highlighter-rouge">[ ]</code>, <code class="language-plaintext highlighter-rouge">[x]</code>로 구현 가능하다.</small></p>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="n">Update</span> <span class="n">the</span> <span class="n">website</span>
-<span class="p">[</span> <span class="p">]</span> <span class="n">Read</span> <span class="n">a</span> <span class="p">[</span><span class="n">paper</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">arxiv</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="nb">abs</span><span class="o">/</span><span class="mf">1706.03762</span><span class="p">)</span>
+<span class="p">[</span>  <span class="p">]</span> <span class="n">Read</span> <span class="n">a</span> <span class="p">[</span><span class="n">paper</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">arxiv</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="nb">abs</span><span class="o">/</span><span class="mf">1706.03762</span><span class="p">)</span>
 </code></pre></div></div>
-<p>[x] Update the website
+<p>[x] Update the website<br>
 [ ] Read a <a href="https://arxiv.org/abs/1706.03762">paper</a></p>
 
-<h2 id="emoji-star-star-star">Emoji :star: :star: :star:</h2>
-<p>매우 중요한 이모지 작성법</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="n">Gone</span> <span class="n">camping</span><span class="err">!</span> <span class="p">:</span><span class="n">tent</span><span class="p">:</span> <span class="n">Be</span> <span class="n">back</span> <span class="n">soon</span><span class="p">.</span>
-<span class="o">&gt;</span>
-<span class="o">&gt;</span><span class="n">Thats</span> <span class="n">so</span> <span class="n">funny</span><span class="err">!</span> <span class="p">:</span><span class="n">joy</span><span class="p">:</span>
+<h2 id="emoji-pushpin1honeybee">Emoji <img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20"><img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"><img class="emoji" title=":honeybee:" alt=":honeybee:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f41d.png" height="20" width="20">
+</h2>
+<p><small>
+Markdown 문법은 emoji를 지원합니다.<br>
+<strong><u>jekyll기반의 블로그에서는 emoji가 작동하지 않습니다.(minimal mistakes포함)</u></strong><br>
+<strong>다음과 같은 설정을 추가합니다.</strong></small></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 1. Gemfile에 아래 문구를 추가
+</span><span class="n">gem</span> <span class="s">'jemoji'</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 2. _config.yml의 plugins부분에 jemoji를 추가
+</span><span class="n">plugins</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">jemoji</span>
+</code></pre></div></div>
+<p>설정을 마치면, <code class="language-plaintext highlighter-rouge">:</code>text<code class="language-plaintext highlighter-rouge">:</code>와 같은 형식으로 이모지를 작성</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="n">Gone</span> <span class="n">camping</span><span class="err">!</span> <span class="p">:</span><span class="n">tent</span><span class="p">:</span> <span class="n">Be</span> <span class="n">back</span> <span class="n">soon</span><span class="p">.</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span><span class="n">Thats</span> <span class="n">so</span> <span class="n">funny</span><span class="err">!</span> <span class="p">:</span><span class="n">joy</span><span class="p">:</span>
 </code></pre></div></div>
 <blockquote>
-  <p>Gone camping! :tent: Be back soon.</p>
-
-  <p>Thats so funny! :joy:</p>
+  <p>Gone camping! <img class="emoji" title=":tent:" alt=":tent:" src="https://github.githubassets.com/images/icons/emoji/unicode/26fa.png" height="20" width="20"> Be back soon.<br>Thats so funny! <img class="emoji" title=":joy:" alt=":joy:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f602.png" height="20" width="20"></p>
 </blockquote>
 
-<p>이모지 리스트는 여기서 확인할 수 있습니다.
-<a href="https://gist.github.com/rxaviers/7360908">list of emoji shortcodes</a></p>
+<p><small>이모지 리스트는 여기서 확인할 수 있습니다.<br>
+<a href="https://gist.github.com/rxaviers/7360908">emoji-cheat-sheet</a></small></p>
 
-<h2 id="math-supportlatex-star-star-star-star-star">Math support(latex) :star: :star: :star: :star: :star:</h2>
-<p>github는 원래 수식을 작성하는 latex를 지원하지 않았다.<br />
-22년 5월부터 latex를 지원한다고 한다. <a href="https://github.blog/2022-05-19-math-support-in-markdown/">https://github.blog/2022-05-19-math-support-in-markdown/</a></p>
+<h2 id="mathpushpin">Math<img class="emoji" title=":pushpin:" alt=":pushpin:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png" height="20" width="20">
+</h2>
+
+<p><small>github는 원래 수식을 작성하는 latex를 지원하지 않았지만<br>
+22년 5월부터 latex를 지원한다고 한다.<br>
+<a href="https://github.blog/2022-05-19-math-support-in-markdown/">https://github.blog/2022-05-19-math-support-in-markdown/</a></small></p>
+
+<p><small> emoji와 마찬가지로 <code class="language-plaintext highlighter-rouge">Jekyll-based-blog</code>에서 LaTex가 적용되지 않기 때문에<br>
+<strong>아래 링크를 통해 해결했습니다.</strong><br>
+<a href="https://shantoroy.com/jekyll/add-latex-math-to-jekyll-blog-minimal-mistakes/">How to Add Latex Math to Jekyll-based Theme- Minimal Mistakes</a></small></p>
+
 <blockquote>
-  <p>한줄 전체에 적용되는 $$ latex formula $$</p>
-
-  <p>인라인수식은 $ inline formula $</p>
+  <p>한줄 전체에 적용되는 <code class="language-plaintext highlighter-rouge">$$ latex formula $$</code><br>
+인라인수식은<code class="language-plaintext highlighter-rouge">$ inline formula $</code></p>
 </blockquote>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$$\</span><span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="n">n</span><span class="p">}</span> <span class="err">\</span><span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="n">n</span><span class="p">}</span> <span class="n">Q_</span><span class="p">{</span><span class="n">i</span><span class="p">}</span> <span class="o">*</span> <span class="n">K_</span><span class="p">{</span><span class="n">i</span><span class="p">}</span><span class="err">$$</span>  
-<span class="o">-</span> <span class="n">RNN</span><span class="err">의</span> <span class="n">hidden</span> <span class="n">state</span><span class="err">는</span> <span class="err">$</span> <span class="n">h_t</span> <span class="o">=</span> <span class="n">f_</span><span class="p">{</span><span class="n">w</span><span class="p">}</span> <span class="p">(</span><span class="n">h_</span><span class="p">{</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="n">x_</span><span class="p">{</span><span class="n">t</span><span class="p">})</span> <span class="err">$</span> <span class="err">입니다</span><span class="p">.</span>
+<span class="n">RNN</span><span class="err">의</span> <span class="n">hidden</span> <span class="n">state</span><span class="err">는</span> <span class="err">$</span> <span class="n">h_t</span> <span class="o">=</span> <span class="n">f_</span><span class="p">{</span><span class="n">w</span><span class="p">}</span> <span class="p">(</span><span class="n">h_</span><span class="p">{</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="n">x_</span><span class="p">{</span><span class="n">t</span><span class="p">})</span> <span class="err">$</span> <span class="err">입니다</span><span class="p">.</span>
 </code></pre></div></div>
-<p>$\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}$$<br />
-RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.</p>
 
-<p>==LaTex==문법을 모르면 아래와 같은 사이트의 도움을 받을 수 있다.</p>
+<p>\(\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}\)<br>
+RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.</p>
+
+<p><small><strong>LaTex</strong>문법을 모르면 아래와 같은 사이트의 도움을 받을 수 있다.</small></p>
 <ul>
   <li><a href="http://www.hostmath.com/">LaTex Editor</a></li>
   <li><a href="https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95">Latex 문법</a></li>
@@ -702,19 +799,18 @@ RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.</p>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fgithub-markdown%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fgithub-markdown%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fgithub-markdown%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/paper/papers-to-read/" class="pagination--pager" title="읽을 논문들
+      <a href="/paper/tf5/" class="pagination--pager" title="[Transformer] Attention is all you need #5
 ">Previous</a>
     
     
-      <a href="/dl/nn-data1/" class="pagination--pager" title="[Pytorch] Dataset, DataLoader
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -843,13 +939,15 @@ RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.</p>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -889,7 +987,7 @@ RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.</p>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 Biops. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2023 Biops. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -934,6 +1032,21 @@ RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.</p>
 
 
 
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+     </script>
+
+     <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX", "output/HTML-CSS"],
+         tex2jax: {
+         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+         displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+         processEscapes: true
+         },
+         "HTML-CSS": { availableFonts: ["TeX"] }
+     });
+      </script>
 
   </body>
 </html>
