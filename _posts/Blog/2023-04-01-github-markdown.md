@@ -25,7 +25,7 @@ Markdown은 문서를 작성하는 하나의 언어입니다.<br>
 ### Caution
 <small>
 :key: jekyll 블로그에서 작동하지 않는 문법들이 있다. <br>
-`이모지`와 `수식작성` 기능은 자주 쓰기 때문에, 따로 Plug-in을 추가해서 해결했다.</small>
+`이모지`와 `수식작성`은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.</small>
 > `jekyll blog` uses `kramdown` as a default markdown converter from 2.0+. <br>And It doesn't support the table cell ...  
 <small><https://stackoverflow.com/questions/26844701/lists-in-markdown-table-with-jekyll></small>
 
