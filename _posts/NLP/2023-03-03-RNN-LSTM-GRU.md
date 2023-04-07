@@ -11,8 +11,8 @@ toc: true
 toc_sticky: true
 toc_label: "Content"
  
-date: 2020-04-03
-last_modified_at: 2020-04-03
+date: 2023-04-03
+last_modified_at: 2023-04-03
 ---
 
 # RNN (Recurrent Nueral Network)

@@ -1,4 +1,10 @@
 var store = [{
+        "title": "읽을 논문들",
+        "excerpt":"   [Attention is all you need]   [BERT]   [GPT-1]   [GPT-2]   [GPT-3]   [ALBERT]   [ELECTRA]   [Seq2seq]  ","categories": ["Paper"],
+        "tags": ["transformer","bert","gpt"],
+        "url": "/paper/papers-to-read/",
+        "teaser": null
+      },{
         "title": "[Github 블로그] 깃허브 블로그 생성",
         "excerpt":"Github   Repository  ","categories": ["Blog"],
         "tags": ["github","blog","repository"],
@@ -56,7 +62,7 @@ var store = [{
         "title": "[Transformer] Attention is all you need #4",
         "excerpt":"attention is all you need  attention is all you need  ","categories": ["Paper"],
         "tags": ["transformer","normalization","batch","feedforward"],
-        "url": "/paper/tf4-copy/",
+        "url": "/paper/tf4/",
         "teaser": null
       },{
         "title": "[Transformer] Attention is all you need #5",
