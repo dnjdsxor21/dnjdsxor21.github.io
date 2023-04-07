@@ -1,0 +1,939 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Github Markdown] 깃허브 마크다운 문법 - Biops</title>
+<meta name="description" content="NLP">
+
+
+  <meta name="author" content="Oh WonTaek">
+  
+  <meta property="article:author" content="Oh WonTaek">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Biops">
+<meta property="og:title" content="[Github Markdown] 깃허브 마크다운 문법">
+<meta property="og:url" content="http://localhost:4000/blog/github-markdown/">
+
+
+  <meta property="og:description" content="NLP">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-01T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2023-04-07T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/blog/github-markdown/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Biops",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Biops Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/honeybee.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt="Biops"></a>
+        
+        <a class="site-title" href="/">
+          Biops
+          <span class="site-subtitle">ver 1.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/profile.jpeg" alt="Oh WonTaek" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Oh WonTaek</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>BME</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:dnjdsxor21@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/dnjdsxor21" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+
+  
+    
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    <!--전체 글 수-->
+    <li>
+      <span>📂 전체 글 수 12개</span>
+    </li>
+    <li>
+      <!-- 카테고리1 -->
+      <ul>
+        
+          
+          <li><a href='/categories/paper' class=''>Paper(7)</a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+      <!-- 카테고리2 -->
+      <ul>
+        
+          
+        
+          
+        
+          
+          <li><a href='/categories/dl' class=''>DL(1)</a></li>
+          
+        
+          
+        
+          
+        
+      </ul>
+      <!-- 카테고리3 -->
+      <ul>
+        
+          
+        
+          
+        
+          
+        
+          
+          <li><a href='/categories/nlp' class=''>NLP(2)</a></li>
+          
+        
+          
+        
+        <!-- 카테고리4 -->
+        <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+            <li><a href='/categories/python' class=''>Python(1)</a></li>
+            
+          
+          <!-- 카테고리5 -->
+          <ul>
+            
+              
+            
+              
+              <li><a href='/categories/blog' class=''>Blog(1)</a></li>
+              
+            
+              
+            
+              
+            
+              
+            
+      </ul>
+    </li>
+  </ul>
+</nav>
+ 
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Github Markdown] 깃허브 마크다운 문법">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2023-04-01T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-04-07T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/blog/github-markdown/" class="u-url" itemprop="url">[Github Markdown] 깃허브 마크다운 문법
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Content</h4></header>
+              <ul class="toc__menu"><li><a href="#header-star-star-star">Header :star: :star: :star:</a></li><li><a href="#paragraphs">Paragraphs</a></li><li><a href="#linebreak">Linebreak</a></li><li><a href="#quotes">Quotes</a></li><li><a href="#list-star-star-star-star">List :star: :star: :star: :star:</a><ul><li><a href="#ul">ul</a><ul><li><a href="#ol">ol</a></li></ul></li></ul></li><li><a href="#text-emphasis-star-star">Text Emphasis :star: :star:</a><ul><li><a href="#bold">bold</a></li><li><a href="#italic">italic</a></li><li><a href="#underline">underline</a></li><li><a href="#line-throgh">line-throgh</a></li><li><a href="#highlighting">Highlighting</a></li></ul></li></ul></li><li><a href="#code-star-starstar-star-star">Code :star: :star::star: :star: :star:</a><ul><li><a href="#code-blocks">Code blocks</a></li></ul></li></ul></li><li><a href="#horizontal-rule">Horizontal Rule</a></li><li><a href="#links-star-star-star-star">Links :star: :star: :star: :star:</a><ul><li><a href="#link">link</a></li><li><a href="#url-and-email">URL and Email</a></li></ul></li></ul></li><li><a href="#images">Images</a><ul><li><a href="#linking-images">Linking Images</a></li></ul></li></ul></li><li><a href="#escaping-characters">Escaping Characters</a></li><li><a href="#html">HTML</a></li><li><a href="#tables">Tables</a></li><li><a href="#checkbox">Checkbox</a></li><li><a href="#emoji-star-star-star">Emoji :star: :star: :star:</a></li><li><a href="#math-supportlatex-star-star-star-star-star">Math support(latex) :star: :star: :star: :star: :star:</a></li><li><a href="#reference">Reference</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="header-star-star-star">Header :star: :star: :star:</h2>
+<p><strong>글의 제목</strong><br />
+제목들은 <u>Contents</u> 에 자동으로 등록된다</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp"># h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
+</span></code></pre></div></div>
+<p>특히 minimal-mistakes에서는 h2에 구분선을 포함하고 있다.</p>
+
+<h2 id="paragraphs">Paragraphs</h2>
+<p>문단을 나누기 위해서는 엔터를 두번 사용하면 된다.</p>
+
+<h2 id="linebreak">Linebreak</h2>
+<p><strong>줄바꿈</strong>이 자동으로 되지 않아서 개인적으로 불편했다.</p>
+<ol>
+  <li>공백 2개 + 엔터</li>
+  <li>HTML의 <br />태그
+둘 중에 골라서 사용 할 수 있다.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello1</span>  
+<span class="n">hello2</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="n">hello3</span>
+</code></pre></div>    </div>
+    <p>hello1<br />
+hello2<br />
+hello3</p>
+  </li>
+</ol>
+
+<h2 id="quotes">Quotes</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="n">인용하는</span> <span class="n">글입니다</span><span class="p">.</span>
+<span class="o">&gt;</span>
+<span class="o">&gt;</span> <span class="n">인용하는</span> <span class="n">글입니다</span><span class="p">.</span>
+<span class="o">&gt;</span>
+<span class="o">&gt;&gt;</span> <span class="n">인용</span> <span class="n">들여쓰기</span>
+</code></pre></div></div>
+<blockquote>
+  <p>인용하는 글입니다.</p>
+
+  <p>인용하는 글입니다.</p>
+
+  <blockquote>
+    <p>인용 들여쓰기</p>
+  </blockquote>
+</blockquote>
+
+<h2 id="list-star-star-star-star">List :star: :star: :star: :star:</h2>
+<h3 id="ul">ul</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">-</span> <span class="n">list1</span>
+<span class="o">-</span> <span class="n">list2</span>
+  <span class="o">-</span> <span class="n">list3</span>
+</code></pre></div></div>
+<ul>
+  <li>list1</li>
+  <li>list2
+    <ul>
+      <li>list3
+        <h4 id="ol">ol</h4>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="mf">1.</span> <span class="n">list1</span>
+    <span class="mf">2.</span> <span class="n">list2</span>
+    <span class="mf">3.</span> <span class="n">list3</span>
+</code></pre></div>        </div>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. list1
+2. list2
+3. list3
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="text-emphasis-star-star">Text Emphasis :star: :star:</h2>
+<h4 id="bold">bold</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">**</span><span class="n">텍스트</span> <span class="n">강조</span><span class="o">**</span><span class="n">하기</span>
+</code></pre></div></div>
+<p><strong>텍스트 강조</strong>하기</p>
+<h4 id="italic">italic</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="n">기울여</span><span class="o">*</span> <span class="n">쓰기</span>
+</code></pre></div></div>
+<p><em>기울여</em> 쓰기</p>
+<h4 id="underline">underline</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">u</span><span class="o">&gt;</span><span class="n">밑줄</span><span class="o">&lt;/</span><span class="n">u</span><span class="o">&gt;</span><span class="n">긋기</span>
+</code></pre></div></div>
+<p><u>밑줄</u>긋기</p>
+
+<h4 id="line-throgh">line-throgh</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">~~</span><span class="n">취소선</span><span class="o">~~</span><span class="n">긋기</span>
+</code></pre></div></div>
+<p><del>취소선</del>긋기</p>
+
+<h4 id="highlighting">Highlighting</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">They</span> <span class="n">are</span> <span class="o">==</span><span class="n">very</span> <span class="n">important</span><span class="p">.</span><span class="o">==</span>
+</code></pre></div></div>
+<p>They are ==very important.==</p>
+
+<h2 id="code-star-starstar-star-star">Code :star: :star::star: :star: :star:</h2>
+<h4 id="code-blocks">Code blocks</h4>
+<p>backticks(`)를 사용한다. <b>Tab키 위에있음</b></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div></div>
+<p>```python
+import numpy as np
+x = np.array([1,2,3])</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#### Inline Code Block
+```python
+`Inline code block`
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">Inline code block</code></p>
+
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+<p>구분선이다.
+dash를 3번 쓴다.<br />
+-–
+up
+—
+down</p>
+
+<h2 id="links-star-star-star-star">Links :star: :star: :star: :star:</h2>
+<h4 id="link">link</h4>
+<p>[링크설명](https://www.example.com) 과 같이 작성한다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">제</span> <span class="p">[</span><span class="n">블로그</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">)</span><span class="n">로</span> <span class="n">놀러오세요</span><span class="err">!</span>
+</code></pre></div></div>
+<p>제 <a href="https://dnjdsxor21.github.io">블로그</a>로 놀러오세요!</p>
+
+<h4 id="url-and-email">URL and Email</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">fake</span><span class="nd">@example.com</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<p><a href="https://dnjdsxor21.github.io">https://dnjdsxor21.github.io</a>
+<a href="mailto:fake@example.com">fake@example.com</a></p>
+
+<h2 id="images">Images</h2>
+<p>!<a href="이미지 링크">이미지설명</a> 처럼 작성 가능.<br />
+이때 이미지 링크는 <code class="language-plaintext highlighter-rouge">local path</code> or <code class="language-plaintext highlighter-rouge">URL</code> 모두 가능한듯?<br />
+<img src="https://i.pinimg.com/564x/2d/cf/63/2dcf63c23e359dd5fec6ced32d4d8805.jpg" alt="고양이" /></p>
+
+<h4 id="linking-images">Linking Images</h4>
+<p>이미지에 링크까지 걸 수 있다.
+[<img src="이미지 링크" alt="이미지설명" />](링크)</p>
+
+<h2 id="escaping-characters">Escaping Characters</h2>
+<p>backslash()를 사용하여, 마크다운 문법이 적용되지 않도록 문자 그대로를 보여준다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="c1">## h2  
+</span>\<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">&gt;</span>  
+</code></pre></div></div>
+<p>## h2<br />
+&lt;https://dnjdsxor21.github.io&gt;</p>
+
+<h2 id="html">HTML</h2>
+<p>밑줄을 칠 때 사용한 <code class="language-plaintext highlighter-rouge">&lt;u&gt;&lt;/u&gt;</code> 처럼 HTML태그를 안다면, 자유롭게 사용 가능한듯 하다.<br />
+<del>나는 잘 모름</del></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">'#'</span><span class="o">&gt;</span><span class="n">맨위로</span> <span class="n">이동하기</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<p><a href="#">맨위로 이동하기</a></p>
+
+<h2 id="tables">Tables</h2>
+<p><code class="language-plaintext highlighter-rouge">|</code>와 <code class="language-plaintext highlighter-rouge">-</code>를 조합하여, 간단한 테이블을 작성할 수 있다.<br />
+<code class="language-plaintext highlighter-rouge">-</code>의 갯수는 3개이상 자유롭게 작성하면 되며,<br />
+<code class="language-plaintext highlighter-rouge">:---</code>는 좌측정렬, <code class="language-plaintext highlighter-rouge">:---:</code>는 중앙정렬, <code class="language-plaintext highlighter-rouge">---:</code>는 우측정렬이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">|</span> <span class="n">Tables</span>  <span class="o">|</span>     <span class="n">Are</span>     <span class="o">|</span>  <span class="n">Cool</span>   <span class="o">|</span>
+<span class="o">|</span><span class="p">:</span><span class="o">--------|</span><span class="p">:</span><span class="o">-----------</span><span class="p">:</span><span class="o">|--------</span><span class="p">:</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">col1</span> <span class="ow">is</span> <span class="o">|</span> <span class="n">left</span><span class="o">-</span><span class="n">aligned</span><span class="o">|</span> <span class="err">$</span><span class="mi">1600</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="n">col2</span> <span class="ow">is</span> <span class="o">|</span>   <span class="n">centered</span>  <span class="o">|</span> <span class="err">$</span><span class="mi">12</span>     <span class="o">|</span>
+<span class="o">|</span> <span class="n">col3</span> <span class="ow">is</span> <span class="o">|</span><span class="n">right</span><span class="o">-</span><span class="n">aligned</span><span class="o">|</span> <span class="err">$</span><span class="mi">1</span>      <span class="o">|</span>
+</code></pre></div></div>
+<p>| Tables  |     Are     |  Cool   |
+|:——–|:———–:|——–:|
+| col1 is | left-aligned| $1600   |
+| col2 is |   centered  | $12     |
+| col3 is |right-aligned| $1      |</p>
+
+<h2 id="checkbox">Checkbox</h2>
+<p>체크박스는 <code class="language-plaintext highlighter-rouge">[ ]</code>, <code class="language-plaintext highlighter-rouge">[x]</code>로 구현 가능하다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="n">Update</span> <span class="n">the</span> <span class="n">website</span>
+<span class="p">[</span> <span class="p">]</span> <span class="n">Read</span> <span class="n">a</span> <span class="p">[</span><span class="n">paper</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">arxiv</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="nb">abs</span><span class="o">/</span><span class="mf">1706.03762</span><span class="p">)</span>
+</code></pre></div></div>
+<p>[x] Update the website
+[ ] Read a <a href="https://arxiv.org/abs/1706.03762">paper</a></p>
+
+<h2 id="emoji-star-star-star">Emoji :star: :star: :star:</h2>
+<p>매우 중요한 이모지 작성법</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="n">Gone</span> <span class="n">camping</span><span class="err">!</span> <span class="p">:</span><span class="n">tent</span><span class="p">:</span> <span class="n">Be</span> <span class="n">back</span> <span class="n">soon</span><span class="p">.</span>
+<span class="o">&gt;</span>
+<span class="o">&gt;</span><span class="n">Thats</span> <span class="n">so</span> <span class="n">funny</span><span class="err">!</span> <span class="p">:</span><span class="n">joy</span><span class="p">:</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Gone camping! :tent: Be back soon.</p>
+
+  <p>Thats so funny! :joy:</p>
+</blockquote>
+
+<p>이모지 리스트는 여기서 확인할 수 있습니다.
+<a href="https://gist.github.com/rxaviers/7360908">list of emoji shortcodes</a></p>
+
+<h2 id="math-supportlatex-star-star-star-star-star">Math support(latex) :star: :star: :star: :star: :star:</h2>
+<p>github는 원래 수식을 작성하는 latex를 지원하지 않았다.<br />
+22년 5월부터 latex를 지원한다고 한다. <a href="https://github.blog/2022-05-19-math-support-in-markdown/">https://github.blog/2022-05-19-math-support-in-markdown/</a></p>
+<blockquote>
+  <p>한줄 전체에 적용되는 $$ latex formula $$</p>
+
+  <p>인라인수식은 $ inline formula $</p>
+</blockquote>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$$\</span><span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="n">n</span><span class="p">}</span> <span class="err">\</span><span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="n">n</span><span class="p">}</span> <span class="n">Q_</span><span class="p">{</span><span class="n">i</span><span class="p">}</span> <span class="o">*</span> <span class="n">K_</span><span class="p">{</span><span class="n">i</span><span class="p">}</span><span class="err">$$</span>  
+<span class="o">-</span> <span class="n">RNN</span><span class="err">의</span> <span class="n">hidden</span> <span class="n">state</span><span class="err">는</span> <span class="err">$</span> <span class="n">h_t</span> <span class="o">=</span> <span class="n">f_</span><span class="p">{</span><span class="n">w</span><span class="p">}</span> <span class="p">(</span><span class="n">h_</span><span class="p">{</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="n">x_</span><span class="p">{</span><span class="n">t</span><span class="p">})</span> <span class="err">$</span> <span class="err">입니다</span><span class="p">.</span>
+</code></pre></div></div>
+<p>$\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}$$<br />
+RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.</p>
+
+<p>==LaTex==문법을 모르면 아래와 같은 사이트의 도움을 받을 수 있다.</p>
+<ul>
+  <li><a href="http://www.hostmath.com/">LaTex Editor</a></li>
+  <li><a href="https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95">Latex 문법</a></li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li><a href="https://www.markdownguide.org/basic-syntax/">Markdown guide</a></li>
+  <li><a href="https://www.tablesgenerator.com/markdown_tables">Markdown tables generator</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#blog" class="page__taxonomy-item p-category" rel="tag">blog</a><span class="sep">, </span>
+    
+      <a href="/tags/#github" class="page__taxonomy-item p-category" rel="tag">github</a><span class="sep">, </span>
+    
+      <a href="/tags/#latex" class="page__taxonomy-item p-category" rel="tag">latex</a><span class="sep">, </span>
+    
+      <a href="/tags/#markdown" class="page__taxonomy-item p-category" rel="tag">markdown</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-04-07">April 7, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BGithub+Markdown%5D+%EA%B9%83%ED%97%88%EB%B8%8C+%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4+%EB%AC%B8%EB%B2%95%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fgithub-markdown%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fgithub-markdown%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fgithub-markdown%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/paper/papers-to-read/" class="pagination--pager" title="읽을 논문들
+">Previous</a>
+    
+    
+      <a href="/dl/nn-data1/" class="pagination--pager" title="[Pytorch] Dataset, DataLoader
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <span class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/paper/tf5/" rel="permalink">[Transformer] Attention is all you need #5
+</a>
+      
+    </span>
+    <small style="font-size:small">
+      <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2023.04.05 
+     </small>
+    
+    <p class="archive__item-excerpt" itemprop="description" style="font-size:small">Code Review
+</p>
+    
+   
+    
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <span class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/paper/tf4/" rel="permalink">[Transformer] Attention is all you need #4
+</a>
+      
+    </span>
+    <small style="font-size:small">
+      <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2023.04.04 
+     </small>
+    
+    <p class="archive__item-excerpt" itemprop="description" style="font-size:small">ADD &amp; NORM &amp; Feed Forward
+</p>
+    
+   
+    
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <span class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/paper/tf3/" rel="permalink">[Transformer] Attention is all you need #3
+</a>
+      
+    </span>
+    <small style="font-size:small">
+      <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2023.04.04 
+     </small>
+    
+    <p class="archive__item-excerpt" itemprop="description" style="font-size:small">Multi-head Self attention
+</p>
+    
+   
+    
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <span class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/paper/tf2/" rel="permalink">[Transformer] Attention is all you need #2
+</a>
+      
+    </span>
+    <small style="font-size:small">
+      <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 2023.04.03 
+     </small>
+    
+    <p class="archive__item-excerpt" itemprop="description" style="font-size:small">Self-attention
+</p>
+    
+   
+    
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://dnjdsxor21.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Biops. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'dnjdsxor21/dnjdsxor21.github.io');
+    script.setAttribute('issue-term', 'pathname');
+    
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+</script>
+
+  
+
+
+
+
+
+  </body>
+</html>

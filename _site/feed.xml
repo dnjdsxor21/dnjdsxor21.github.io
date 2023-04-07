@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-07T23:26:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Biops</title><subtitle>NLP</subtitle><author><name>Oh WonTaek</name></author><entry><title type="html">[Transformer] Attention is all you need #5</title><link href="http://localhost:4000/paper/tf5/" rel="alternate" type="text/html" title="[Transformer] Attention is all you need #5" /><published>2023-04-05T00:00:00+09:00</published><updated>2023-04-05T00:00:00+09:00</updated><id>http://localhost:4000/paper/tf5</id><content type="html" xml:base="http://localhost:4000/paper/tf5/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-08T01:11:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Biops</title><subtitle>NLP</subtitle><author><name>Oh WonTaek</name></author><entry><title type="html">[Transformer] Attention is all you need #5</title><link href="http://localhost:4000/paper/tf5/" rel="alternate" type="text/html" title="[Transformer] Attention is all you need #5" /><published>2023-04-05T00:00:00+09:00</published><updated>2023-04-05T00:00:00+09:00</updated><id>http://localhost:4000/paper/tf5</id><content type="html" xml:base="http://localhost:4000/paper/tf5/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
 <h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="Paper" /><category term="transformer" /><category term="github" /><category term="code" /><category term="pytorch" /><summary type="html"><![CDATA[Code Review]]></summary></entry><entry><title type="html">[Transformer] Attention is all you need #3</title><link href="http://localhost:4000/paper/tf3/" rel="alternate" type="text/html" title="[Transformer] Attention is all you need #3" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/paper/tf3</id><content type="html" xml:base="http://localhost:4000/paper/tf3/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
 <h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="Paper" /><category term="transformer" /><category term="attention" /><category term="MSA" /><summary type="html"><![CDATA[Multi-head Self attention]]></summary></entry><entry><title type="html">[Transformer] Attention is all you need #4</title><link href="http://localhost:4000/paper/tf4/" rel="alternate" type="text/html" title="[Transformer] Attention is all you need #4" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/paper/tf4</id><content type="html" xml:base="http://localhost:4000/paper/tf4/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
 <h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="Paper" /><category term="transformer" /><category term="normalization" /><category term="batch" /><category term="feedforward" /><summary type="html"><![CDATA[ADD & NORM & Feed Forward]]></summary></entry><entry><title type="html">[RNN, LSTM, GRU] RNN 기반 모델 구조</title><link href="http://localhost:4000/nlp/RNN-LSTM-GRU/" rel="alternate" type="text/html" title="[RNN, LSTM, GRU] RNN 기반 모델 구조" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-03T00:00:00+09:00</updated><id>http://localhost:4000/nlp/RNN-LSTM-GRU</id><content type="html" xml:base="http://localhost:4000/nlp/RNN-LSTM-GRU/"><![CDATA[<h1 id="rnn-recurrent-nueral-network">RNN (Recurrent Nueral Network)</h1>
@@ -35,9 +35,230 @@ $h \rightarrow h$</p>
   <li>natural%20language%20processing/2017/03/09/rnnlstm/</li>
 </ul>]]></content><author><name>Oh WonTaek</name></author><category term="NLP" /><category term="RNN" /><category term="LSTM" /><category term="GRU" /><summary type="html"><![CDATA[RNN based Models]]></summary></entry><entry><title type="html">[Transformer] Attention is all you need #2</title><link href="http://localhost:4000/paper/tf2/" rel="alternate" type="text/html" title="[Transformer] Attention is all you need #2" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-03T00:00:00+09:00</updated><id>http://localhost:4000/paper/tf2</id><content type="html" xml:base="http://localhost:4000/paper/tf2/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
 <h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="Paper" /><category term="transformer" /><category term="attention" /><summary type="html"><![CDATA[Self-attention]]></summary></entry><entry><title type="html">[Transformer] Attention is all you need #1</title><link href="http://localhost:4000/paper/tf1/" rel="alternate" type="text/html" title="[Transformer] Attention is all you need #1" /><published>2023-04-02T00:00:00+09:00</published><updated>2023-04-02T00:00:00+09:00</updated><id>http://localhost:4000/paper/tf1</id><content type="html" xml:base="http://localhost:4000/paper/tf1/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
-<h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="Paper" /><category term="transformer" /><category term="attention" /><category term="positional_encoding" /><category term="embedding" /><summary type="html"><![CDATA[Word Embedding & Positional Encoding]]></summary></entry><entry><title type="html">[Github 블로그] 깃허브 블로그 생성</title><link href="http://localhost:4000/blog/blog1/" rel="alternate" type="text/html" title="[Github 블로그] 깃허브 블로그 생성" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/blog/blog1</id><content type="html" xml:base="http://localhost:4000/blog/blog1/"><![CDATA[<h1 id="github">Github</h1>
+<h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="Paper" /><category term="transformer" /><category term="attention" /><category term="positional_encoding" /><category term="embedding" /><summary type="html"><![CDATA[Word Embedding & Positional Encoding]]></summary></entry><entry><title type="html">[Github Markdown] 깃허브 마크다운 문법</title><link href="http://localhost:4000/blog/github-markdown/" rel="alternate" type="text/html" title="[Github Markdown] 깃허브 마크다운 문법" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/github-markdown</id><content type="html" xml:base="http://localhost:4000/blog/github-markdown/"><![CDATA[<h2 id="header-star-star-star">Header :star: :star: :star:</h2>
+<p><strong>글의 제목</strong><br />
+제목들은 <u>Contents</u> 에 자동으로 등록된다</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp"># h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
+</span></code></pre></div></div>
+<p>특히 minimal-mistakes에서는 h2에 구분선을 포함하고 있다.</p>
 
-<h1 id="repository">Repository</h1>]]></content><author><name>Oh WonTaek</name></author><category term="Blog" /><category term="github" /><category term="blog" /><category term="repository" /></entry><entry><title type="html">[Pytorch] Dataset, DataLoader</title><link href="http://localhost:4000/dl/nn-data1/" rel="alternate" type="text/html" title="[Pytorch] Dataset, DataLoader" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/dl/nn-data1</id><content type="html" xml:base="http://localhost:4000/dl/nn-data1/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
+<h2 id="paragraphs">Paragraphs</h2>
+<p>문단을 나누기 위해서는 엔터를 두번 사용하면 된다.</p>
+
+<h2 id="linebreak">Linebreak</h2>
+<p><strong>줄바꿈</strong>이 자동으로 되지 않아서 개인적으로 불편했다.</p>
+<ol>
+  <li>공백 2개 + 엔터</li>
+  <li>HTML의 <br />태그
+둘 중에 골라서 사용 할 수 있다.
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hello1</span>  
+<span class="n">hello2</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="n">hello3</span>
+</code></pre></div>    </div>
+    <p>hello1<br />
+hello2<br />
+hello3</p>
+  </li>
+</ol>
+
+<h2 id="quotes">Quotes</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="n">인용하는</span> <span class="n">글입니다</span><span class="p">.</span>
+<span class="o">&gt;</span>
+<span class="o">&gt;</span> <span class="n">인용하는</span> <span class="n">글입니다</span><span class="p">.</span>
+<span class="o">&gt;</span>
+<span class="o">&gt;&gt;</span> <span class="n">인용</span> <span class="n">들여쓰기</span>
+</code></pre></div></div>
+<blockquote>
+  <p>인용하는 글입니다.</p>
+
+  <p>인용하는 글입니다.</p>
+
+  <blockquote>
+    <p>인용 들여쓰기</p>
+  </blockquote>
+</blockquote>
+
+<h2 id="list-star-star-star-star">List :star: :star: :star: :star:</h2>
+<h3 id="ul">ul</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">-</span> <span class="n">list1</span>
+<span class="o">-</span> <span class="n">list2</span>
+  <span class="o">-</span> <span class="n">list3</span>
+</code></pre></div></div>
+<ul>
+  <li>list1</li>
+  <li>list2
+    <ul>
+      <li>list3
+        <h4 id="ol">ol</h4>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="mf">1.</span> <span class="n">list1</span>
+    <span class="mf">2.</span> <span class="n">list2</span>
+    <span class="mf">3.</span> <span class="n">list3</span>
+</code></pre></div>        </div>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. list1
+2. list2
+3. list3
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="text-emphasis-star-star">Text Emphasis :star: :star:</h2>
+<h4 id="bold">bold</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">**</span><span class="n">텍스트</span> <span class="n">강조</span><span class="o">**</span><span class="n">하기</span>
+</code></pre></div></div>
+<p><strong>텍스트 강조</strong>하기</p>
+<h4 id="italic">italic</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="n">기울여</span><span class="o">*</span> <span class="n">쓰기</span>
+</code></pre></div></div>
+<p><em>기울여</em> 쓰기</p>
+<h4 id="underline">underline</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">u</span><span class="o">&gt;</span><span class="n">밑줄</span><span class="o">&lt;/</span><span class="n">u</span><span class="o">&gt;</span><span class="n">긋기</span>
+</code></pre></div></div>
+<p><u>밑줄</u>긋기</p>
+
+<h4 id="line-throgh">line-throgh</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">~~</span><span class="n">취소선</span><span class="o">~~</span><span class="n">긋기</span>
+</code></pre></div></div>
+<p><del>취소선</del>긋기</p>
+
+<h4 id="highlighting">Highlighting</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">They</span> <span class="n">are</span> <span class="o">==</span><span class="n">very</span> <span class="n">important</span><span class="p">.</span><span class="o">==</span>
+</code></pre></div></div>
+<p>They are ==very important.==</p>
+
+<h2 id="code-star-starstar-star-star">Code :star: :star::star: :star: :star:</h2>
+<h4 id="code-blocks">Code blocks</h4>
+<p>backticks(`)를 사용한다. <b>Tab키 위에있음</b></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</code></pre></div></div>
+<p>```python
+import numpy as np
+x = np.array([1,2,3])</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#### Inline Code Block
+```python
+`Inline code block`
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">Inline code block</code></p>
+
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+<p>구분선이다.
+dash를 3번 쓴다.<br />
+-–
+up
+—
+down</p>
+
+<h2 id="links-star-star-star-star">Links :star: :star: :star: :star:</h2>
+<h4 id="link">link</h4>
+<p>[링크설명](https://www.example.com) 과 같이 작성한다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">제</span> <span class="p">[</span><span class="n">블로그</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">)</span><span class="n">로</span> <span class="n">놀러오세요</span><span class="err">!</span>
+</code></pre></div></div>
+<p>제 <a href="https://dnjdsxor21.github.io">블로그</a>로 놀러오세요!</p>
+
+<h4 id="url-and-email">URL and Email</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">fake</span><span class="nd">@example.com</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<p><a href="https://dnjdsxor21.github.io">https://dnjdsxor21.github.io</a>
+<a href="mailto:fake@example.com">fake@example.com</a></p>
+
+<h2 id="images">Images</h2>
+<p>!<a href="이미지 링크">이미지설명</a> 처럼 작성 가능.<br />
+이때 이미지 링크는 <code class="language-plaintext highlighter-rouge">local path</code> or <code class="language-plaintext highlighter-rouge">URL</code> 모두 가능한듯?<br />
+<img src="https://i.pinimg.com/564x/2d/cf/63/2dcf63c23e359dd5fec6ced32d4d8805.jpg" alt="고양이" /></p>
+
+<h4 id="linking-images">Linking Images</h4>
+<p>이미지에 링크까지 걸 수 있다.
+[<img src="이미지 링크" alt="이미지설명" />](링크)</p>
+
+<h2 id="escaping-characters">Escaping Characters</h2>
+<p>backslash()를 사용하여, 마크다운 문법이 적용되지 않도록 문자 그대로를 보여준다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\<span class="c1">## h2  
+</span>\<span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dnjdsxor21</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">&gt;</span>  
+</code></pre></div></div>
+<p>## h2<br />
+&lt;https://dnjdsxor21.github.io&gt;</p>
+
+<h2 id="html">HTML</h2>
+<p>밑줄을 칠 때 사용한 <code class="language-plaintext highlighter-rouge">&lt;u&gt;&lt;/u&gt;</code> 처럼 HTML태그를 안다면, 자유롭게 사용 가능한듯 하다.<br />
+<del>나는 잘 모름</del></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">'#'</span><span class="o">&gt;</span><span class="n">맨위로</span> <span class="n">이동하기</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<p><a href="#">맨위로 이동하기</a></p>
+
+<h2 id="tables">Tables</h2>
+<p><code class="language-plaintext highlighter-rouge">|</code>와 <code class="language-plaintext highlighter-rouge">-</code>를 조합하여, 간단한 테이블을 작성할 수 있다.<br />
+<code class="language-plaintext highlighter-rouge">-</code>의 갯수는 3개이상 자유롭게 작성하면 되며,<br />
+<code class="language-plaintext highlighter-rouge">:---</code>는 좌측정렬, <code class="language-plaintext highlighter-rouge">:---:</code>는 중앙정렬, <code class="language-plaintext highlighter-rouge">---:</code>는 우측정렬이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">|</span> <span class="n">Tables</span>  <span class="o">|</span>     <span class="n">Are</span>     <span class="o">|</span>  <span class="n">Cool</span>   <span class="o">|</span>
+<span class="o">|</span><span class="p">:</span><span class="o">--------|</span><span class="p">:</span><span class="o">-----------</span><span class="p">:</span><span class="o">|--------</span><span class="p">:</span><span class="o">|</span>
+<span class="o">|</span> <span class="n">col1</span> <span class="ow">is</span> <span class="o">|</span> <span class="n">left</span><span class="o">-</span><span class="n">aligned</span><span class="o">|</span> <span class="err">$</span><span class="mi">1600</span>   <span class="o">|</span>
+<span class="o">|</span> <span class="n">col2</span> <span class="ow">is</span> <span class="o">|</span>   <span class="n">centered</span>  <span class="o">|</span> <span class="err">$</span><span class="mi">12</span>     <span class="o">|</span>
+<span class="o">|</span> <span class="n">col3</span> <span class="ow">is</span> <span class="o">|</span><span class="n">right</span><span class="o">-</span><span class="n">aligned</span><span class="o">|</span> <span class="err">$</span><span class="mi">1</span>      <span class="o">|</span>
+</code></pre></div></div>
+<p>| Tables  |     Are     |  Cool   |
+|:——–|:———–:|——–:|
+| col1 is | left-aligned| $1600   |
+| col2 is |   centered  | $12     |
+| col3 is |right-aligned| $1      |</p>
+
+<h2 id="checkbox">Checkbox</h2>
+<p>체크박스는 <code class="language-plaintext highlighter-rouge">[ ]</code>, <code class="language-plaintext highlighter-rouge">[x]</code>로 구현 가능하다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="n">Update</span> <span class="n">the</span> <span class="n">website</span>
+<span class="p">[</span> <span class="p">]</span> <span class="n">Read</span> <span class="n">a</span> <span class="p">[</span><span class="n">paper</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">arxiv</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="nb">abs</span><span class="o">/</span><span class="mf">1706.03762</span><span class="p">)</span>
+</code></pre></div></div>
+<p>[x] Update the website
+[ ] Read a <a href="https://arxiv.org/abs/1706.03762">paper</a></p>
+
+<h2 id="emoji-star-star-star">Emoji :star: :star: :star:</h2>
+<p>매우 중요한 이모지 작성법</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="n">Gone</span> <span class="n">camping</span><span class="err">!</span> <span class="p">:</span><span class="n">tent</span><span class="p">:</span> <span class="n">Be</span> <span class="n">back</span> <span class="n">soon</span><span class="p">.</span>
+<span class="o">&gt;</span>
+<span class="o">&gt;</span><span class="n">Thats</span> <span class="n">so</span> <span class="n">funny</span><span class="err">!</span> <span class="p">:</span><span class="n">joy</span><span class="p">:</span>
+</code></pre></div></div>
+<blockquote>
+  <p>Gone camping! :tent: Be back soon.</p>
+
+  <p>Thats so funny! :joy:</p>
+</blockquote>
+
+<p>이모지 리스트는 여기서 확인할 수 있습니다.
+<a href="https://gist.github.com/rxaviers/7360908">list of emoji shortcodes</a></p>
+
+<h2 id="math-supportlatex-star-star-star-star-star">Math support(latex) :star: :star: :star: :star: :star:</h2>
+<p>github는 원래 수식을 작성하는 latex를 지원하지 않았다.<br />
+22년 5월부터 latex를 지원한다고 한다. <a href="https://github.blog/2022-05-19-math-support-in-markdown/">https://github.blog/2022-05-19-math-support-in-markdown/</a></p>
+<blockquote>
+  <p>한줄 전체에 적용되는 $$ latex formula $$</p>
+
+  <p>인라인수식은 $ inline formula $</p>
+</blockquote>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$$\</span><span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="n">n</span><span class="p">}</span> <span class="err">\</span><span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="n">n</span><span class="p">}</span> <span class="n">Q_</span><span class="p">{</span><span class="n">i</span><span class="p">}</span> <span class="o">*</span> <span class="n">K_</span><span class="p">{</span><span class="n">i</span><span class="p">}</span><span class="err">$$</span>  
+<span class="o">-</span> <span class="n">RNN</span><span class="err">의</span> <span class="n">hidden</span> <span class="n">state</span><span class="err">는</span> <span class="err">$</span> <span class="n">h_t</span> <span class="o">=</span> <span class="n">f_</span><span class="p">{</span><span class="n">w</span><span class="p">}</span> <span class="p">(</span><span class="n">h_</span><span class="p">{</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="n">x_</span><span class="p">{</span><span class="n">t</span><span class="p">})</span> <span class="err">$</span> <span class="err">입니다</span><span class="p">.</span>
+</code></pre></div></div>
+<p>$\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}$$<br />
+RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.</p>
+
+<p>==LaTex==문법을 모르면 아래와 같은 사이트의 도움을 받을 수 있다.</p>
+<ul>
+  <li><a href="http://www.hostmath.com/">LaTex Editor</a></li>
+  <li><a href="https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95">Latex 문법</a></li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li><a href="https://www.markdownguide.org/basic-syntax/">Markdown guide</a></li>
+  <li><a href="https://www.tablesgenerator.com/markdown_tables">Markdown tables generator</a></li>
+</ul>]]></content><author><name>Oh WonTaek</name></author><category term="Blog" /><category term="github" /><category term="blog" /><category term="markdown" /><category term="latex" /></entry><entry><title type="html">[Pytorch] Dataset, DataLoader</title><link href="http://localhost:4000/dl/nn-data1/" rel="alternate" type="text/html" title="[Pytorch] Dataset, DataLoader" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/dl/nn-data1</id><content type="html" xml:base="http://localhost:4000/dl/nn-data1/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
 <h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="DL" /><category term="dataset" /><category term="dataloader" /><category term="pytorch" /><summary type="html"><![CDATA[데이터 구성하기]]></summary></entry><entry><title type="html">[Tokenize]</title><link href="http://localhost:4000/nlp/token/" rel="alternate" type="text/html" title="[Tokenize]" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/nlp/token</id><content type="html" xml:base="http://localhost:4000/nlp/token/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
 <h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="NLP" /><category term="tokenizer" /><category term="embedding" /><summary type="html"><![CDATA[워드 토크나이저]]></summary></entry><entry><title type="html">[Transformer] Attention is all you need #0</title><link href="http://localhost:4000/paper/tf0/" rel="alternate" type="text/html" title="[Transformer] Attention is all you need #0" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/paper/tf0</id><content type="html" xml:base="http://localhost:4000/paper/tf0/"><![CDATA[<h2 id="attention-is-all-you-need">attention is all you need</h2>
 <h4 id="attention-is-all-you-need-1">attention is all you need</h4>]]></content><author><name>Oh WonTaek</name></author><category term="Paper" /><category term="transformer" /><category term="attention" /><summary type="html"><![CDATA[Attention Mechanism]]></summary></entry></feed>
