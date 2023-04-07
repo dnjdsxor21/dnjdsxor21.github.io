@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Github 블로그] 깃허브 블로그 생성 - Biops</title>
-<meta name="description" content="NLP">
+<!-- begin _includes/seo.html --><title>[RNN, LSTM, GRU] RNN 기반 모델 구조 - Biops</title>
+<meta name="description" content="RNN based Models">
 
 
   <meta name="author" content="Oh WonTaek">
@@ -22,32 +22,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Biops">
-<meta property="og:title" content="[Github 블로그] 깃허브 블로그 생성">
-<meta property="og:url" content="http://localhost:4000/blog/blog1/">
+<meta property="og:title" content="[RNN, LSTM, GRU] RNN 기반 모델 구조">
+<meta property="og:url" content="http://localhost:4000/nlp/RNN-LSTM-GRU/">
 
 
-  <meta property="og:description" content="NLP">
-
-
-
+  <meta property="og:description" content="RNN based Models">
 
 
 
 
-  <meta property="article:published_time" content="2020-04-01T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2020-04-01T00:00:00+09:00">
+  <meta property="article:published_time" content="2020-04-03T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2020-04-03T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/blog/blog1/">
+
+<link rel="canonical" href="http://localhost:4000/nlp/RNN-LSTM-GRU/">
 
 
 
@@ -372,16 +372,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Github 블로그] 깃허브 블로그 생성">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2020-04-01T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2020-04-01T00:00:00+09:00">
+    <meta itemprop="headline" content="[RNN, LSTM, GRU] RNN 기반 모델 구조">
+    <meta itemprop="description" content="RNN based Models">
+    <meta itemprop="datePublished" content="2020-04-03T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2020-04-03T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/blog/blog1/" class="u-url" itemprop="url">[Github 블로그] 깃허브 블로그 생성
+            <a href="http://localhost:4000/nlp/RNN-LSTM-GRU/" class="u-url" itemprop="url">[RNN, LSTM, GRU] RNN 기반 모델 구조
 </a>
           </h1>
           
@@ -413,14 +413,44 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Content</h4></header>
-              <ul class="toc__menu"><li><a href="#github">Github</a></li><li><a href="#repository">Repository</a></li></ul>
+              <ul class="toc__menu"><li><a href="#rnn-recurrent-nueral-network">RNN (Recurrent Nueral Network)</a><ul><li><a href="#lstm">LSTM</a></li><li><a href="#gru">GRU</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="github">Github</h1>
+        <h1 id="rnn-recurrent-nueral-network">RNN (Recurrent Nueral Network)</h1>
+<p>은닉층에서 나온 결과값이 다시 은닉층으로 돌아가 새로운 입력값과 연산을 하는 구조</p>
 
-<h1 id="repository">Repository</h1>
+<p>시계열 데이터, 텍스트 데이터같은 가변길이의 데이터에 적합한 모델</p>
+
+<p>학습을 통해 각 단어 다음에 나올 단어를 예측</p>
+
+<h3 id="lstm">LSTM</h3>
+<p>hiddne state는 벡터값이고,
+$y = W*h$</p>
+
+<p>LSTM의 경우 과거 정보를 가져갈지 말지를 정하는 cell state가 존재.
+여기서 c, h는 같은 크기의 벡터이다. 따라서 가중치행렬 사이즈는 두가지 종류임.</p>
+
+<p>$x \rightarrow h$
+$h \rightarrow h$</p>
+
+<p><strong>각각의 연산에서 행렬의 곱셈부분이 inner product인지 element-wise product인지 확인할 필요가 있다.</strong></p>
+
+<p><img src="https://user-images.githubusercontent.com/75467530/230545937-141da8df-53c4-45d6-991f-32445ff959be.png" alt="GRU" /></p>
+
+<h3 id="gru">GRU</h3>
+<p>cell state와 비슷한 역할을 하는 hidden state 하나만 존재 -&gt; 경량화된 모델</p>
+
+<p><img src="https://user-images.githubusercontent.com/75467530/230545967-f46b7f66-b388-48da-863f-f5bd077626a8.png" alt="GRU" /></p>
+
+<p>Reference</p>
+<ul>
+  <li><a href="https://pytorch.org/docs/stable/index.html">Pytorch document</a></li>
+  <li>https://byumm315.tistory.com/entry/RNN%EC%9D%84-%EC%95%8C%EC%95%84%EB%B4%85%EC%8B%9C%EB%8B%A4</li>
+  <li>https://ratsgo.github.io/</li>
+  <li>natural%20language%20processing/2017/03/09/rnnlstm/</li>
+</ul>
 
         
       </section>
@@ -437,11 +467,11 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#blog" class="page__taxonomy-item p-category" rel="tag">blog</a><span class="sep">, </span>
+      <a href="/tags/#gru" class="page__taxonomy-item p-category" rel="tag">GRU</a><span class="sep">, </span>
     
-      <a href="/tags/#github" class="page__taxonomy-item p-category" rel="tag">github</a><span class="sep">, </span>
+      <a href="/tags/#lstm" class="page__taxonomy-item p-category" rel="tag">LSTM</a><span class="sep">, </span>
     
-      <a href="/tags/#repository" class="page__taxonomy-item p-category" rel="tag">repository</a>
+      <a href="/tags/#rnn" class="page__taxonomy-item p-category" rel="tag">RNN</a>
     
     </span>
   </p>
@@ -458,7 +488,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+      <a href="/categories/#nlp" class="page__taxonomy-item p-category" rel="tag">NLP</a>
     
     </span>
   </p>
@@ -466,7 +496,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-04-01">April 1, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-04-03">April 3, 2020</time></p>
 
       </footer>
 
@@ -475,21 +505,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BGithub+%EB%B8%94%EB%A1%9C%EA%B7%B8%5D+%EA%B9%83%ED%97%88%EB%B8%8C+%EB%B8%94%EB%A1%9C%EA%B7%B8+%EC%83%9D%EC%84%B1%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fblog1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BRNN%2C+LSTM%2C+GRU%5D+RNN+%EA%B8%B0%EB%B0%98+%EB%AA%A8%EB%8D%B8+%EA%B5%AC%EC%A1%B0%20http%3A%2F%2Flocalhost%3A4000%2Fnlp%2FRNN-LSTM-GRU%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fblog1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fnlp%2FRNN-LSTM-GRU%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fblog1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnlp%2FRNN-LSTM-GRU%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
+      <a href="/paper/tf1/" class="pagination--pager" title="[Transformer] Attention is all you need #1
+">Previous</a>
     
     
-      <a href="/dl/nn-data1/" class="pagination--pager" title="[Pytorch] Dataset, DataLoader
+      <a href="/paper/tf2/" class="pagination--pager" title="[Transformer] Attention is all you need #2
 ">Next</a>
     
   </nav>
@@ -686,8 +717,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/blog/blog1/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/blog/blog1"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/nlp/RNN-LSTM-GRU/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/nlp/RNN-LSTM-GRU"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
