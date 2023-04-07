@@ -1,13 +1,29 @@
 ---
 permalink: /about/
-title: "About123"
-toc: true  # table of contents
-toc_sticky: true  # 우측 고정
-toc_label: "MYSELF"  # toc제목
+title: "About me"
+#toc: true  # table of contents
+#toc_sticky: true  # 우측 고정
+#toc_label: "MYSELF"  # toc제목
 ---
 
-![icon](/assets/logo.ico/apple-icon-120x120.png)
+---
 
-# hello
-## hello
-### hello
+### WonTaek Oh
+Biomedical Engineering Hanyang univ
+
+
+### Tech
+- 비전공자이지만, 전체적인 서비스를 다루는 MLops에 관심이 많습니다.
+- Pytorch, Tensorflow, Librosa
+- Matlab, LTspice, C# .NET
+- Django, Firebase
+
+
+
+### Industry
+- NLP - GPT, BERT, Gen AI
+- HCI, IoT
+- Healthcare - ECG, EOG, EMG, Voice sequence analysis
+
+### Projects
+[dnjdsxor21 - Overview](https://github.com/dnjdsxor21)

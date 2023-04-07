@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>About123 - Biops</title>
+<!-- begin _includes/seo.html --><title>About me - Biops</title>
 <meta name="description" content="NLP">
 
 
@@ -20,7 +20,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Biops">
-<meta property="og:title" content="About123">
+<meta property="og:title" content="About me">
 <meta property="og:url" content="http://localhost:4000/about/">
 
 
@@ -123,6 +123,11 @@
             </li><li class="masthead__menu-item">
               <a href="/tags/">Tags</a>
             </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
@@ -361,7 +366,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="About123">
+    <meta itemprop="headline" content="About me">
     
     
     
@@ -370,7 +375,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/about/" class="u-url" itemprop="url">About123
+            <a href="http://localhost:4000/about/" class="u-url" itemprop="url">About me
 </a>
           </h1>
           
@@ -381,19 +386,28 @@
 
       <section class="page__content e-content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> MYSELF</h4></header>
-              <ul class="toc__menu"><li><a href="#hello">hello</a><ul><li><a href="#hello-1">hello</a><ul><li><a href="#hello-2">hello</a></li></ul></li></ul></li></ul>
+        <hr />
 
-            </nav>
-          </aside>
-        
-        <p><img src="/assets/logo.ico/apple-icon-120x120.png" alt="icon" /></p>
+<h3 id="wontaek-oh">WonTaek Oh</h3>
+<p>Biomedical Engineering Hanyang univ</p>
 
-<h1 id="hello">hello</h1>
-<h2 id="hello-1">hello</h2>
-<h3 id="hello-2">hello</h3>
+<h3 id="tech">Tech</h3>
+<ul>
+  <li>비전공자이지만, 전체적인 서비스를 다루는 MLops에 관심이 많습니다.</li>
+  <li>Pytorch, Tensorflow, Librosa</li>
+  <li>Matlab, LTspice, C# .NET</li>
+  <li>Django, Firebase</li>
+</ul>
+
+<h3 id="industry">Industry</h3>
+<ul>
+  <li>NLP - GPT, BERT, Gen AI</li>
+  <li>HCI, IoT</li>
+  <li>Healthcare - ECG, EOG, EMG, Voice sequence analysis</li>
+</ul>
+
+<h3 id="projects">Projects</h3>
+<p><a href="https://github.com/dnjdsxor21">dnjdsxor21 - Overview</a></p>
 
         
       </section>
@@ -421,6 +435,17 @@
 
     </div>
 
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
     
 
     <div id="footer" class="page__footer">
@@ -468,6 +493,10 @@
 
 
 
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
