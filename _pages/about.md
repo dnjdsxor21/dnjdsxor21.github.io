@@ -16,14 +16,15 @@ Biomedical Engineering Hanyang univ
 - 비전공자이지만, 전체적인 서비스를 다루는 MLops에 관심이 많습니다.
 - Pytorch, Tensorflow, Librosa
 - Matlab, LTspice, C# .NET
-- Django, Firebase
+- Django, Firebase, FastAPI
+- Docker
 
 
 
 ### Industry
 - NLP - GPT, BERT, Gen AI
 - HCI, IoT
-- Healthcare - ECG, EOG, EMG, Voice sequence analysis
+- Biomedical, BCI
 
 ### Projects
 [dnjdsxor21 - Overview](https://github.com/dnjdsxor21)
