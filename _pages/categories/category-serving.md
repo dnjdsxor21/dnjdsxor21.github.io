@@ -1,7 +1,7 @@
 ---
 title: "Pytorch & DL basics"
 layout: archive
-permalink: categories/dl
+permalink: categories/serving
 author_profile: true
 sidebar_main: true
 ---
