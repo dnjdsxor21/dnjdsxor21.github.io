@@ -100,7 +100,7 @@ print(output['loss'].shape) # torch.Size([])
 추가적으로 label을 동시에 넣으면, `loss`값도 계산해준다. (그냥 logits와 label를 계산해서 loss를 구할수도 있음)
 
 ```python
-criterion = nn.CrossEntropyLoss()
+criterion = nn.MSELoss()
 loss = criterion(output['logits'], labels) # output['loss']와 동일
 ```
 
