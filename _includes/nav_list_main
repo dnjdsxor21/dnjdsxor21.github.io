@@ -21,7 +21,7 @@
       <!-- 카테고리2 -->
       <ul>
         {% for category in site.categories %}
-          {% if category[0] == 'Serving' %}
+          {% if category[0] == 'serving' %}
           <li><a href='/categories/serving' class=''>{{category[0]}}({{category[1].size}})</a></li>
           {% endif %}
         {% endfor %}
