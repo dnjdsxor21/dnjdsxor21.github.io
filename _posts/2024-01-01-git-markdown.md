@@ -296,7 +296,7 @@ $$\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}$$
 RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.  
 
 <small>**LaTex**문법을 모르면 아래와 같은 사이트의 도움을 받을 수 있다.</small>
-- [LaTex Editor](http://www.hostmath.com/)
+- [LaTex Editor](https://www.hostmath.com/)
 - [Latex 문법](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95)
 
 ## Reference
