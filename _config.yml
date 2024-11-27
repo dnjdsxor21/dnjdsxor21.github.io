@@ -16,10 +16,10 @@ timezone: Asia/Seoul
 
 title: 누누의 샌드타운 # the main title
 
-tagline: 코딩 공부 기록 # it will display as the sub-title
+tagline: cg # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  코딩 공부하는 누누의 샌드타운
+  누누의 샌드타운
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -28,8 +28,8 @@ url: "https://dnjdsxor21.github.io"
 github:
   username: dnjdsxor21 # change to your github username
 
-twitter:
-  username: twitter_username # change to your twitter username
+# twitter:
+#   username: twitter_username # change to your twitter username
 
 social:
   # Change to your full name.
@@ -225,3 +225,7 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# ---
+plugins: 
+  - jemoji 
