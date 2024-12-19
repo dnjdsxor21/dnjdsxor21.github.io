@@ -263,6 +263,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
 
 # Archives
 #  Type
@@ -312,6 +313,3 @@ defaults:
       comments: # true
       share: true
       related: true
-
-plugins:
-  - jemoji
