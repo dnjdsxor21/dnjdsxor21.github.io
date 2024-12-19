@@ -1,0 +1,27 @@
+# Jekyll cache
+_site
+.jekyll-metadata
+*-cache/
+
+# Bundler cache
+.bundle
+vendor
+Gemfile.lock
+
+# NPM
+/node_modules/
+package-lock.json
+
+# MacOS
+*.DS_Store
+
+# IDE configurations
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Custom
+**.txt
+/_posts/drafts/
