@@ -1,0 +1,39 @@
+baseURL = 'https://dnjdsxor21.github.io/'
+languageCode = 'ko-KR'
+title = '누누의 샌드타운'
+theme = 'paper'
+author = 'Nu4nu'
+
+[pagination]
+    pagerSize = 10
+
+[params]
+    github = 'dnjdsxor21'
+
+    color = 'linen' # 'linen', 'wheat', 'gray'
+    rss = true
+
+    # home page profile
+    avatar = 'dnjdsxor21@gmail.com'
+    name = 'nunu'
+    bio = 'hellobio'
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 10
+
+[services]
+    [services.disqus]
+        shortname = ''
