@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nlp on 누누의 샌드타운</title>
+    <link>http://localhost:1313/categories/nlp/</link>
+    <description>Recent content in Nlp on 누누의 샌드타운</description>
+    <generator>Hugo</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Sun, 22 Dec 2024 00:33:53 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NLP - Second Post</title>
+      <link>http://localhost:1313/posts/nlp/second-post/</link>
+      <pubDate>Sun, 22 Dec 2024 00:33:53 +0900</pubDate>
+      <guid>http://localhost:1313/posts/nlp/second-post/</guid>
+      <description>&lt;h1 id=&#34;this-is--nlps-posting&#34;&gt;this is  NLPs posting&lt;/h1&gt;&#xA;&lt;p&gt;hello&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
