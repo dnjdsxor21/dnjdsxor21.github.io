@@ -23,7 +23,7 @@ tags = ["OPENAPI"]
 뿐만 아니라 손쉬운 활용을 위해 API를 제공하고,<br>
 정부 각 부처에서 공공데이터 활용 경진대회를 열고 있습니다.<br>
 
-<img src="/assets/img/posts/openapi-1-2.jpg" alt="data.go.kr" style="max-width: 80%; height: auto; display: block;"> <br>
+<img src="/img/posts/openapi-1-2.jpg" alt="data.go.kr" style="max-width: 80%; height: auto; display: block;" />
 
 
 대한민국은 2015년부터 OECD 공공데이터 개방지수에서<br>
@@ -33,8 +33,8 @@ tags = ["OPENAPI"]
 
 ## 공공데이터포털 들어가기(<https://data.go.kr>)<br>
 
-<img src="/assets/img/posts/openapi-1-31.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
-<img src="/assets/img/posts/openapi-1-3.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
+<img src="/img/posts/openapi-1-31.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
+<img src="/img/posts/openapi-1-3.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
 
 
 
@@ -56,13 +56,13 @@ tags = ["OPENAPI"]
 
 ## 국가 데이터맵<br>
 
-<img src="/assets/img/posts/openapi-1-4.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
+<img src="/img/posts/openapi-1-4.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
 
 
 데이터가 너무 많아서 처음에 어떤 데이터를 활용할지 결정하기 어렵습니다.<br>
 국가데이터맵은 데이터를 종류별로 시각화 한 기능입니다.<br><br>
 
-<img src="/assets/img/posts/openapi-1-5.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
+<img src="/img/posts/openapi-1-5.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
 
 
 
@@ -79,7 +79,7 @@ tags = ["OPENAPI"]
 
 ## 데이터 활용 / 정보공유<br>
 
-<img src="/assets/img/posts/openapi-1-6.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
+<img src="/img/posts/openapi-1-6.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
 
 
 다음으로 \[데이터활용] 탭에서<br>
@@ -92,7 +92,7 @@ tags = ["OPENAPI"]
 "공공데이터 창업경진대회" 수상작을 보고 분석하여,<br>
 아이디어를 얻으려고 했습니다.<br>
 
-<img src="/assets/img/posts/openapi-1-7.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
+<img src="/img/posts/openapi-1-7.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
 
 <br><br><br>
 
@@ -117,13 +117,13 @@ tags = ["OPENAPI"]
 그리고 밑에 바로가기에서<br>
 공공데이터 창업경진대회, 오픈스퀘어-D를 확인 할 수 있습니다.<br><br>
 
-<img src="/assets/img/posts/openapi-1-8.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"><br>
+<img src="/img/posts/openapi-1-8.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"><br>
 
 
 
 공공데이터를 활용하는 교육영상도 제공합니다.<br><br><br>
 
-<img src="/assets/img/posts/openapi-1-9.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
+<img src="/img/posts/openapi-1-9.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
 
 
 

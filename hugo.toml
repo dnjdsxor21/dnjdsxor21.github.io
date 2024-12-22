@@ -8,7 +8,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
 # ------------------------------
 theme = 'paper' # themes/paper/
 enableEmoji = true
-
+enableRobotsTXT = true
 
 [pagination]
     pagerSize = 5
@@ -29,8 +29,8 @@ enableEmoji = true
     # misc
     math = true  # KaTex math types
     localKatex = false
-    favicon = "favicon.ico"
-    appleTouchIcon = "apple-touch-icon.png"
+    favicon = 'img/favicons/favicon.ico'
+    appleTouchIcon = 'img/favicons/apple-touch-icon.png'
 
 [markup]
   [markup.goldmark]

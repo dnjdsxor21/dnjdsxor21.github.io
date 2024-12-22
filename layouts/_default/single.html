@@ -1,6 +1,22 @@
 {{ define "main" }}
+{{ $toc := .TableOfContents }}
+{{ if not (eq $toc "<nav id=\"TableOfContents\"></nav>") }}
+  {{ .Scratch.Set "toc" $toc }}
+{{ end }}
 
-<article>
+<main class="relative">
+<!-- TOC -->
+{{ with .Scratch.Get "toc" }}
+<aside class="toc fixed left-4 top-14 hidden xl:block w-48 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+  <h4 class="text-s font-medium mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider">Contents</h4>
+  {{ . | replaceRE "<nav>" "<nav class=''>" | replaceRE "<ul>" "<ul class='space-y-1 list-none pl-0'>" | replaceRE "<li>" "<li class='text-gray-600 dark:text-gray-400'>" | replaceRE "<a " "<a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'" | safeHTML }}
+</aside>
+{{ end }}
+
+
+
+
+<article class="max-w-3xl mx-auto">
   <header class="mb-14">
     <h1 class="!my-0 pb-2.5">{{ .Title }}</h1>
 
@@ -33,6 +49,35 @@
     {{ end }}
   </footer>
   {{ end }}
+
+   <!-- 시리즈 또는 카테고리 관련 포스트 -->
+   <div class="mt-16 pt-8 border-t">
+    {{ $series := index .Params.series 0 }}
+    {{ if $series }}
+      <h3 class="text-xl font-semibold mb-4">More in "{{ $series }}" series</h3>
+      <ul class="space-y-2">
+        {{ range where .Site.RegularPages "Params.series" "intersect" (slice $series) }}
+          <li>
+            <a href="{{ .Permalink }}" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              {{ .Title }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ else if .Params.categories }}
+      <h3 class="text-xl font-semibold mb-4">Related posts in "{{ index .Params.categories 0 }}"</h3>
+      <ul class="space-y-2">
+        {{ $category := index .Params.categories 0 }}
+        {{ range first 5 (where (where .Site.RegularPages "Params.categories" "intersect" (slice $category)) ".Permalink" "!=" .Permalink).ByDate.Reverse }}
+          <li>
+            <a href="{{ .Permalink }}" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              {{ .Title }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
 
   <!-- Post Nav -->
   {{ if not site.Params.disablePostNavigation }}<!---->
@@ -125,5 +170,7 @@
   ></script>
   {{ end }}
 </article>
+</main>
+
 
 {{ end }}

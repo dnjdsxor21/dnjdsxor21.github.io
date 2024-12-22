@@ -67,24 +67,24 @@
 {{ if gt $paginator.TotalPages 1 }}
 <nav class="mt-14 flex justify-center items-center space-x-2">
   {{ if $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}" class="btn !px-3 !py-2">←</a>
+    <a href="{{ $paginator.Prev.URL }}" class="px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">←</a>
   {{ end }}
   
   {{ $ellipsisShown := false }}
   {{ range $paginator.Pagers }}
     {{ if or (le .PageNumber 3) (ge .PageNumber (sub $paginator.TotalPages 2)) (and (ge .PageNumber (sub $paginator.PageNumber 2)) (le .PageNumber (add $paginator.PageNumber 2))) }}
-      <a href="{{ .URL }}" class="{{ if eq . $paginator }}btn bg-primary text-white{{ else }}btn{{ end }} !px-3 !py-2">
+      <a href="{{ .URL }}" class="{{ if eq . $paginator }}px-3 py-2 bg-primary text-blue-500 font-bold{{ else }}px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200{{ end }}">
         {{ .PageNumber }}
       </a>
       {{ $ellipsisShown = false }}
     {{ else if not $ellipsisShown }}
-      <span class="px-2 py-1">...</span>
+      <span class="px-2 py-1 text-gray-600 dark:text-gray-400">...</span>
       {{ $ellipsisShown = true }}
     {{ end }}
   {{ end }}
   
   {{ if $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}" class="btn !px-3 !py-2">→</a>
+    <a href="{{ $paginator.Next.URL }}" class="px-3 py-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">→</a>
   {{ end }}
 </nav>
 {{ end }}

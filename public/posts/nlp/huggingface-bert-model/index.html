@@ -166,11 +166,11 @@ BERT 기본 모델을 불러오려면 역시 BertModel를 사용 해야 할 것�
   
   <link
     rel="icon"
-    href="http://localhost:1313/favicon.ico"
+    href="http://localhost:1313/img/favicons/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="http://localhost:1313/apple-touch-icon.png"
+    href="http://localhost:1313/img/favicons/apple-touch-icon.png"
   />
 
   
@@ -315,7 +315,32 @@ BERT 기본 모델을 불러오려면 역시 BertModel를 사용 해야 할 것�
     >
       
 
-<article>
+
+  
+
+
+<main class="relative">
+
+
+<aside class="toc fixed left-4 top-14 hidden xl:block w-48 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+  <h4 class="text-s font-medium mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider">Contents</h4>
+  <nav id="TableOfContents">
+  <ul class='space-y-1 list-none pl-0'>
+    <li class='text-gray-600 dark:text-gray-400'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#bert-모델-사용하기">BERT 모델 사용하기</a></li>
+    <li class='text-gray-600 dark:text-gray-400'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#bertmodel">BertModel</a></li>
+    <li class='text-gray-600 dark:text-gray-400'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#bertforsequenceclassification">BertForSequenceClassification</a></li>
+    <li class='text-gray-600 dark:text-gray-400'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#bertformaskedlm">BertForMaskedLM</a></li>
+    <li class='text-gray-600 dark:text-gray-400'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#bertfortokenclassification">BertForTokenClassification</a></li>
+    <li class='text-gray-600 dark:text-gray-400'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#reference">Reference</a></li>
+  </ul>
+</nav>
+</aside>
+
+
+
+
+
+<article class="max-w-3xl mx-auto">
   <header class="mb-14">
     <h1 class="!my-0 pb-2.5">Huggingface BERT 모델(BertModel, BertForSequenceClassification, BertForMaskedLM, BertForTokenClassification)</h1>
 
@@ -425,6 +450,30 @@ BERT 기본 모델을 불러오려면 역시 BertModel를 사용 해야 할 것�
   </footer>
   
 
+   
+   <div class="mt-16 pt-8 border-t">
+    
+    
+      <h3 class="text-xl font-semibold mb-4">Related posts in "NLP"</h3>
+      <ul class="space-y-2">
+        
+        
+          <li>
+            <a href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              Huggingface 모델 저장하고 불러오기
+            </a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/posts/nlp/rnn-based-models/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              [RNN, LSTM, GRU] RNN 기반 모델 구조
+            </a>
+          </li>
+        
+      </ul>
+    
+  </div>
+
   
   
   
@@ -438,8 +487,8 @@ BERT 기본 모델을 불러오려면 역시 BertModel를 사용 해야 할 것�
     >
     
     
-    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:1313/posts/paper/attention-is-all-you-need-3/"
-      ><span>[논문리뷰] Attention is all you need #3</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:1313/posts/paper/attention-is-all-you-need-6/"
+      ><span>[논문리뷰] Attention is all you need #6</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     >
     
   </nav>
@@ -457,89 +506,91 @@ BERT 기본 모델을 불러오려면 역시 BertModel를 사용 해야 할 것�
 
   
 </article>
+</main>
+
 
 
     </main>
     
     
-<aside class="fixed top-20 right-4 w-48 max-h-[calc(100vh-5rem)] overflow-y-auto bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 text-sm hidden lg:block">
+<aside class="fixed top-14 right-4 w-48 max-h-[calc(100vh-5rem)] overflow-y-auto bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 text-sm hidden lg:block">
     
     <div class="mb-6">
       <h3 class="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300 border-b pb-1">Recent Posts</h3>
       <ul class="space-y-1">
         
           <li>
-            <a href="http://localhost:1313/posts/openapi/openapi-1/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="http://localhost:1313/posts/openapi/openapi-1/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [공공데이터] 공공데이터포털 / OPENAPI #1
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/docker-container-guide/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="http://localhost:1313/posts/docker/docker-container-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker container 도커 #3
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/docker-image-guide/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="http://localhost:1313/posts/docker/docker-image-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker image 도커 #2
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/what-is-docker/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="http://localhost:1313/posts/docker/what-is-docker/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]What is Docker 도커 #1
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               Huggingface 모델 저장하고 불러오기
             </a>
           </li>
         
       </ul>
     </div>
+
     
-    
-    <div>
+    <div class="mb-6">
       <h3 class="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300 border-b pb-1">Categories</h3>
       <ul class="space-y-1">
         
           <li>
-            <a href="/categories/blog" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+            <a href="/categories/blog" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               blog (1)
             </a>
           </li>
         
           <li>
-            <a href="/categories/docker" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+            <a href="/categories/docker" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               docker (3)
             </a>
           </li>
         
           <li>
-            <a href="/categories/nlp" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+            <a href="/categories/nlp" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               nlp (3)
             </a>
           </li>
         
           <li>
-            <a href="/categories/paper" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
-              paper (3)
+            <a href="/categories/paper" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              paper (7)
             </a>
           </li>
         
           <li>
-            <a href="/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+            <a href="/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               공공데이터 (1)
             </a>
           </li>
         
       </ul>
     </div>
-  </aside>
-  
+</aside>
+
 
     <footer
   class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
@@ -560,6 +611,7 @@ BERT 기본 모델을 불러오려면 역시 BertModel를 사용 해야 할 것�
     target="_blank"
     >hugo-paper</a
   >
+    
 </footer>
 
   </body>

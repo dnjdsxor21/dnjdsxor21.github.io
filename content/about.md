@@ -1,8 +1,8 @@
 +++
 title = "About"
 description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-author = "lee.so"
+date = "0001-01-01"
+author = "nunu"
 +++
 
 - [github.com/dnjdsxor21](https://github.com/dnjdsxor21)
