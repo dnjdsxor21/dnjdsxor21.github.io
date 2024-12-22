@@ -1,0 +1,439 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="ko-KR"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>[논문리뷰] Attention is all you need #1 - 누누타운</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="
+워드 임베딩
+각 단어들은 Word2Index를 통해 정수인코딩을 하고, 그 정수값을 임베딩 벡터로 변환한다.
+이때 논문에서 임베딩dim 은 512이다.
+PE(positional encoding)
+트랜스포머 이전에는 RNN모델을 많이 사용했다. 순차적으로 문장을 처리하기 때문에, 계산유닛이 많아도 앞에서부터 하나씩 처리한다. 결국 연산속도가 매우 느리다.
+트랜스포머는 문장을 병렬적으로, 한번에 처리한다. 병렬적으로 한번에 처리한다는 것은, 단어의 위치를 알 수 없다는 뜻이다. 따라서 PE를 통해 위치순서를 나타낼 필요가 있다.
+
+모든 PE값은 시퀀스의 길이나 값에 관계없이 동일한 식별자를 가져야한다.
+모든 PE값은 너무 크면 안된다. 워드 임베딩 값이 상대적으로 작아지게된다.
+
+PE를 위한 sin, cos함수 - [-1, 1]사이를 주기적으로 반복하기 때문에 긴 문장에서도 위치 벡터값이 너무 커지지 않으면서, 너무 미미한 차이를 보이지도 않는다.
+PE는 단어벡터와 같은 차원의 벡터값이다. 따라서 벡터차원만큼의 주기함수 차원을 가지게 되고, 모든 주기함수의 주기 공배수가 되지 않는 이상 값이 겹치지 않는다." />
+  <meta name="author" content="Nunu" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/b36b25ee4e567b6817a807d01980a628?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:1313/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.140.0">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
+      >누누타운</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/categories/"
+        >categories</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/series/"
+        >series</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/archives/"
+        >archives</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/dnjdsxor21"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="http://localhost:1313/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">[논문리뷰] Attention is all you need #1</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>2023. 4. 2.</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p><img src="https://user-images.githubusercontent.com/75467530/230660894-458594f7-9c04-45f9-9659-5be94e85398d.png" alt="image"></p>
+<h2 id="워드-임베딩">워드 임베딩</h2>
+<p>각 단어들은 Word2Index를 통해 정수인코딩을 하고, 그 정수값을 임베딩 벡터로 변환한다.<br>
+이때 논문에서 임베딩dim 은 512이다.</p>
+<h2 id="pepositional-encoding">PE(positional encoding)</h2>
+<p>트랜스포머 이전에는 RNN모델을 많이 사용했다. 순차적으로 문장을 처리하기 때문에, 계산유닛이 많아도 앞에서부터 하나씩 처리한다. 결국 연산속도가 매우 느리다.<br>
+트랜스포머는 문장을 병렬적으로, 한번에 처리한다. 병렬적으로 한번에 처리한다는 것은, 단어의 위치를 알 수 없다는 뜻이다. 따라서 PE를 통해 위치순서를 나타낼 필요가 있다.</p>
+<ol>
+<li>모든 PE값은 시퀀스의 길이나 값에 관계없이 동일한 식별자를 가져야한다.</li>
+<li>모든 PE값은 너무 크면 안된다. 워드 임베딩 값이 상대적으로 작아지게된다.</li>
+</ol>
+<p>PE를 위한 sin, cos함수 - [-1, 1]사이를 주기적으로 반복하기 때문에 긴 문장에서도 위치 벡터값이 너무 커지지 않으면서, 너무 미미한 차이를 보이지도 않는다.<br>
+PE는 단어벡터와 같은 차원의 벡터값이다. 따라서 벡터차원만큼의 주기함수 차원을 가지게 되고, 모든 주기함수의 주기 공배수가 되지 않는 이상 값이 겹치지 않는다.</p>
+<p><img src="https://user-images.githubusercontent.com/75467530/230660915-e3eda8fc-f681-44b4-9bf8-c8df47c16ae2.png" alt="image"></p>
+<p>￼
+pos는 각 단어인덱스, i는 벡터인덱스</p>
+<p>워드임베딩과 PE의 연산 -&gt; concat이 아니라 summation연산을 사용한다. concat을 사용할 경우 PE역시 자체 차원을 가지게 된다. 따라서 의미가 섞이지 않지만, 비용문제가 발생한다.<br>
+summation의 경우 정보가 뒤섞이는 문제가 발생하지만, 단어의미정보가 충분히 유지된다.</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.blossominkyung.com/deeplearning/transfomer-positional-encoding">https://www.blossominkyung.com/deeplearning/transfomer-positional-encoding</a></li>
+</ul>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="http://localhost:1313/tags/transformer"
+      >Transformer</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="http://localhost:1313/tags/attention"
+      >Attention</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="http://localhost:1313/posts/paper/attention-is-all-you-need-2/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>[논문리뷰] Attention is all you need #2</span></a
+    >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:1313/posts/nlp/rnn-based-models/"
+      ><span>[RNN, LSTM, GRU] RNN 기반 모델 구조</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">누누타운</a>
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

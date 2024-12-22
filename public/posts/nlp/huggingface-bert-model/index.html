@@ -1,0 +1,486 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="ko-KR"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Huggingface BERT 모델(BertModel, BertForSequenceClassification, BertForMaskedLM, BertForTokenClassification) - 누누타운</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="BERT 모델 사용하기
+허깅페이스에서 BERT 모델을 불러와서 사용할 때 목적에 맞게 다양한 함수를 불러온다.
+예를 들어, STS(Semantic Textual Similarity) task에서 두 문장이 비슷한지 아닌지를 분류하는 문제를 풀기 위해, CLS토큰을 사용하여 학습을 할 것이다. BertForSequenceClassification를 사용하면 &ldquo;BERT모델의 CLS토큰에 분류를 위한 Linear모델을 추가한 모델&quot;을 불러올 수 있다.
+from transformers import BertForSequenceClassification
+
+model = BertForSequenceClassification(&#39;klue/bert-base&#39;, num_labels=1)
+또는 BERT의 pre-training방법중 하나인 MLM을 수행하기 위해 BertForMaskedLM을 사용하면 쉽게 모델을 불러올 수 있다.
+BertModel
+BERT 기본 모델을 불러오려면 역시 BertModel를 사용 해야 할 것이다.(또는 AutoModel)" />
+  <meta name="author" content="Nunu" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/b36b25ee4e567b6817a807d01980a628?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:1313/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:1313/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.140.0">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
+      >누누타운</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/categories/"
+        >categories</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/series/"
+        >series</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/archives/"
+        >archives</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/dnjdsxor21"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="http://localhost:1313/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">Huggingface BERT 모델(BertModel, BertForSequenceClassification, BertForMaskedLM, BertForTokenClassification)</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>2023. 5. 7.</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h2 id="bert-모델-사용하기">BERT 모델 사용하기</h2>
+<p>허깅페이스에서 BERT 모델을 불러와서 사용할 때 목적에 맞게 다양한 함수를 불러온다.</p>
+<p>예를 들어, STS(Semantic Textual Similarity) task에서 두 문장이 비슷한지 아닌지를 분류하는 문제를 풀기 위해, CLS토큰을 사용하여 학습을 할 것이다. <code>BertForSequenceClassification</code>를 사용하면 &ldquo;BERT모델의 CLS토큰에 분류를 위한 Linear모델을 추가한 모델&quot;을 불러올 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> transformers <span style="color:#f92672">import</span> BertForSequenceClassification
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> BertForSequenceClassification(<span style="color:#e6db74">&#39;klue/bert-base&#39;</span>, num_labels<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>또는 BERT의 pre-training방법중 하나인 MLM을 수행하기 위해 <code>BertForMaskedLM</code>을 사용하면 쉽게 모델을 불러올 수 있다.</p>
+<h2 id="bertmodel">BertModel</h2>
+<p>BERT 기본 모델을 불러오려면 역시 <code>BertModel</code>를 사용 해야 할 것이다.(또는 <code>AutoModel</code>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> transformers <span style="color:#f92672">import</span> AutoModel <span style="color:#75715e"># 자동으로 Bert모델 인식을 지원한다.</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> AutoModel<span style="color:#f92672">.</span>from_pretrained(<span style="color:#e6db74">&#39;klue/bert-base&#39;</span>)
+</span></span></code></pre></div><img width="646" alt="BertModel1" src="https://user-images.githubusercontent.com/75467530/236688620-09179b8d-59ca-459c-acfe-3321d006c052.png">
+<p>모델을 출력해보면, 모델 구조를 자세히 볼 수 있다. BERT 모델은 <code>embedding layer</code>와 <code>encoder layer</code>로 이루어져 있다고만 알고 있었는데, <strong>마지막에 <code>pooler layer</code>가 추가된 구조</strong>를 볼 수 있다</p>
+<p>더 자세히 보기위해 모델의 출력을 살펴봤다.</p>
+<img width="859" alt="BertModel2" src="https://user-images.githubusercontent.com/75467530/236688845-2c74e63d-3547-4540-be53-f4d2986ad638.png">
+<p>모델의 output으로 두 가지가 나오는데,<br>
+<code>last_hidden_state</code>가 바로 encoder layer의 출력값에 해당하며 각 토큰마다 가지는 결과값일 것이다.(Batch_size, Sequence_length, hidden_emb)<br>
+<code>pooler_output</code>은 모델의 마지막에 있던 pooler layer의 출력값에 해당할 것이다. CLS토큰의 출력값과 같은 크기를 가진다. (Batch_size, hidden_emb)</p>
+<p>그렇다면 <strong><code>pooler_output</code>과  <code>last_hidden_state[:,0]</code>(CLS token)는 같은 값일까?</strong></p>
+<p><a href="https://github.com/huggingface/transformers/blob/dacd34568d1a27b91f84610eab526640ed8f94e0/src/transformers/models/bert/modeling_bert.py#L652">BertModel의 코드를 자세히 보면</a> 알 수 있는데, CLS 토큰에 Linear모델을 하나 추가한 출력값인듯 하다.</p>
+<img width="744" alt="BertModel3" src="https://user-images.githubusercontent.com/75467530/236689565-28f0986f-14c8-4568-8aa4-83b481821dcd.png">
+<p>간단하게 max, min값을 출력해보면 값의 범위가 다른 것을 확인할 수도 있다. (Tanh때문에)</p>
+<img width="859" alt="BertModel4" src="https://user-images.githubusercontent.com/75467530/236689558-772b45fc-88d8-4f57-bb9c-081c523a26a1.png">
+<p>참고로 pooling의 방식은 여러가지 방법이 있다. 위의 예시처럼 CLS 토큰만 사용할 수도 있고, 모든 토큰(일부 토큰)의 평균(Mean Pooling), 가장 큰 값을 가지는 토큰의 출력값(Max Pooling) 등이 있다.<br>
+<a href="https://github.com/UKPLab/sentence-transformers/blob/master/sentence_transformers/models/Pooling.py">참고링크(sentence_transformers)</a></p>
+<h2 id="bertforsequenceclassification">BertForSequenceClassification</h2>
+<p>BERT모델의 last_hidden_state에서 CLS토큰에 Linear모델을 추가하면, 간단하게 분류모델을 만들 수 있다. 위에서 BERT모델의 <code>pooler_output</code>과 비슷한 방식일 것이다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model <span style="color:#f92672">=</span> transformers<span style="color:#f92672">.</span>AutoModelForSequenceClassification<span style="color:#f92672">.</span>from_pretrained(<span style="color:#e6db74">&#39;klue/bert-base&#39;</span>, num_labels<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>모델을 출력하면,<br>
+<code>Some weights of BertForSequenceClassification were not initialized from the model checkpoint at klue/bert-base and are newly initialized: ['classifier.weight', 'classifier.bias']</code>라는 문구가 나오는데, 마지막에 추가된 classifier모델의 가중치는 학습된 파라미터가 아니라는 뜻</p>
+<img width="859" alt="SequenceClassification1" src="https://user-images.githubusercontent.com/75467530/236690478-02e69878-5721-45b4-aaaa-95f4b9df994c.png">
+<p>모델의 마지막 부분을 보면, BERT 모델의 <code>pooler_output</code>에 Linear모델(<code>Classifier</code>)이 하나 더 추가된 것을 볼 수 있다. 이때 출력되는 값의 shape은 모델을 정의할 때 <code>num_labels=1</code>에 의해 1로 정의된다.</p>
+<p><em>그럼 CLS토큰에 두 개의 linear model을 달아서 분류 모델을 만든다는 뜻인데, CLS토큰에 바로 classifier를 달아서 사용할 수는 없을까?</em></p>
+<p><code>BertModel</code>과 마찬가지로 샘플데이터를 넣어 output를 확인해봤다. (이때 input과 label를 모델에 함께 넣을 수도 있음)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 모델의 input으로 label도 넣을 수 있다.</span>
+</span></span><span style="display:flex;"><span>output <span style="color:#f92672">=</span> model(input_ids, labels<span style="color:#f92672">=</span>labels)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(output<span style="color:#f92672">.</span>keys()) <span style="color:#75715e"># [&#39;loss&#39;,&#39;logits&#39;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(output[<span style="color:#e6db74">&#39;logits&#39;</span>]) <span style="color:#75715e"># tensor([[0.3268], [0.3268]], grad_fn=&lt;AddmmBackward0&gt;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(output[<span style="color:#e6db74">&#39;logits&#39;</span>]<span style="color:#f92672">.</span>shape) <span style="color:#75715e"># torch.Size([2, 1])</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(output[<span style="color:#e6db74">&#39;loss&#39;</span>]) <span style="color:#75715e"># tensor(1.6264, grad_fn=&lt;MseLossBackward0&gt;)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(output[<span style="color:#e6db74">&#39;loss&#39;</span>]<span style="color:#f92672">.</span>shape) <span style="color:#75715e"># torch.Size([])</span>
+</span></span></code></pre></div><p><code>classifier</code>에 의한 출력값은 <code>logits</code>으로 출력된다.<br>
+추가적으로 label을 동시에 넣으면, <code>loss</code>값도 계산해준다. (그냥 logits와 label를 계산해서 loss를 구할수도 있음)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>MSELoss()
+</span></span><span style="display:flex;"><span>loss <span style="color:#f92672">=</span> criterion(output[<span style="color:#e6db74">&#39;logits&#39;</span>], labels) <span style="color:#75715e"># output[&#39;loss&#39;]와 동일</span>
+</span></span></code></pre></div><h2 id="bertformaskedlm">BertForMaskedLM</h2>
+<p>(writing)</p>
+<h2 id="bertfortokenclassification">BertForTokenClassification</h2>
+<p>(writing)</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://github.com/huggingface/transformers/blob/dacd34568d1a27b91f84610eab526640ed8f94e0/src/transformers/models/bert/modeling_bert.py#L468">https://github.com/huggingface/transformers/blob/dacd34568d1a27b91f84610eab526640ed8f94e0/src/transformers/models/bert/modeling_bert.py#L468</a></li>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html?highlight=crossen#torch.nn.CrossEntropyLoss">https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html?highlight=crossen#torch.nn.CrossEntropyLoss</a></li>
+<li><a href="https://github.com/UKPLab/sentence-transformers/blob/master/sentence_transformers/models/Pooling.py">https://github.com/UKPLab/sentence-transformers/blob/master/sentence_transformers/models/Pooling.py</a></li>
+</ul>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="http://localhost:1313/tags/huggingface"
+      >Huggingface</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="http://localhost:1313/tags/transformers"
+      >Transformers</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="http://localhost:1313/tags/bert"
+      >BERT</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="http://localhost:1313/tags/model"
+      >Model</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Huggingface 모델 저장하고 불러오기</span></a
+    >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:1313/posts/paper/attention-is-all-you-need-3/"
+      ><span>[논문리뷰] Attention is all you need #3</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    &copy; 2024
+    <a class="link" href="http://localhost:1313/">누누타운</a>
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

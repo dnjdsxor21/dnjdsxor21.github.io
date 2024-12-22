@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 누누의 샌드타운</title>
+    <title>Categories on 누누타운</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on 누누의 샌드타운</description>
+    <description>Recent content in Categories on 누누타운</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Sun, 22 Dec 2024 00:33:53 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nlp</title>
+      <title>공공데이터</title>
+      <link>http://localhost:1313/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/</link>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/categories/docker/</link>
+      <pubDate>Tue, 18 Jul 2023 15:52:10 +0900</pubDate>
+      <guid>http://localhost:1313/categories/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NLP</title>
       <link>http://localhost:1313/categories/nlp/</link>
-      <pubDate>Sun, 22 Dec 2024 00:33:53 +0900</pubDate>
+      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/categories/nlp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paper</title>
+      <link>http://localhost:1313/categories/paper/</link>
+      <pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/paper/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
       <link>http://localhost:1313/categories/blog/</link>
-      <pubDate>Sun, 22 Dec 2024 00:06:54 +0900</pubDate>
+      <pubDate>Wed, 01 Mar 2023 15:52:10 +0900</pubDate>
       <guid>http://localhost:1313/categories/blog/</guid>
       <description></description>
     </item>

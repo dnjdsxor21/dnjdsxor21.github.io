@@ -1,38 +1,69 @@
 baseURL = 'https://dnjdsxor21.github.io/'
-languageCode = 'ko-KR'
-title = '누누의 샌드타운'
-theme = 'paper'
+title = '누누타운'
 author = 'Nu4nu'
+
+languageCode = 'ko-KR'
+DefaultContentLanguage = "ko"
+ignoreLogs = ['warning-goldmark-raw-html']
+# ------------------------------
+theme = 'paper' # themes/paper/
+enableEmoji = true
+
 
 [pagination]
     pagerSize = 10
 
 [params]
+    # header social icons
     github = 'dnjdsxor21'
-
-    color = 'linen' # 'linen', 'wheat', 'gray'
     rss = true
 
+    # color
+    color = 'linen' # 'linen', 'wheat', 'gray'
+    
     # home page profile
-    avatar = 'dnjdsxor21@gmail.com'
-    name = 'nunu'
-    bio = 'hellobio'
+    avatar = 'dnjdsxor21@gmail.com' # gravater email or image url
+    name = 'Nunu'
+    bio = '하이요'
+
+    # misc
+    math = true  # KaTex math types
+    localKatex = false
+    favicon = "favicon.ico"
+    appleTouchIcon = "apple-touch-icon.png"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+        unsafe = true  # raw HTML 렌더링
+    
 
 [taxonomies]
     category = "categories"
     tag = "tags"
+    series = "series"
 
 [menu]
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 10
-  [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
-    weight = 10
+    [[menu.main]] # top nav bar
+        identifier = "about" # content/*.md 
+        name = "About" # nav bar name
+        url = "/about/"
+        weight = 1
+    [[menu.main]]
+        identifier = "categories"
+        name = "categories"
+        url = "/categories/"
+        weight = 2
+    [[menu.main]]
+        identifier = "series"
+        name = "series"
+        url = "/series/"
+        weight = 3
+    [[menu.main]]
+        identifier = "archives"
+        name = "archives"
+        url = "/archives/"
+        weight = 4
 
 [services]
     [services.disqus]
