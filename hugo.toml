@@ -76,7 +76,7 @@ enableEmoji = true
     source = 'assets/.*\.css'
     target = 'css'
   [[build.cachebusters]]
-    source = 'layouts/.*\.html'
+    source = 'layouts/(_default|partials|shortcodes)/.*\.html'
     target = 'html'
 
 [server]

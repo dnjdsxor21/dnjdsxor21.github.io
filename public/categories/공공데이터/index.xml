@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>공공데이터 on 누누타운</title>
-    <link>http://localhost:1313/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/</link>
+    <link>https://dnjdsxor21.github.io/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/</link>
     <description>Recent content in 공공데이터 on 누누타운</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
     <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dnjdsxor21.github.io/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[공공데이터] 공공데이터포털 / OPENAPI #1</title>
-      <link>http://localhost:1313/posts/openapi/openapi-1/</link>
+      <link>https://dnjdsxor21.github.io/posts/openapi/openapi-1/</link>
       <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/openapi/openapi-1/</guid>
-      <description>&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;&#xA;&lt;p&gt;여러 산업에서 데이터가 최우선의 가치를 가지고 있습니다.&lt;br&gt;&#xA;따라서 데이터를 잘 축적하고 가공하여 개방하는 것도 중요한 임무가 되었습니다.&#xA;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;좋은-품질의-데이터를-얻을-수-있는-사이트&#34;&gt;좋은 품질의 데이터를 얻을 수 있는 사이트&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;공공데이터포털(&lt;a href=&#34;https://data.go.kr&#34;&gt;https://data.go.kr&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;AI Hub(&lt;a href=&#34;https://aihub.or.kr&#34;&gt;https://aihub.or.kr&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Kaggle(&lt;a href=&#34;https://www.kaggle.com&#34;&gt;https://www.kaggle.com&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;대한민국은 공공데이터포털을 통해 아주 다양한 분야의 공공데이터를 개방하고 있습니다.&lt;br&gt;&#xA;뿐만 아니라 손쉬운 활용을 위해 API를 제공하고,&lt;br&gt;&#xA;정부 각 부처에서 공공데이터 활용 경진대회를 열고 있습니다.&lt;br&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/assets/img/posts/openapi-1-2.jpg&#34; alt=&#34;data.go.kr&#34; style=&#34;max-width: 80%; height: auto; display: block;&#34;&gt; &lt;br&gt;&lt;/p&gt;&#xA;&lt;p&gt;대한민국은 2015년부터 OECD 공공데이터 개방지수에서&lt;br&gt;&#xA;4년 연속 세계 1위를 기록하는 중입니다.&lt;/p&gt;</description>
+      <guid>https://dnjdsxor21.github.io/posts/openapi/openapi-1/</guid>
+      <description>&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;&#xA;&lt;p&gt;여러 산업에서 데이터가 최우선의 가치를 가지고 있습니다.&lt;br&gt;&#xA;따라서 데이터를 잘 축적하고 가공하여 개방하는 것도 중요한 임무가 되었습니다.&#xA;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;좋은-품질의-데이터를-얻을-수-있는-사이트&#34;&gt;좋은 품질의 데이터를 얻을 수 있는 사이트&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;공공데이터포털(&lt;a href=&#34;https://data.go.kr&#34;&gt;https://data.go.kr&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;AI Hub(&lt;a href=&#34;https://aihub.or.kr&#34;&gt;https://aihub.or.kr&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Kaggle(&lt;a href=&#34;https://www.kaggle.com&#34;&gt;https://www.kaggle.com&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;대한민국은 공공데이터포털을 통해 아주 다양한 분야의 공공데이터를 개방하고 있습니다.&lt;br&gt;&#xA;뿐만 아니라 손쉬운 활용을 위해 API를 제공하고,&lt;br&gt;&#xA;정부 각 부처에서 공공데이터 활용 경진대회를 열고 있습니다.&lt;br&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://dnjdsxor21.github.io/assets/img/posts/openapi-1-2.jpg&#34; alt=&#34;data.go.kr&#34; style=&#34;max-width: 80%; height: auto; display: block;&#34;&gt; &lt;br&gt;&lt;/p&gt;&#xA;&lt;p&gt;대한민국은 2015년부터 OECD 공공데이터 개방지수에서&lt;br&gt;&#xA;4년 연속 세계 1위를 기록하는 중입니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
