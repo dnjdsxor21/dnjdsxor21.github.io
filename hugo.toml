@@ -11,7 +11,7 @@ enableEmoji = true
 
 
 [pagination]
-    pagerSize = 10
+    pagerSize = 5
 
 [params]
     # header social icons

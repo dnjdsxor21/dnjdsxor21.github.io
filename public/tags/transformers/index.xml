@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Transformers on 누누타운</title>
-    <link>https://dnjdsxor21.github.io/tags/transformers/</link>
+    <link>http://localhost:1313/tags/transformers/</link>
     <description>Recent content in Transformers on 누누타운</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
     <lastBuildDate>Tue, 09 May 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dnjdsxor21.github.io/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Huggingface 모델 저장하고 불러오기</title>
-      <link>https://dnjdsxor21.github.io/posts/nlp/how-to-save-and-load-huggingface/</link>
+      <link>http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/</link>
       <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/nlp/how-to-save-and-load-huggingface/</guid>
+      <guid>http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/</guid>
       <description>&lt;h2 id=&#34;huggingface-를-사용하면-모델-불러오기-저장이-훨씬-쉽다&#34;&gt;HuggingFace 를 사용하면 모델 불러오기, 저장이 훨씬 쉽다.&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; transformers &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; AutoModel&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MODEL_NAME &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;klue/bert-base&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 학습 전 모델 불러오기&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AutoModel&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;from_pretrained(MODEL_NAME)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 학습 후 모델 저장하기&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;save_pretrained(OUTPUT_DIR)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;huggingface-hub&#34;&gt;HuggingFace Hub&lt;/h2&gt;&#xA;&lt;p&gt;허깅페이스에도 깃허브처럼 &amp;lsquo;모델&amp;rsquo;과 &amp;lsquo;데이터셋&amp;rsquo;을 저장할 수 있는 저장공간이 존재한다!&lt;/p&gt;&#xA;&lt;p&gt;위에서는 &lt;code&gt;klue/bert-base&lt;/code&gt;를 허브에서 불러왔으며, OUTPUT_DIR(local 환경)에 저장했다.&lt;/p&gt;&#xA;&lt;p&gt;먼저 local 환경(내 컴퓨터)에서 모델을 불러와보자.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; transformers &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; AutoModel&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MODEL_PATH &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/opt/ml/bert/checkpoint-100&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; AutoModel&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;from_pretrained(MODEL_PATH)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;사실 위와 똑같은 방법이다.&lt;br&gt;&#xA;이때 &lt;code&gt;MODEL_PATH&lt;/code&gt;에는 &lt;code&gt;config.json&lt;/code&gt;, &lt;code&gt;pytorch_model.bin&lt;/code&gt; 등등의 파일이 있어야함!&lt;br&gt;&#xA;코드가 같은 이유는 허깅페이스 허브에 모델이 있는지 확인하고, 없으면 로컬 디렉토리에 모델이 있는지 체크한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Huggingface BERT 모델(BertModel, BertForSequenceClassification, BertForMaskedLM, BertForTokenClassification)</title>
-      <link>https://dnjdsxor21.github.io/posts/nlp/huggingface-bert-model/</link>
+      <link>http://localhost:1313/posts/nlp/huggingface-bert-model/</link>
       <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/nlp/huggingface-bert-model/</guid>
+      <guid>http://localhost:1313/posts/nlp/huggingface-bert-model/</guid>
       <description>&lt;h2 id=&#34;bert-모델-사용하기&#34;&gt;BERT 모델 사용하기&lt;/h2&gt;&#xA;&lt;p&gt;허깅페이스에서 BERT 모델을 불러와서 사용할 때 목적에 맞게 다양한 함수를 불러온다.&lt;/p&gt;&#xA;&lt;p&gt;예를 들어, STS(Semantic Textual Similarity) task에서 두 문장이 비슷한지 아닌지를 분류하는 문제를 풀기 위해, CLS토큰을 사용하여 학습을 할 것이다. &lt;code&gt;BertForSequenceClassification&lt;/code&gt;를 사용하면 &amp;ldquo;BERT모델의 CLS토큰에 분류를 위한 Linear모델을 추가한 모델&amp;quot;을 불러올 수 있다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; transformers &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; BertForSequenceClassification&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; BertForSequenceClassification(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;klue/bert-base&amp;#39;&lt;/span&gt;, num_labels&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;또는 BERT의 pre-training방법중 하나인 MLM을 수행하기 위해 &lt;code&gt;BertForMaskedLM&lt;/code&gt;을 사용하면 쉽게 모델을 불러올 수 있다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;bertmodel&#34;&gt;BertModel&lt;/h2&gt;&#xA;&lt;p&gt;BERT 기본 모델을 불러오려면 역시 &lt;code&gt;BertModel&lt;/code&gt;를 사용 해야 할 것이다.(또는 &lt;code&gt;AutoModel&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>[논문리뷰] Attention is all you need #3</title>
-      <link>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-3/</link>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-3/</link>
       <pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-3/</guid>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-3/</guid>
       <description>&lt;h2 id=&#34;multihead-attention&#34;&gt;Multihead attention&lt;/h2&gt;&#xA;&lt;p&gt;multihead를 하는 이유 - 각각의 attention는 토큰 간의 관계(유사도)를 통해 어텐션을 구하고 종속성을 계산하며, 각각의 head는 다른 유형의 종속성을 가지게 된다.&lt;/p&gt;&#xA;&lt;p&gt;(문장타입에집중, 관계에 집중, 명사에집중, 강조에 집중)&lt;/p&gt;&#xA;&lt;h2 id=&#34;논문과-실제-코드에서-나타나는-차이점&#34;&gt;논문과 실제 코드에서 나타나는 차이점&lt;/h2&gt;&#xA;&lt;p&gt;논문 : Q,K,V를 각각의 dimension size로 계산해서 똑같이 z를 얻는다 -&amp;gt; z를 모두 concat -&amp;gt; linear연산으로 차원을 축소시켜서 input dimension과 동일하게 맞춰준다.&lt;br&gt;&#xA;따라서 concate(z)의 size = n_head x n_Q x dim_V 이고, linear를 지났을 때의 output의 size = n_Q x dim_input&lt;/p&gt;</description>
     </item>
     <item>
       <title>[논문리뷰] Attention is all you need #2</title>
-      <link>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-2/</link>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-2/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-2/</guid>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-2/</guid>
       <description>&lt;h2 id=&#34;attention-self-attention&#34;&gt;Attention, Self-attention&lt;/h2&gt;&#xA;&lt;p&gt;일반적으로 어텐션이란, 입력값에서 중요한 단어들에 더 집중할 수 있도록 한다.&lt;br&gt;&#xA;문장을 병렬적으로 처리하기 때문에 속도가 비교적 빠르다.&lt;br&gt;&#xA;RNN구조에서는 순차적으로 값을 확인하기 때문에 gradient vanishing/exploding문제가 발생하게 된다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;self-attention&#34;&gt;Self-attention&lt;/h2&gt;&#xA;&lt;p&gt;같은 문장 내에서 단어들 간의 관계를 나타낸다. attention의 입력값은 Q,K,V&lt;/p&gt;&#xA;&lt;h2 id=&#34;qkv&#34;&gt;Q,K,V&lt;/h2&gt;&#xA;&lt;p&gt;어텐션의 목표는 value의 weighted sum을 구하는것이고, 각 가중치는 Q,K가 얼마나 유사한지에 따라 결정된다.&lt;br&gt;&#xA;Query - 소스벡터, 유사도를 계산하는 값&lt;br&gt;&#xA;Key - 타겟벡터, 유사도를 계산하는 값&lt;br&gt;&#xA;Value - key에 해당하는 정보로 값을 계산, 최종 출력계산에 사용&lt;br&gt;&#xA;각각의 값은 인풋이 Linear연산을 거쳐서 구한다. - 벡터의 차원을 줄여준다.&lt;br&gt;&#xA;Q.size = n x d_K&lt;br&gt;&#xA;K.size = m x d_K&lt;br&gt;&#xA;V. size = m x d_V&lt;br&gt;&#xA;Z.size = n x d_V&lt;br&gt;&#xA;왜 실습에서는 3차원이지? -&amp;gt; 각 단어의 갯수만큼 연산하므로 n_Q, n_K, n_V가 존재&lt;br&gt;&#xA;Q, K 의 dimension은 동일해야함&lt;br&gt;&#xA;n_batch가 의미하는 것????? - data의 개수, ‘문장’의 개수&lt;br&gt;&#xA;dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 한번 더 수행하여 z를 얻는다.&lt;/p&gt;</description>
     </item>
   </channel>

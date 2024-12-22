@@ -50,7 +50,7 @@
   lang="ko-KR"
   dir="ltr"
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -94,14 +94,14 @@ model = AutoModel.from_pretrained(MODEL_PATH)
   
   
   
-  <link rel="preload stylesheet" as="style" href="https://dnjdsxor21.github.io/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/theme.png" />
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
 
   
   
@@ -113,9 +113,9 @@ model = AutoModel.from_pretrained(MODEL_PATH)
 
   
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/github.svg" />
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/rss.svg" />
+  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
   
   
 
@@ -123,7 +123,7 @@ model = AutoModel.from_pretrained(MODEL_PATH)
   
   <script
     defer
-    src="https://dnjdsxor21.github.io/highlight.min.js"
+    src="http://localhost:1313/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -174,11 +174,11 @@ model = AutoModel.from_pretrained(MODEL_PATH)
   
   <link
     rel="icon"
-    href="https://dnjdsxor21.github.io/favicon.ico"
+    href="http://localhost:1313/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="https://dnjdsxor21.github.io/apple-touch-icon.png"
+    href="http://localhost:1313/apple-touch-icon.png"
   />
 
   
@@ -187,65 +187,12 @@ model = AutoModel.from_pretrained(MODEL_PATH)
   
   
   
-  
-  
-  
-  <meta itemprop="name" content="Huggingface 모델 저장하고 불러오기">
-  <meta itemprop="description" content="HuggingFace 를 사용하면 모델 불러오기, 저장이 훨씬 쉽다. from transformers import AutoModel MODEL_NAME = &#39;klue/bert-base&#39; # 학습 전 모델 불러오기 model = AutoModel.from_pretrained(MODEL_NAME) # 학습 후 모델 저장하기 model.save_pretrained(OUTPUT_DIR) HuggingFace Hub 허깅페이스에도 깃허브처럼 ‘모델’과 ‘데이터셋’을 저장할 수 있는 저장공간이 존재한다!
-위에서는 klue/bert-base를 허브에서 불러왔으며, OUTPUT_DIR(local 환경)에 저장했다.
-먼저 local 환경(내 컴퓨터)에서 모델을 불러와보자.
-from transformers import AutoModel MODEL_PATH = &#39;/opt/ml/bert/checkpoint-100&#39; model = AutoModel.from_pretrained(MODEL_PATH) 사실 위와 똑같은 방법이다.
-이때 MODEL_PATH에는 config.json, pytorch_model.bin 등등의 파일이 있어야함!
-코드가 같은 이유는 허깅페이스 허브에 모델이 있는지 확인하고, 없으면 로컬 디렉토리에 모델이 있는지 체크한다.">
-  <meta itemprop="datePublished" content="2023-05-09T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2023-05-09T00:00:00+00:00">
-  <meta itemprop="wordCount" content="261">
-  <meta itemprop="keywords" content="Huggingface,HuggingfaceHub,Transformers,BERT,Model">
-  
-  <meta property="og:url" content="https://dnjdsxor21.github.io/posts/nlp/how-to-save-and-load-huggingface/">
-  <meta property="og:site_name" content="누누타운">
-  <meta property="og:title" content="Huggingface 모델 저장하고 불러오기">
-  <meta property="og:description" content="HuggingFace 를 사용하면 모델 불러오기, 저장이 훨씬 쉽다. from transformers import AutoModel MODEL_NAME = &#39;klue/bert-base&#39; # 학습 전 모델 불러오기 model = AutoModel.from_pretrained(MODEL_NAME) # 학습 후 모델 저장하기 model.save_pretrained(OUTPUT_DIR) HuggingFace Hub 허깅페이스에도 깃허브처럼 ‘모델’과 ‘데이터셋’을 저장할 수 있는 저장공간이 존재한다!
-위에서는 klue/bert-base를 허브에서 불러왔으며, OUTPUT_DIR(local 환경)에 저장했다.
-먼저 local 환경(내 컴퓨터)에서 모델을 불러와보자.
-from transformers import AutoModel MODEL_PATH = &#39;/opt/ml/bert/checkpoint-100&#39; model = AutoModel.from_pretrained(MODEL_PATH) 사실 위와 똑같은 방법이다.
-이때 MODEL_PATH에는 config.json, pytorch_model.bin 등등의 파일이 있어야함!
-코드가 같은 이유는 허깅페이스 허브에 모델이 있는지 확인하고, 없으면 로컬 디렉토리에 모델이 있는지 체크한다.">
-  <meta property="og:locale" content="ko_KR">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-05-09T00:00:00+00:00">
-    <meta property="article:modified_time" content="2023-05-09T00:00:00+00:00">
-    <meta property="article:tag" content="Huggingface">
-    <meta property="article:tag" content="HuggingfaceHub">
-    <meta property="article:tag" content="Transformers">
-    <meta property="article:tag" content="BERT">
-    <meta property="article:tag" content="Model">
-
-  
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Huggingface 모델 저장하고 불러오기">
-  <meta name="twitter:description" content="HuggingFace 를 사용하면 모델 불러오기, 저장이 훨씬 쉽다. from transformers import AutoModel MODEL_NAME = &#39;klue/bert-base&#39; # 학습 전 모델 불러오기 model = AutoModel.from_pretrained(MODEL_NAME) # 학습 후 모델 저장하기 model.save_pretrained(OUTPUT_DIR) HuggingFace Hub 허깅페이스에도 깃허브처럼 ‘모델’과 ‘데이터셋’을 저장할 수 있는 저장공간이 존재한다!
-위에서는 klue/bert-base를 허브에서 불러왔으며, OUTPUT_DIR(local 환경)에 저장했다.
-먼저 local 환경(내 컴퓨터)에서 모델을 불러와보자.
-from transformers import AutoModel MODEL_PATH = &#39;/opt/ml/bert/checkpoint-100&#39; model = AutoModel.from_pretrained(MODEL_PATH) 사실 위와 똑같은 방법이다.
-이때 MODEL_PATH에는 config.json, pytorch_model.bin 등등의 파일이 있어야함!
-코드가 같은 이유는 허깅페이스 허브에 모델이 있는지 확인하고, 없으면 로컬 디렉토리에 모델이 있는지 체크한다.">
-
-  
-  
-
-  
-  <link rel="canonical" href="https://dnjdsxor21.github.io/posts/nlp/how-to-save-and-load-huggingface/" />
-  
-  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="https://dnjdsxor21.github.io/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
       >누누타운</a
     >
     <div
@@ -358,7 +305,7 @@ from transformers import AutoModel MODEL_PATH = &#39;/opt/ml/bert/checkpoint-100
       <a
         class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href="https://dnjdsxor21.github.io/index.xml"
+        href="http://localhost:1313/index.xml"
         target="_blank"
         rel="alternate"
       >
@@ -457,31 +404,31 @@ huggingface-cli login
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/huggingface"
+      href="http://localhost:1313/tags/huggingface"
       >Huggingface</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/huggingfacehub"
+      href="http://localhost:1313/tags/huggingfacehub"
       >HuggingfaceHub</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/transformers"
+      href="http://localhost:1313/tags/transformers"
       >Transformers</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/bert"
+      href="http://localhost:1313/tags/bert"
       >BERT</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/model"
+      href="http://localhost:1313/tags/model"
       >Model</a
     >
     
@@ -496,12 +443,12 @@ huggingface-cli login
     class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
   >
     
-    <a class="ltr:pr-3 rtl:pl-3" href="https://dnjdsxor21.github.io/posts/docker/what-is-docker/"
+    <a class="ltr:pr-3 rtl:pl-3" href="http://localhost:1313/posts/docker/what-is-docker/"
       ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>[Docker]What is Docker 도커 #1</span></a
     >
     
     
-    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://dnjdsxor21.github.io/posts/nlp/huggingface-bert-model/"
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:1313/posts/nlp/huggingface-bert-model/"
       ><span>Huggingface BERT 모델(BertModel, BertForSequenceClassification, BertForMaskedLM, BertForTokenClassification)</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     >
     
@@ -523,6 +470,86 @@ huggingface-cli login
 
 
     </main>
+    
+    
+<aside class="fixed top-20 right-4 w-48 max-h-[calc(100vh-5rem)] overflow-y-auto bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 text-sm hidden lg:block">
+    
+    <div class="mb-6">
+      <h3 class="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300 border-b pb-1">Recent Posts</h3>
+      <ul class="space-y-1">
+        
+          <li>
+            <a href="http://localhost:1313/posts/openapi/openapi-1/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              [공공데이터] 공공데이터포털 / OPENAPI #1
+            </a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/posts/docker/docker-container-guide/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              [Docker]docker container 도커 #3
+            </a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/posts/docker/docker-image-guide/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              [Docker]docker image 도커 #2
+            </a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/posts/docker/what-is-docker/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              [Docker]What is Docker 도커 #1
+            </a>
+          </li>
+        
+          <li>
+            <a href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              Huggingface 모델 저장하고 불러오기
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+    
+    
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300 border-b pb-1">Categories</h3>
+      <ul class="space-y-1">
+        
+          <li>
+            <a href="/categories/blog" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+              blog (1)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/docker" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+              docker (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/nlp" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+              nlp (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/paper" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+              paper (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0" class="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200">
+              공공데이터 (1)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+  
 
     <footer
   class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
@@ -530,7 +557,7 @@ huggingface-cli login
   <div class="mr-auto">
   
     &copy; 2024
-    <a class="link" href="https://dnjdsxor21.github.io/">누누타운</a>
+    <a class="link" href="http://localhost:1313/">누누타운</a>
   
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"

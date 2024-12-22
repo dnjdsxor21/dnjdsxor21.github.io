@@ -62,18 +62,31 @@
 </section>
 {{ end }}
 
-<!-- Main Nav -->
+<!-- Pagination -->
+{{ $paginator := .Paginator }}
 {{ if gt $paginator.TotalPages 1 }}
-<nav class="mt-14 flex">
+<nav class="mt-14 flex justify-center items-center space-x-2">
   {{ if $paginator.HasPrev }}
-  <a class="btn" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
-  {{ end }}<!---->
+    <a href="{{ $paginator.Prev.URL }}" class="btn !px-3 !py-2">←</a>
+  {{ end }}
+  
+  {{ $ellipsisShown := false }}
+  {{ range $paginator.Pagers }}
+    {{ if or (le .PageNumber 3) (ge .PageNumber (sub $paginator.TotalPages 2)) (and (ge .PageNumber (sub $paginator.PageNumber 2)) (le .PageNumber (add $paginator.PageNumber 2))) }}
+      <a href="{{ .URL }}" class="{{ if eq . $paginator }}btn bg-primary text-white{{ else }}btn{{ end }} !px-3 !py-2">
+        {{ .PageNumber }}
+      </a>
+      {{ $ellipsisShown = false }}
+    {{ else if not $ellipsisShown }}
+      <span class="px-2 py-1">...</span>
+      {{ $ellipsisShown = true }}
+    {{ end }}
+  {{ end }}
+  
   {{ if $paginator.HasNext }}
-  <a class="btn ml-auto" href="{{ $paginator.Next.URL }}"
-    >{{ i18n "next_page" }} →</a
-  >
+    <a href="{{ $paginator.Next.URL }}" class="btn !px-3 !py-2">→</a>
   {{ end }}
 </nav>
-{{ end }}<!---->
+{{ end }}
 
 {{ end }}
