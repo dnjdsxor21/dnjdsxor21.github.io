@@ -68,3 +68,17 @@ enableEmoji = true
 [services]
     [services.disqus]
         shortname = ''
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/.*\.css'
+    target = 'css'
+  [[build.cachebusters]]
+    source = 'layouts/.*\.html'
+    target = 'html'
+
+[server]
+  [[server.watcher]]
+    paths = ["assets", "layouts"]
