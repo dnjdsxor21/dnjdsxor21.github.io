@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RNN on 누누타운</title>
-    <link>http://localhost:1313/tags/rnn/</link>
+    <link>https://dnjdsxor21.github.io/tags/rnn/</link>
     <description>Recent content in RNN on 누누타운</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
     <lastBuildDate>Fri, 03 Mar 2023 15:52:10 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/rnn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dnjdsxor21.github.io/tags/rnn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[RNN, LSTM, GRU] RNN 기반 모델 구조</title>
-      <link>http://localhost:1313/posts/nlp/rnn-based-models/</link>
+      <link>https://dnjdsxor21.github.io/posts/nlp/rnn-based-models/</link>
       <pubDate>Fri, 03 Mar 2023 15:52:10 +0900</pubDate>
-      <guid>http://localhost:1313/posts/nlp/rnn-based-models/</guid>
+      <guid>https://dnjdsxor21.github.io/posts/nlp/rnn-based-models/</guid>
       <description>&lt;h1 id=&#34;rnn-recurrent-nueral-network&#34;&gt;RNN (Recurrent Nueral Network)&lt;/h1&gt;&#xA;&lt;p&gt;은닉층에서 나온 결과값이 다시 은닉층으로 돌아가 새로운 입력값과 연산을 하는 구조&lt;/p&gt;&#xA;&lt;p&gt;시계열 데이터, 텍스트 데이터같은 가변길이의 데이터에 적합한 모델&lt;/p&gt;&#xA;&lt;p&gt;학습을 통해 각 단어 다음에 나올 단어를 예측&lt;/p&gt;&#xA;&lt;h3 id=&#34;lstm&#34;&gt;LSTM&lt;/h3&gt;&#xA;&lt;p&gt;hiddne state는 벡터값이고,&#xA;$y = W*h$&lt;/p&gt;&#xA;&lt;p&gt;LSTM의 경우 과거 정보를 가져갈지 말지를 정하는 cell state가 존재.&#xA;여기서 c, h는 같은 크기의 벡터이다. 따라서 가중치행렬 사이즈는 두가지 종류임.&lt;/p&gt;&#xA;&lt;p&gt;$x \rightarrow h$&#xA;$h \rightarrow h$&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;각각의 연산에서 행렬의 곱셈부분이 inner product인지 element-wise product인지 확인할 필요가 있다.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

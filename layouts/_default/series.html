@@ -3,7 +3,7 @@
     <h1>{{ .Title }}</h1>
     <ul>
     {{ range .Site.Taxonomies.series }}
-    <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }} 포스트)</h2>
+    <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</h2>
     <ul>
         {{ range .Pages }}
         <li>

@@ -301,12 +301,14 @@
 
 <script>
   
-  if (window.location.pathname == '/') {
-      const clearCacheBtn = document.getElementById('clearCacheBtn');
-      if (clearCacheBtn) {
-          clearCacheBtn.addEventListener('click', function() {
-              
-              caches.keys().then(function(names) {
+  document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname === '/') { 
+    const clearCacheBtn = document.getElementById('clearCacheBtn');
+    if (clearCacheBtn) {
+      clearCacheBtn.addEventListener('click', function(e) {
+        console.log("Reload cache");
+        
+        caches.keys().then(function(names) {
                   for (let name of names) {
                       caches.delete(name);
                   }
@@ -314,11 +316,14 @@
                   
                   window.location.reload(true);
               });
-          });
-      console.log('hello');
-      }
+      });
+      
+    } else {
+      console.log('Reload Button not found');
+    }
   }
-  </script>
+});
+</script>
   
 
     <main

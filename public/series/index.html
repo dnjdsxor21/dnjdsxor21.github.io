@@ -50,7 +50,7 @@
   lang="ko-KR"
   dir="ltr"
 >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -78,14 +78,14 @@
   
   
   
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="https://dnjdsxor21.github.io/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/theme.png" />
 
   
   
@@ -97,9 +97,9 @@
 
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/github.svg" />
   
-  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/rss.svg" />
   
   
 
@@ -107,7 +107,7 @@
   
   <script
     defer
-    src="http://localhost:1313/highlight.min.js"
+    src="https://dnjdsxor21.github.io/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -158,11 +158,11 @@
   
   <link
     rel="icon"
-    href="http://localhost:1313/img/favicons/favicon.ico"
+    href="https://dnjdsxor21.github.io/img/favicons/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="http://localhost:1313/img/favicons/apple-touch-icon.png"
+    href="https://dnjdsxor21.github.io/img/favicons/apple-touch-icon.png"
   />
 
   
@@ -171,12 +171,35 @@
   
   
   
+  
+  
+  
+  <meta itemprop="name" content="Series">
+  
+  <meta property="og:url" content="https://dnjdsxor21.github.io/series/">
+  <meta property="og:site_name" content="누누타운">
+  <meta property="og:title" content="Series">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Series">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://dnjdsxor21.github.io/series/" />
+  
+  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="https://dnjdsxor21.github.io/"
       >누누타운</a
     >
     <div
@@ -289,7 +312,7 @@
       <a
         class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href="http://localhost:1313/index.xml"
+        href="https://dnjdsxor21.github.io/index.xml"
         target="_blank"
         rel="alternate"
       >
@@ -303,12 +326,14 @@
 
 <script>
   
-  if (window.location.pathname == '/') {
-      const clearCacheBtn = document.getElementById('clearCacheBtn');
-      if (clearCacheBtn) {
-          clearCacheBtn.addEventListener('click', function() {
-              
-              caches.keys().then(function(names) {
+  document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname === '/') { 
+    const clearCacheBtn = document.getElementById('clearCacheBtn');
+    if (clearCacheBtn) {
+      clearCacheBtn.addEventListener('click', function(e) {
+        console.log("Reload cache");
+        
+        caches.keys().then(function(names) {
                   for (let name of names) {
                       caches.delete(name);
                   }
@@ -316,11 +341,14 @@
                   
                   window.location.reload(true);
               });
-          });
-      console.log('hello');
-      }
+      });
+      
+    } else {
+      console.log('Reload Button not found');
+    }
   }
-  </script>
+});
+</script>
   
 
     <main
@@ -331,42 +359,22 @@
     <h1>Series</h1>
     <ul>
     
-    <h2><a href="http://localhost:1313/series/transformer/">Transformer</a> (7 포스트)</h2>
+    <h2><a href="https://dnjdsxor21.github.io/series/transformer/">Transformer</a> (3)</h2>
     <ul>
         
         <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-6/">[논문리뷰] Attention is all you need #6</a>
-            <span style="float: right; font-size: 0.8em;">2023-04-08</span>
-        </li>
-    
-        <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-5/">[논문리뷰] Attention is all you need #5</a>
-            <span style="float: right; font-size: 0.8em;">2023-04-06</span>
-        </li>
-    
-        <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-4/">[논문리뷰] Attention is all you need #4</a>
-            <span style="float: right; font-size: 0.8em;">2023-04-05</span>
-        </li>
-    
-        <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-3/">[논문리뷰] Attention is all you need #3</a>
+            <a href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-3/">[논문리뷰] Attention is all you need #3</a>
             <span style="float: right; font-size: 0.8em;">2023-04-04</span>
         </li>
     
         <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-2/">[논문리뷰] Attention is all you need #2</a>
+            <a href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-2/">[논문리뷰] Attention is all you need #2</a>
             <span style="float: right; font-size: 0.8em;">2023-04-03</span>
         </li>
     
         <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-1/">[논문리뷰] Attention is all you need #1</a>
+            <a href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-1/">[논문리뷰] Attention is all you need #1</a>
             <span style="float: right; font-size: 0.8em;">2023-04-02</span>
-        </li>
-    
-        <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-0/">[논문리뷰] Attention is all you need #0</a>
-            <span style="float: right; font-size: 0.8em;">2023-04-01</span>
         </li>
     
     </ul>
@@ -384,31 +392,31 @@
       <ul class="space-y-1">
         
           <li>
-            <a href="http://localhost:1313/posts/openapi/openapi-1/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/openapi/openapi-1/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [공공데이터] 공공데이터포털 / OPENAPI #1
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/docker-container-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/docker/docker-container-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker container 도커 #3
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/docker-image-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/docker/docker-image-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker image 도커 #2
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/what-is-docker/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/docker/what-is-docker/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]What is Docker 도커 #1
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/nlp/how-to-save-and-load-huggingface/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               Huggingface 모델 저장하고 불러오기
             </a>
           </li>
@@ -441,7 +449,7 @@
         
           <li>
             <a href="/categories/paper" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
-              paper (7)
+              paper (3)
             </a>
           </li>
         
@@ -462,7 +470,7 @@
   <div class="mr-auto">
   
     &copy; 2024
-    <a class="link" href="http://localhost:1313/">누누타운</a>
+    <a class="link" href="https://dnjdsxor21.github.io/">누누타운</a>
   
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"

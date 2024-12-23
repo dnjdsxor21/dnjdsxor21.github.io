@@ -44,11 +44,11 @@ enableRobotsTXT = true
     series = "series"
 
 [menu]
-    [[menu.main]] # top nav bar
-        identifier = "about" # content/*.md 
-        name = "About" # nav bar name
-        url = "/about/"
-        weight = 1
+    [[menu.main]]                             # menu on the top
+        identifier = "about"                  # content/about.md 
+        name = "About"                        # Name displayed on the menu
+        url = "/about/"                       # url
+        weight = 1                            # order
     [[menu.main]]
         identifier = "categories"
         name = "categories"
@@ -65,20 +65,11 @@ enableRobotsTXT = true
         url = "/archives/"
         weight = 4
 
-[services]
-    [services.disqus]
-        shortname = ''
-
-[build]
-  [build.buildStats]
-    enable = true
-  [[build.cachebusters]]
-    source = 'assets/.*\.css'
-    target = 'css'
-  [[build.cachebusters]]
-    source = 'layouts/(_default|partials|shortcodes)/.*\.html'
-    target = 'html'
-
-[server]
-  [[server.watcher]]
-    paths = ["assets", "layouts"]
+[params.giscus]
+  repo = 'dnjdsxor21/dnjdsxor21.github.io'                 # see https://giscus.app for more details
+  repoId = 'R_kgDONgrX0Q'
+  category = 'General'
+  categoryId = 'DIC_kwDONgrX0c4CldTm'
+  mapping = 'pathname'
+  theme = 'preferred_color_scheme'
+  lang = 'ko'

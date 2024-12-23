@@ -311,12 +311,14 @@ Linear연산으로 차원 변경하는 과정
 
 <script>
   
-  if (window.location.pathname == '/') {
-      const clearCacheBtn = document.getElementById('clearCacheBtn');
-      if (clearCacheBtn) {
-          clearCacheBtn.addEventListener('click', function() {
-              
-              caches.keys().then(function(names) {
+  document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname === '/') { 
+    const clearCacheBtn = document.getElementById('clearCacheBtn');
+    if (clearCacheBtn) {
+      clearCacheBtn.addEventListener('click', function(e) {
+        console.log("Reload cache");
+        
+        caches.keys().then(function(names) {
                   for (let name of names) {
                       caches.delete(name);
                   }
@@ -324,11 +326,14 @@ Linear연산으로 차원 변경하는 과정
                   
                   window.location.reload(true);
               });
-          });
-      console.log('hello');
-      }
+      });
+      
+    } else {
+      console.log('Reload Button not found');
+    }
   }
-  </script>
+});
+</script>
   
 
     <main
@@ -486,6 +491,25 @@ Normalization : 기준을 minibatch로 하여 정규화를 수행하며, 학습�
   
 
 
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="dnjdsxor21/dnjdsxor21.github.io"
+    data-repo-id="R_kgDONgrX0Q"
+    data-category="General"
+    data-category-id="DIC_kwDONgrX0c4CldTm"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
   
 </article>
 </main>
