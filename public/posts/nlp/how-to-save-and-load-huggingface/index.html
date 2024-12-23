@@ -370,6 +370,26 @@ from transformers import AutoModel MODEL_PATH = &#39;/opt/ml/bert/checkpoint-100
   </div>
 </header>
 
+<script>
+  
+  if (window.location.pathname === '/') {
+      const clearCacheBtn = document.getElementById('clearCacheBtn');
+      if (clearCacheBtn) {
+          clearCacheBtn.addEventListener('click', function() {
+              
+              caches.keys().then(function(names) {
+                  for (let name of names) {
+                      caches.delete(name);
+                  }
+              }).then(function() {
+                  
+                  window.location.reload(true);
+              });
+          });
+      }
+  }
+  </script>
+  
 
     <main
       class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"

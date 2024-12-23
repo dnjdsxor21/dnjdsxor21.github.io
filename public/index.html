@@ -331,6 +331,26 @@
   </div>
 </header>
 
+<script>
+  
+  if (window.location.pathname === '/') {
+      const clearCacheBtn = document.getElementById('clearCacheBtn');
+      if (clearCacheBtn) {
+          clearCacheBtn.addEventListener('click', function() {
+              
+              caches.keys().then(function(names) {
+                  for (let name of names) {
+                      caches.delete(name);
+                  }
+              }).then(function() {
+                  
+                  window.location.reload(true);
+              });
+          });
+      }
+  }
+  </script>
+  
 
     <main
       class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
@@ -354,7 +374,7 @@
 
 
 
-<div class="-mt-2 mb-8 flex items-center border-b-2 pb-6">
+<div class="-mt-2 mb-8 flex items-center border-b-2 pb-6 relative">
   
   <div
     class="ltr:-ml-1 rtl:-mr-1 ltr:mr-5 rtl:ml-5 h-24 w-24 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 dark:!bg-white/90"
@@ -375,6 +395,14 @@
       하이요
     </div>
   </div>
+
+  <div class="absolute right-2">
+    <button id="clearCacheBtn" class="p-2 text-gray-600 hover:text-gray-800 transition duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+    </button>
+</div>
   
 </div>
 
