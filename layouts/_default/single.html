@@ -7,9 +7,9 @@
 <main class="relative">
 <!-- TOC -->
 {{ with .Scratch.Get "toc" }}
-<aside id="toc" class="toc fixed left-4 top-14 hidden xl:block w-48 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
-  <h4 class="text-s font-medium mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider">Contents</h4>
-  {{ . | replaceRE "<nav>" "<nav class=''>" | replaceRE "<ul>" "<ul class='space-y-1 list-none pl-0'>" | replaceRE "<li>" "<li class='text-gray-600 dark:text-gray-400'>" | replaceRE "<a " "<a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'" | safeHTML }}
+<aside id="toc" class="toc fixed left-4 top-14 hidden w-40 xl:w-56 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-md backdrop-blur-sm hidden lg:block leading-tight">
+  <h4 class="text-s font-medium pb-2 mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider border-b border-gray-400 dark:border-gray-500">Contents</h4>
+  {{ . | replaceRE "<nav>" "<nav class=''>" | replaceRE "<ul>" "<ul class='space-y-1 list-none pl-0'>" | replaceRE "<li>" "<li class='text-gray-600 dark:text-gray-400 my-[1rem]'>" | replaceRE "<a " "<a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'" | safeHTML }}
 </aside>
 {{ end }}
 <script>

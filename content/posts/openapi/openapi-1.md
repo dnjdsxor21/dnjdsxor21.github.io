@@ -32,7 +32,7 @@ thumbnail = "img/posts/openapi-1-1.png"
 
 
 
-## 공공데이터포털 들어가기(<https://data.go.kr>)<br>
+## 공공데이터포털
 
 <img src="/img/posts/openapi-1-31.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>
 <img src="/img/posts/openapi-1-3.png" alt="data.go.kr" style="max-width: 100%; height: auto; display: block;"> <br>

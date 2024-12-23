@@ -9,6 +9,13 @@
     <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://dnjdsxor21.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>[Blog] Markdown Syntax 마크다운 가이드</title>
+      <link>https://dnjdsxor21.github.io/posts/blog/markdown-guide/</link>
+      <pubDate>Wed, 01 Mar 2023 15:52:10 +0900</pubDate>
+      <guid>https://dnjdsxor21.github.io/posts/blog/markdown-guide/</guid>
+      <description>&lt;h2 id=&#34;what-is-markdown&#34;&gt;What is Markdown&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Markdown은 문서를 작성하는 하나의 언어입니다.&lt;br&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;github&lt;/code&gt;,&lt;code&gt;notion&lt;/code&gt;,&lt;code&gt;tistory&lt;/code&gt;, &lt;code&gt;velog&lt;/code&gt; 등등 다양한 서비스에서 지원하기 때문에 편리하게 작성이 가능합니다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;caution&#34;&gt;Caution&lt;/h3&gt;&#xA;&lt;p&gt;&amp;#x1f435; Hugo 블로그에서 작동하지 않는 문법들이 있다. &lt;br&gt;&#xA;&lt;code&gt;이모지&lt;/code&gt;와 &lt;code&gt;수식작성&lt;/code&gt;은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;code&gt;jekyll blog&lt;/code&gt; uses &lt;code&gt;kramdown&lt;/code&gt; as a default markdown converter from 2.0+.&#xA;And It doesn&amp;rsquo;t support the table cell &amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>[공공데이터] 공공데이터포털 / OPENAPI #1</title>
       <link>https://dnjdsxor21.github.io/posts/openapi/openapi-1/</link>
       <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
@@ -77,13 +84,6 @@
       <pubDate>Fri, 03 Mar 2023 15:52:10 +0900</pubDate>
       <guid>https://dnjdsxor21.github.io/posts/nlp/rnn-based-models/</guid>
       <description>&lt;h1 id=&#34;rnn-recurrent-nueral-network&#34;&gt;RNN (Recurrent Nueral Network)&lt;/h1&gt;&#xA;&lt;p&gt;은닉층에서 나온 결과값이 다시 은닉층으로 돌아가 새로운 입력값과 연산을 하는 구조&lt;/p&gt;&#xA;&lt;p&gt;시계열 데이터, 텍스트 데이터같은 가변길이의 데이터에 적합한 모델&lt;/p&gt;&#xA;&lt;p&gt;학습을 통해 각 단어 다음에 나올 단어를 예측&lt;/p&gt;&#xA;&lt;h3 id=&#34;lstm&#34;&gt;LSTM&lt;/h3&gt;&#xA;&lt;p&gt;hiddne state는 벡터값이고,&#xA;$y = W*h$&lt;/p&gt;&#xA;&lt;p&gt;LSTM의 경우 과거 정보를 가져갈지 말지를 정하는 cell state가 존재.&#xA;여기서 c, h는 같은 크기의 벡터이다. 따라서 가중치행렬 사이즈는 두가지 종류임.&lt;/p&gt;&#xA;&lt;p&gt;$x \rightarrow h$&#xA;$h \rightarrow h$&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;각각의 연산에서 행렬의 곱셈부분이 inner product인지 element-wise product인지 확인할 필요가 있다.&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>[Blog] Markdown Syntax 마크다운 가이드</title>
-      <link>https://dnjdsxor21.github.io/posts/blog/markdown-guide/</link>
-      <pubDate>Wed, 01 Mar 2023 15:52:10 +0900</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/blog/markdown-guide/</guid>
-      <description>&lt;h2 id=&#34;what-is-markdown&#34;&gt;What is Markdown&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Markdown은 문서를 작성하는 하나의 언어입니다.&lt;br&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;github&lt;/code&gt;,&lt;code&gt;notion&lt;/code&gt;,&lt;code&gt;tistory&lt;/code&gt;, &lt;code&gt;velog&lt;/code&gt; 등등 다양한 서비스에서 지원하기 때문에 편리하게 작성이 가능합니다.&lt;/p&gt;&#xA;&lt;h3 id=&#34;caution&#34;&gt;Caution&lt;/h3&gt;&#xA;&lt;p&gt;&amp;#x1f435; Hugo 블로그에서 작동하지 않는 문법들이 있다. &lt;br&gt;&#xA;&lt;code&gt;이모지&lt;/code&gt;와 &lt;code&gt;수식작성&lt;/code&gt;은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;code&gt;jekyll blog&lt;/code&gt; uses &lt;code&gt;kramdown&lt;/code&gt; as a default markdown converter from 2.0+.&#xA;And It doesn&amp;rsquo;t support the table cell &amp;hellip;&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
