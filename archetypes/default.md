@@ -6,5 +6,5 @@ subtitle = ''
 categories = [] # ['my-category']
 tags = []       # ['my-tag']
 series = []     # ['my-series']
-thumbnail = ''  # /img/posts/example.png
+thumbnail = ''  # /img/posts/default.png
 +++
