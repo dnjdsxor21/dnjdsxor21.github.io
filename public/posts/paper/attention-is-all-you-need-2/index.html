@@ -50,7 +50,7 @@
   lang="ko-KR"
   dir="ltr"
 >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -97,14 +97,14 @@ dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 �
   
   
   
-  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="https://dnjdsxor21.github.io/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/theme.png" />
 
   
   
@@ -116,9 +116,9 @@ dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 �
 
   
   
-  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/github.svg" />
   
-  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/rss.svg" />
   
   
 
@@ -126,7 +126,7 @@ dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 �
   
   <script
     defer
-    src="http://localhost:1313/highlight.min.js"
+    src="https://dnjdsxor21.github.io/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -177,11 +177,11 @@ dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 �
   
   <link
     rel="icon"
-    href="http://localhost:1313/img/favicons/favicon.ico"
+    href="https://dnjdsxor21.github.io/img/favicons/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="http://localhost:1313/img/favicons/apple-touch-icon.png"
+    href="https://dnjdsxor21.github.io/img/favicons/apple-touch-icon.png"
   />
 
   
@@ -190,12 +190,97 @@ dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 �
   
   
   
+  
+  
+  
+  <meta itemprop="name" content="[논문리뷰] Attention is all you need #2">
+  <meta itemprop="description" content="Attention, Self-attention 일반적으로 어텐션이란, 입력값에서 중요한 단어들에 더 집중할 수 있도록 한다.
+문장을 병렬적으로 처리하기 때문에 속도가 비교적 빠르다.
+RNN구조에서는 순차적으로 값을 확인하기 때문에 gradient vanishing/exploding문제가 발생하게 된다.
+Self-attention 같은 문장 내에서 단어들 간의 관계를 나타낸다. attention의 입력값은 Q,K,V
+Q,K,V 어텐션의 목표는 value의 weighted sum을 구하는것이고, 각 가중치는 Q,K가 얼마나 유사한지에 따라 결정된다.
+Query - 소스벡터, 유사도를 계산하는 값
+Key - 타겟벡터, 유사도를 계산하는 값
+Value - key에 해당하는 정보로 값을 계산, 최종 출력계산에 사용
+각각의 값은 인풋이 Linear연산을 거쳐서 구한다. - 벡터의 차원을 줄여준다.
+Q.size = n x d_K
+K.size = m x d_K
+V. size = m x d_V
+Z.size = n x d_V
+왜 실습에서는 3차원이지? -&gt; 각 단어의 갯수만큼 연산하므로 n_Q, n_K, n_V가 존재
+Q, K 의 dimension은 동일해야함
+n_batch가 의미하는 것????? - data의 개수, ‘문장’의 개수
+dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 한번 더 수행하여 z를 얻는다.">
+  <meta itemprop="datePublished" content="2023-04-03T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-04-03T00:00:00+00:00">
+  <meta itemprop="wordCount" content="287">
+  <meta itemprop="keywords" content="Transformers,Attention">
+  
+  <meta property="og:url" content="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-2/">
+  <meta property="og:site_name" content="누누타운">
+  <meta property="og:title" content="[논문리뷰] Attention is all you need #2">
+  <meta property="og:description" content="Attention, Self-attention 일반적으로 어텐션이란, 입력값에서 중요한 단어들에 더 집중할 수 있도록 한다.
+문장을 병렬적으로 처리하기 때문에 속도가 비교적 빠르다.
+RNN구조에서는 순차적으로 값을 확인하기 때문에 gradient vanishing/exploding문제가 발생하게 된다.
+Self-attention 같은 문장 내에서 단어들 간의 관계를 나타낸다. attention의 입력값은 Q,K,V
+Q,K,V 어텐션의 목표는 value의 weighted sum을 구하는것이고, 각 가중치는 Q,K가 얼마나 유사한지에 따라 결정된다.
+Query - 소스벡터, 유사도를 계산하는 값
+Key - 타겟벡터, 유사도를 계산하는 값
+Value - key에 해당하는 정보로 값을 계산, 최종 출력계산에 사용
+각각의 값은 인풋이 Linear연산을 거쳐서 구한다. - 벡터의 차원을 줄여준다.
+Q.size = n x d_K
+K.size = m x d_K
+V. size = m x d_V
+Z.size = n x d_V
+왜 실습에서는 3차원이지? -&gt; 각 단어의 갯수만큼 연산하므로 n_Q, n_K, n_V가 존재
+Q, K 의 dimension은 동일해야함
+n_batch가 의미하는 것????? - data의 개수, ‘문장’의 개수
+dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 한번 더 수행하여 z를 얻는다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-04-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-04-03T00:00:00+00:00">
+    <meta property="article:tag" content="Transformers">
+    <meta property="article:tag" content="Attention">
+      <meta property="og:see_also" content="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-3/">
+      <meta property="og:see_also" content="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-1/">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="[논문리뷰] Attention is all you need #2">
+  <meta name="twitter:description" content="Attention, Self-attention 일반적으로 어텐션이란, 입력값에서 중요한 단어들에 더 집중할 수 있도록 한다.
+문장을 병렬적으로 처리하기 때문에 속도가 비교적 빠르다.
+RNN구조에서는 순차적으로 값을 확인하기 때문에 gradient vanishing/exploding문제가 발생하게 된다.
+Self-attention 같은 문장 내에서 단어들 간의 관계를 나타낸다. attention의 입력값은 Q,K,V
+Q,K,V 어텐션의 목표는 value의 weighted sum을 구하는것이고, 각 가중치는 Q,K가 얼마나 유사한지에 따라 결정된다.
+Query - 소스벡터, 유사도를 계산하는 값
+Key - 타겟벡터, 유사도를 계산하는 값
+Value - key에 해당하는 정보로 값을 계산, 최종 출력계산에 사용
+각각의 값은 인풋이 Linear연산을 거쳐서 구한다. - 벡터의 차원을 줄여준다.
+Q.size = n x d_K
+K.size = m x d_K
+V. size = m x d_V
+Z.size = n x d_V
+왜 실습에서는 3차원이지? -&gt; 각 단어의 갯수만큼 연산하므로 n_Q, n_K, n_V가 존재
+Q, K 의 dimension은 동일해야함
+n_batch가 의미하는 것????? - data의 개수, ‘문장’의 개수
+dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 한번 더 수행하여 z를 얻는다.">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-2/" />
+  
+  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="https://dnjdsxor21.github.io/"
       >누누타운</a
     >
     <div
@@ -308,7 +393,7 @@ dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 �
       <a
         class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href="http://localhost:1313/index.xml"
+        href="https://dnjdsxor21.github.io/index.xml"
         target="_blank"
         rel="alternate"
       >
@@ -419,13 +504,13 @@ Q,K이 각각 i.i.d N(0,1)라고 가정하면, 위와같은 분포를 보인다.
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="http://localhost:1313/tags/transformers"
+      href="https://dnjdsxor21.github.io/tags/transformers"
       >Transformers</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="http://localhost:1313/tags/attention"
+      href="https://dnjdsxor21.github.io/tags/attention"
       >Attention</a
     >
     
@@ -440,44 +525,20 @@ Q,K이 각각 i.i.d N(0,1)라고 가정하면, 위와같은 분포를 보인다.
       <ul class="space-y-2">
         
           <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-6/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
-              [논문리뷰] Attention is all you need #6
-            </a>
-          </li>
-        
-          <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-5/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
-              [논문리뷰] Attention is all you need #5
-            </a>
-          </li>
-        
-          <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-4/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
-              [논문리뷰] Attention is all you need #4
-            </a>
-          </li>
-        
-          <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-3/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-3/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
               [논문리뷰] Attention is all you need #3
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-2/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-2/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
               [논문리뷰] Attention is all you need #2
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-1/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-1/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
               [논문리뷰] Attention is all you need #1
-            </a>
-          </li>
-        
-          <li>
-            <a href="http://localhost:1313/posts/paper/attention-is-all-you-need-0/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
-              [논문리뷰] Attention is all you need #0
             </a>
           </li>
         
@@ -493,12 +554,12 @@ Q,K이 각각 i.i.d N(0,1)라고 가정하면, 위와같은 분포를 보인다.
     class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
   >
     
-    <a class="ltr:pr-3 rtl:pl-3" href="http://localhost:1313/posts/paper/attention-is-all-you-need-3/"
+    <a class="ltr:pr-3 rtl:pl-3" href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-3/"
       ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>[논문리뷰] Attention is all you need #3</span></a
     >
     
     
-    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:1313/posts/paper/attention-is-all-you-need-1/"
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-1/"
       ><span>[논문리뷰] Attention is all you need #1</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     >
     
@@ -531,31 +592,31 @@ Q,K이 각각 i.i.d N(0,1)라고 가정하면, 위와같은 분포를 보인다.
       <ul class="space-y-1">
         
           <li>
-            <a href="http://localhost:1313/posts/openapi/openapi-1/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/openapi/openapi-1/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [공공데이터] 공공데이터포털 / OPENAPI #1
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/docker-container-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/docker/docker-container-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker container 도커 #3
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/docker-image-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/docker/docker-image-guide/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker image 도커 #2
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/docker/what-is-docker/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/docker/what-is-docker/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]What is Docker 도커 #1
             </a>
           </li>
         
           <li>
-            <a href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="https://dnjdsxor21.github.io/posts/nlp/how-to-save-and-load-huggingface/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               Huggingface 모델 저장하고 불러오기
             </a>
           </li>
@@ -588,7 +649,7 @@ Q,K이 각각 i.i.d N(0,1)라고 가정하면, 위와같은 분포를 보인다.
         
           <li>
             <a href="/categories/paper" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
-              paper (7)
+              paper (3)
             </a>
           </li>
         
@@ -609,7 +670,7 @@ Q,K이 각각 i.i.d N(0,1)라고 가정하면, 위와같은 분포를 보인다.
   <div class="mr-auto">
   
     &copy; 2024
-    <a class="link" href="http://localhost:1313/">누누타운</a>
+    <a class="link" href="https://dnjdsxor21.github.io/">누누타운</a>
   
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
