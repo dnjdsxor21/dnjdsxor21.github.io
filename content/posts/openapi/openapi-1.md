@@ -5,6 +5,7 @@ title =  "[공공데이터] 공공데이터포털 / OPENAPI #1"
 description = "공공데이터 소개"
 categories = ["공공데이터"]
 tags = ["OPENAPI"]
+thumbnail = "img/posts/openapi-1-1.png"
 +++
 
 

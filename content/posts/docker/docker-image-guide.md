@@ -2,8 +2,10 @@
 date = '2023-07-16T15:52:10+09:00'
 draft = false
 title = "[Docker]docker image 도커 #2"
+subtitle = "helloasdf"
 categories = ["Docker"]
 tags = ["Docker"]
+thumbnail = "img/posts/docker.png"
 +++
 
 

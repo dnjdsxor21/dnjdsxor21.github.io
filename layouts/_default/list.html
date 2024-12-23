@@ -5,7 +5,7 @@
 <h1 class="mb-14">#{{ .Title }}</h1>
 {{ end }}
 
-<!-- $pages -->
+<!-- $pages --> 
 {{ $pages := union .RegularPages .Sections }}<!---->
 {{ if .IsHome }}<!---->
 {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}<!---->
@@ -56,18 +56,28 @@
 
 {{ end }}
 
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  {{ if gt .Weight 0 }}
-  <span class="mb-1 inline-block text-xs tracking-wider text-orange-500"
-    >Featured</span
-  >
-  {{ end }}
-  <h2 class="!my-0">{{ .Title }}</h2>
-  <time class="text-xs antialiased opacity-60"
-    >{{ .Date | time.Format ":date_medium" }}</time
-  >
-  <a class="absolute inset-0 text-[0]" href="{{ .Permalink }}">{{ .Title }}</a>
+<section class="relative my-6 first-of-type:mt-0 last-of-type:mb-0">
+  <div class="flex flex-row justify-between items-center">
+    <div class="flex-grow pr-4">
+      {{ if gt .Weight 0 }}
+      <span class="mb-1 inline-block text-xs tracking-wider text-orange-500">Featured</span>
+      {{ end }}
+      <h2 class="!my-0 text-xl">{{ .Title }}</h2>
+      {{ if .Params.SubTitle }}
+      <span class="block text-sm px-2 opacity-80">{{ .Params.SubTitle }}</span>
+      {{ end }}
+      <time class="text-xs antialiased opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
+    </div>
+    {{ if .Params.thumbnail }}
+    <div class="flex-shrink-0 w-24 h-24">
+      <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="w-full h-full object-cover rounded-md not-prose">
+    </div>
+    {{ end }}
+    <a class="absolute inset-0 text-[0]" href="{{ .Permalink }}">{{ .Title }}</a>
+  </div>
 </section>
+
+
 {{ end }}
 
 <!-- Pagination -->

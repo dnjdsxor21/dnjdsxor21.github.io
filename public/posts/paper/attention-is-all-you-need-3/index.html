@@ -391,7 +391,7 @@ multihead를 하는 이유 - 각각의 attention는 토큰 간의 관계(유사�
 <main class="relative">
 
 
-<aside class="toc fixed left-4 top-14 hidden xl:block w-48 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+<aside id="toc" class="toc fixed left-4 top-14 hidden xl:block w-48 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
   <h4 class="text-s font-medium mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider">Contents</h4>
   <nav id="TableOfContents">
   <ul class='space-y-1 list-none pl-0'>
@@ -402,6 +402,25 @@ multihead를 하는 이유 - 각각의 attention는 토큰 간의 관계(유사�
 </nav>
 </aside>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var toc = document.getElementById('toc');
+    if (toc) {
+      toc.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          e.preventDefault();
+          var targetId = e.target.getAttribute('href').substring(1);
+          var targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    }
+  });
+  </script>
 
 
 

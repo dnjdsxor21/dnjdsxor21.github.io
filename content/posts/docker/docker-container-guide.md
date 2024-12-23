@@ -4,6 +4,7 @@ draft = false
 title =  "[Docker]docker container 도커 #3"
 categories = ["Docker"]
 tags = ["Docker"]
+thumbnail = "img/posts/docker.png"
 +++
 
 

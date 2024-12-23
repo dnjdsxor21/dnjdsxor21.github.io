@@ -348,7 +348,7 @@ Linear연산으로 차원 변경하는 과정
 <main class="relative">
 
 
-<aside class="toc fixed left-4 top-14 hidden xl:block w-48 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
+<aside id="toc" class="toc fixed left-4 top-14 hidden xl:block w-48 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-sm backdrop-blur-sm">
   <h4 class="text-s font-medium mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider">Contents</h4>
   <nav id="TableOfContents">
   <ul class='space-y-1 list-none pl-0'>
@@ -358,6 +358,25 @@ Linear연산으로 차원 변경하는 과정
 </nav>
 </aside>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var toc = document.getElementById('toc');
+    if (toc) {
+      toc.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          e.preventDefault();
+          var targetId = e.target.getAttribute('href').substring(1);
+          var targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    }
+  });
+  </script>
 
 
 
@@ -396,13 +415,13 @@ Normalization : 기준을 minibatch로 하여 정규화를 수행하며, 학습�
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
       href="http://localhost:1313/tags/transformers"
-      >Transformers</a
+      >#Transformers</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
       href="http://localhost:1313/tags/attention"
-      >Attention</a
+      >#Attention</a
     >
     
   </footer>
@@ -526,6 +545,12 @@ Normalization : 기준을 minibatch로 하여 정규화를 수행하며, 학습�
       <ul class="space-y-1">
         
           <li>
+            <a href="http://localhost:1313/posts/a/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              A Test
+            </a>
+          </li>
+        
+          <li>
             <a href="http://localhost:1313/posts/openapi/openapi-1/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [공공데이터] 공공데이터포털 / OPENAPI #1
             </a>
@@ -546,12 +571,6 @@ Normalization : 기준을 minibatch로 하여 정규화를 수행하며, 학습�
           <li>
             <a href="http://localhost:1313/posts/docker/what-is-docker/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]What is Docker 도커 #1
-            </a>
-          </li>
-        
-          <li>
-            <a href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
-              Huggingface 모델 저장하고 불러오기
             </a>
           </li>
         
