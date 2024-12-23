@@ -99,12 +99,14 @@
 
 <script>
   // 현재 페이지가 홈페이지인지 확인
-  if (window.location.pathname === '/') {
-      const clearCacheBtn = document.getElementById('clearCacheBtn');
-      if (clearCacheBtn) {
-          clearCacheBtn.addEventListener('click', function() {
-              // 캐시 스토리지만 삭제
-              caches.keys().then(function(names) {
+  document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname === '/') { 
+    const clearCacheBtn = document.getElementById('clearCacheBtn');
+    if (clearCacheBtn) {
+      clearCacheBtn.addEventListener('click', function(e) {
+        console.log("Reload cache");
+        // 캐시 스토리지만 삭제
+        caches.keys().then(function(names) {
                   for (let name of names) {
                       caches.delete(name);
                   }
@@ -112,8 +114,12 @@
                   // 캐시 삭제 후 페이지 새로고침
                   window.location.reload(true);
               });
-          });
-      }
+      });
+      
+    } else {
+      console.log('Reload Button not found');
+    }
   }
-  </script>
+});
+</script>
   

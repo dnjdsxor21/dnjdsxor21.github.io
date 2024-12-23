@@ -2,32 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paper on 누누타운</title>
-    <link>https://dnjdsxor21.github.io/categories/paper/</link>
+    <link>http://localhost:1313/categories/paper/</link>
     <description>Recent content in Paper on 누누타운</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
-    <lastBuildDate>Tue, 04 Apr 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dnjdsxor21.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/paper/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[논문리뷰] Attention is all you need #6</title>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-6/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-6/</guid>
+      <description>&lt;h2 id=&#34;attention&#34;&gt;Attention&lt;/h2&gt;&#xA;&lt;h2 id=&#34;multihead-attention&#34;&gt;Multihead attention&lt;/h2&gt;&#xA;&lt;h2 id=&#34;cross-attention&#34;&gt;Cross attention&lt;/h2&gt;&#xA;&lt;h2 id=&#34;outputs&#34;&gt;Outputs&lt;/h2&gt;&#xA;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ndb796/Deep-Learning-Paper-Review-and-Practice&#34;&gt;https://github.com/ndb796/Deep-Learning-Paper-Review-and-Practice&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>[논문리뷰] Attention is all you need #5</title>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-5/</link>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-5/</guid>
+      <description>&lt;h2 id=&#34;masked-multihead-self-attention&#34;&gt;Masked Multihead Self-attention&lt;/h2&gt;&#xA;&lt;img width=&#34;793&#34; alt=&#34;스크린샷 2023-03-29 10 39 24&#34; src=&#34;https://user-images.githubusercontent.com/75467530/230662201-337365b6-f416-43ba-9216-28d1ddd5fd15.png&#34;&gt;&#xA;&lt;h2 id=&#34;cross-attention&#34;&gt;Cross attention&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Encoder-decoder attention&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/75467530/230662934-714e2ebc-ce15-4d72-a70b-7de616f5a9ca.png&#34; alt=&#34;transformer_resideual_layer_norm_3&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://tigris-data-science.tistory.com/entry/%EC%B0%A8%EA%B7%BC%EC%B0%A8%EA%B7%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8A%94-Transformer4-Masked-Multi-Head-Attention%EA%B3%BC-Decoder&#34;&gt;https://tigris-data-science.tistory.com/entry/%EC%B0%A8%EA%B7%BC%EC%B0%A8%EA%B7%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EB%8A%94-Transformer4-Masked-Multi-Head-Attention%EA%B3%BC-Decoder&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>[논문리뷰] Attention is all you need #4</title>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-4/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-4/</guid>
+      <description>&lt;h2 id=&#34;residual-connection&#34;&gt;Residual Connection&lt;/h2&gt;&#xA;&lt;p&gt;원래 인풋 x + 어텐션 결과 z의 합을 normalization하는 과정&lt;br&gt;&#xA;왜??&lt;br&gt;&#xA;딥러닝 모델이 깊어지면 전달하는 gradient가 작아지게 된다. residual connection은 gradient가 멀리까지 전달되게 한다. 같은 블록이 반복될 때 잔차연결은 효과적이다.&lt;br&gt;&#xA;Normalization : 기준을 minibatch로 하여 정규화를 수행하며, 학습이 안정되고 빨라지도록 하기 위해 r, b는 업데이느하는 파라미터이다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;feed-forward&#34;&gt;Feed-Forward&lt;/h2&gt;&#xA;&lt;p&gt;Linear연산으로 차원 변경하는 과정&lt;br&gt;&#xA;일반적인 인공신경망 형태로, 층을 깊게 쌓아 학습효과를 높이기 위한 장치&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/75467530/230662237-4f4561ab-1434-4a8f-b69f-7a6296d1ed3b.png&#34; alt=&#34;ffn&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>[논문리뷰] Attention is all you need #3</title>
-      <link>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-3/</link>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-3/</link>
       <pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-3/</guid>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-3/</guid>
       <description>&lt;h2 id=&#34;multihead-attention&#34;&gt;Multihead attention&lt;/h2&gt;&#xA;&lt;p&gt;multihead를 하는 이유 - 각각의 attention는 토큰 간의 관계(유사도)를 통해 어텐션을 구하고 종속성을 계산하며, 각각의 head는 다른 유형의 종속성을 가지게 된다.&lt;/p&gt;&#xA;&lt;p&gt;(문장타입에집중, 관계에 집중, 명사에집중, 강조에 집중)&lt;/p&gt;&#xA;&lt;h2 id=&#34;논문과-실제-코드에서-나타나는-차이점&#34;&gt;논문과 실제 코드에서 나타나는 차이점&lt;/h2&gt;&#xA;&lt;p&gt;논문 : Q,K,V를 각각의 dimension size로 계산해서 똑같이 z를 얻는다 -&amp;gt; z를 모두 concat -&amp;gt; linear연산으로 차원을 축소시켜서 input dimension과 동일하게 맞춰준다.&lt;br&gt;&#xA;따라서 concate(z)의 size = n_head x n_Q x dim_V 이고, linear를 지났을 때의 output의 size = n_Q x dim_input&lt;/p&gt;</description>
     </item>
     <item>
       <title>[논문리뷰] Attention is all you need #2</title>
-      <link>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-2/</link>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-2/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-2/</guid>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-2/</guid>
       <description>&lt;h2 id=&#34;attention-self-attention&#34;&gt;Attention, Self-attention&lt;/h2&gt;&#xA;&lt;p&gt;일반적으로 어텐션이란, 입력값에서 중요한 단어들에 더 집중할 수 있도록 한다.&lt;br&gt;&#xA;문장을 병렬적으로 처리하기 때문에 속도가 비교적 빠르다.&lt;br&gt;&#xA;RNN구조에서는 순차적으로 값을 확인하기 때문에 gradient vanishing/exploding문제가 발생하게 된다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;self-attention&#34;&gt;Self-attention&lt;/h2&gt;&#xA;&lt;p&gt;같은 문장 내에서 단어들 간의 관계를 나타낸다. attention의 입력값은 Q,K,V&lt;/p&gt;&#xA;&lt;h2 id=&#34;qkv&#34;&gt;Q,K,V&lt;/h2&gt;&#xA;&lt;p&gt;어텐션의 목표는 value의 weighted sum을 구하는것이고, 각 가중치는 Q,K가 얼마나 유사한지에 따라 결정된다.&lt;br&gt;&#xA;Query - 소스벡터, 유사도를 계산하는 값&lt;br&gt;&#xA;Key - 타겟벡터, 유사도를 계산하는 값&lt;br&gt;&#xA;Value - key에 해당하는 정보로 값을 계산, 최종 출력계산에 사용&lt;br&gt;&#xA;각각의 값은 인풋이 Linear연산을 거쳐서 구한다. - 벡터의 차원을 줄여준다.&lt;br&gt;&#xA;Q.size = n x d_K&lt;br&gt;&#xA;K.size = m x d_K&lt;br&gt;&#xA;V. size = m x d_V&lt;br&gt;&#xA;Z.size = n x d_V&lt;br&gt;&#xA;왜 실습에서는 3차원이지? -&amp;gt; 각 단어의 갯수만큼 연산하므로 n_Q, n_K, n_V가 존재&lt;br&gt;&#xA;Q, K 의 dimension은 동일해야함&lt;br&gt;&#xA;n_batch가 의미하는 것????? - data의 개수, ‘문장’의 개수&lt;br&gt;&#xA;dim_V의 값은 정해져있지 않다. 어차피 Linear연산을 마지막에 한번 더 수행하여 z를 얻는다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>[논문리뷰] Attention is all you need #1</title>
-      <link>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-1/</link>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-1/</link>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-1/</guid>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-1/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/75467530/230660894-458594f7-9c04-45f9-9659-5be94e85398d.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;워드-임베딩&#34;&gt;워드 임베딩&lt;/h2&gt;&#xA;&lt;p&gt;각 단어들은 Word2Index를 통해 정수인코딩을 하고, 그 정수값을 임베딩 벡터로 변환한다.&lt;br&gt;&#xA;이때 논문에서 임베딩dim 은 512이다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pepositional-encoding&#34;&gt;PE(positional encoding)&lt;/h2&gt;&#xA;&lt;p&gt;트랜스포머 이전에는 RNN모델을 많이 사용했다. 순차적으로 문장을 처리하기 때문에, 계산유닛이 많아도 앞에서부터 하나씩 처리한다. 결국 연산속도가 매우 느리다.&lt;br&gt;&#xA;트랜스포머는 문장을 병렬적으로, 한번에 처리한다. 병렬적으로 한번에 처리한다는 것은, 단어의 위치를 알 수 없다는 뜻이다. 따라서 PE를 통해 위치순서를 나타낼 필요가 있다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;모든 PE값은 시퀀스의 길이나 값에 관계없이 동일한 식별자를 가져야한다.&lt;/li&gt;&#xA;&lt;li&gt;모든 PE값은 너무 크면 안된다. 워드 임베딩 값이 상대적으로 작아지게된다.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;PE를 위한 sin, cos함수 - [-1, 1]사이를 주기적으로 반복하기 때문에 긴 문장에서도 위치 벡터값이 너무 커지지 않으면서, 너무 미미한 차이를 보이지도 않는다.&lt;br&gt;&#xA;PE는 단어벡터와 같은 차원의 벡터값이다. 따라서 벡터차원만큼의 주기함수 차원을 가지게 되고, 모든 주기함수의 주기 공배수가 되지 않는 이상 값이 겹치지 않는다.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[논문리뷰] Attention is all you need #0</title>
+      <link>http://localhost:1313/posts/paper/attention-is-all-you-need-0/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paper/attention-is-all-you-need-0/</guid>
+      <description>&lt;h2 id=&#34;attention-mechanism의-등장&#34;&gt;Attention Mechanism의 등장&lt;/h2&gt;&#xA;&lt;h2 id=&#34;attention-기본-개념&#34;&gt;Attention 기본 개념&lt;/h2&gt;&#xA;&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://tigris-data-science.tistory.com/entry/DL-%EC%89%BD%EA%B2%8C-%ED%92%80%EC%96%B4%EC%93%B4-Attention-Mechanism-1-Bahdanau-Attention&#34;&gt;https://tigris-data-science.tistory.com/entry/DL-%EC%89%BD%EA%B2%8C-%ED%92%80%EC%96%B4%EC%93%B4-Attention-Mechanism-1-Bahdanau-Attention&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
