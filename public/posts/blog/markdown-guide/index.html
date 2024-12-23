@@ -50,7 +50,7 @@
   lang="ko-KR"
   dir="ltr"
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -68,18 +68,27 @@
   
   
   
-  <meta name="description" content="What is Markdown
+  <meta name="description" content="Introduction
 
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.
 
 Markdown은 문서를 작성하는 하나의 언어입니다.
 github,notion,tistory, velog 등등 다양한 서비스에서 지원하기 때문에 편리하게 작성이 가능합니다.
-Caution
-&#x1f435; Hugo 블로그에서 작동하지 않는 문법들이 있다. 
-이모지와 수식작성은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.
-
-jekyll blog uses kramdown as a default markdown converter from 2.0&#43;.
-And It doesn&rsquo;t support the table cell &hellip;" />
+LEVEL 1 &#x1f4cc;
+헤더 (Headers)
+# h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
+h1
+h2
+h3
+h4
+h5
+h6
+헤더는 &lsquo;#&rsquo; 기호를 사용하여 표시합니다. &lsquo;#&lsquo;의 개수에 따라 h1부터 h6까지 다양한 크기의 헤더를 만들 수 있습니다. h1은 가장 큰 헤더이며, h6로 갈수록 크기가 작아집니다." />
   <meta name="author" content="Nunu" />
   
 
@@ -89,14 +98,14 @@ And It doesn&rsquo;t support the table cell &hellip;" />
   
   
   
-  <link rel="preload stylesheet" as="style" href="https://dnjdsxor21.github.io/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/theme.png" />
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
 
   
   
@@ -108,9 +117,9 @@ And It doesn&rsquo;t support the table cell &hellip;" />
 
   
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/github.svg" />
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/rss.svg" />
+  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
   
   
 
@@ -118,7 +127,7 @@ And It doesn&rsquo;t support the table cell &hellip;" />
   
   <script
     defer
-    src="https://dnjdsxor21.github.io/highlight.min.js"
+    src="http://localhost:1313/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -169,11 +178,11 @@ And It doesn&rsquo;t support the table cell &hellip;" />
   
   <link
     rel="icon"
-    href="https://dnjdsxor21.github.io/img/favicons/favicon.ico"
+    href="http://localhost:1313/img/favicons/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="https://dnjdsxor21.github.io/img/favicons/apple-touch-icon.png"
+    href="http://localhost:1313/img/favicons/apple-touch-icon.png"
   />
 
   
@@ -182,59 +191,12 @@ And It doesn&rsquo;t support the table cell &hellip;" />
   
   
   
-  
-  
-  
-  <meta itemprop="name" content="[Blog] Markdown Syntax 마크다운 가이드">
-  <meta itemprop="description" content="What is Markdown Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.
-Markdown은 문서를 작성하는 하나의 언어입니다.
-github,notion,tistory, velog 등등 다양한 서비스에서 지원하기 때문에 편리하게 작성이 가능합니다.
-Caution 🐵 Hugo 블로그에서 작동하지 않는 문법들이 있다. 이모지와 수식작성은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.
-jekyll blog uses kramdown as a default markdown converter from 2.0&#43;. And It doesn’t support the table cell …">
-  <meta itemprop="datePublished" content="2023-03-01T15:52:10+09:00">
-  <meta itemprop="dateModified" content="2023-03-01T15:52:10+09:00">
-  <meta itemprop="wordCount" content="557">
-  <meta itemprop="keywords" content="Blog,Markdown">
-  
-  <meta property="og:url" content="https://dnjdsxor21.github.io/posts/blog/markdown-guide/">
-  <meta property="og:site_name" content="누누타운">
-  <meta property="og:title" content="[Blog] Markdown Syntax 마크다운 가이드">
-  <meta property="og:description" content="What is Markdown Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.
-Markdown은 문서를 작성하는 하나의 언어입니다.
-github,notion,tistory, velog 등등 다양한 서비스에서 지원하기 때문에 편리하게 작성이 가능합니다.
-Caution 🐵 Hugo 블로그에서 작동하지 않는 문법들이 있다. 이모지와 수식작성은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.
-jekyll blog uses kramdown as a default markdown converter from 2.0&#43;. And It doesn’t support the table cell …">
-  <meta property="og:locale" content="ko_KR">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-03-01T15:52:10+09:00">
-    <meta property="article:modified_time" content="2023-03-01T15:52:10+09:00">
-    <meta property="article:tag" content="Blog">
-    <meta property="article:tag" content="Markdown">
-
-  
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[Blog] Markdown Syntax 마크다운 가이드">
-  <meta name="twitter:description" content="What is Markdown Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.
-Markdown은 문서를 작성하는 하나의 언어입니다.
-github,notion,tistory, velog 등등 다양한 서비스에서 지원하기 때문에 편리하게 작성이 가능합니다.
-Caution 🐵 Hugo 블로그에서 작동하지 않는 문법들이 있다. 이모지와 수식작성은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.
-jekyll blog uses kramdown as a default markdown converter from 2.0&#43;. And It doesn’t support the table cell …">
-
-  
-  
-
-  
-  <link rel="canonical" href="https://dnjdsxor21.github.io/posts/blog/markdown-guide/" />
-  
-  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="https://dnjdsxor21.github.io/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
       >누누타운</a
     >
     <div
@@ -347,7 +309,7 @@ jekyll blog uses kramdown as a default markdown converter from 2.0&#43;. And It 
       <a
         class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href="https://dnjdsxor21.github.io/index.xml"
+        href="http://localhost:1313/index.xml"
         target="_blank"
         rel="alternate"
       >
@@ -402,30 +364,39 @@ jekyll blog uses kramdown as a default markdown converter from 2.0&#43;. And It 
   <h4 class="text-s font-medium pb-2 mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider border-b border-gray-400 dark:border-gray-500">Contents</h4>
   <nav id="TableOfContents">
   <ul class='space-y-1 list-none pl-0'>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#what-is-markdown">What is Markdown</a>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#introduction">Introduction</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#level-1-pushpin">LEVEL 1 &#x1f4cc;</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#헤더-headers">헤더 (Headers)</a></li>
+  </ul>
+
+  <ul class='space-y-1 list-none pl-0'>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#h2">h2</a>
       <ul class='space-y-1 list-none pl-0'>
-        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#caution">Caution</a></li>
+        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#h3">h3</a></li>
       </ul>
     </li>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#basics">Basics</a>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#줄바꿈-line-breaks">줄바꿈 (Line Breaks)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#인용구-quotes">인용구 (Quotes)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#목록-lists">목록 (Lists)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#텍스트-강조-text-emphasis">텍스트 강조 (Text Emphasis)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#수평선-horizontal-rule">수평선 (Horizontal Rule)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#level-2-pushpin">LEVEL 2 &#x1f4cc;</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#코드-code">코드 (Code)</a>
       <ul class='space-y-1 list-none pl-0'>
-        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#header">Header</a></li>
-        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#paragraphs">Paragraphs</a></li>
-        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#linebreak">Linebreak</a></li>
-        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#quotes">Quotes</a></li>
-        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#list">List</a></li>
-        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#text-emphasis">Text Emphasis</a></li>
-        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#horizontal-rule">Horizontal Rule</a></li>
+        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#코드-블록-code-block">코드 블록 (Code Block)</a></li>
+        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#인라인-코드-inline-code">인라인 코드 (Inline Code)</a></li>
       </ul>
     </li>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#codepushpin">Code&#x1f4cc;</a></li>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#linkspushpin">Links&#x1f4cc;</a></li>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#images">Images</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#링크-links">링크 (Links)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#이미지-image">이미지 (Image)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#이모지-emoji">이모지 (Emoji)</a></li>
     <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#html">HTML</a></li>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#tablesjekyllx">Tables~~(jekyll[X])~~</a></li>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#checkboxjekyll-blogx">Checkbox~~(jekyll blog[X])~~</a></li>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#emoji-pushpin1honeybee">Emoji &#x1f4cc;&#x1f44d;&#x1f41d;</a></li>
-    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#mathpushpin">Math&#x1f4cc;</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#level-3-pushpin">LEVEL 3 &#x1f4cc;</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#테이블-tables">테이블 (Tables)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#작업-목록-task-lists">작업 목록 (Task Lists)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#각주-footnotes">각주 (Footnotes)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#접기펼치기-details">접기/펼치기 (Details)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#수식">수식</a></li>
     <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#reference">Reference</a></li>
   </ul>
 </nav>
@@ -470,205 +441,210 @@ jekyll blog uses kramdown as a default markdown converter from 2.0&#43;. And It 
     
   </header>
 
-  <section><h2 id="what-is-markdown">What is Markdown</h2>
+  <section><h2 id="introduction">Introduction</h2>
 <blockquote>
 <p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.</p>
 </blockquote>
 <p>Markdown은 문서를 작성하는 하나의 언어입니다.<br></p>
 <p><code>github</code>,<code>notion</code>,<code>tistory</code>, <code>velog</code> 등등 다양한 서비스에서 지원하기 때문에 편리하게 작성이 가능합니다.</p>
-<h3 id="caution">Caution</h3>
-<p>&#x1f435; Hugo 블로그에서 작동하지 않는 문법들이 있다. <br>
-<code>이모지</code>와 <code>수식작성</code>은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.</p>
-<blockquote>
-<p><code>jekyll blog</code> uses <code>kramdown</code> as a default markdown converter from 2.0+.
-And It doesn&rsquo;t support the table cell &hellip;</p>
-<blockquote>
-<p><a href="https://stackoverflow.com/questions/26844701/lists-in-markdown-table-with-jekyll">https://stackoverflow.com/questions/26844701/lists-in-markdown-table-with-jekyll</a></p>
-</blockquote>
-</blockquote>
-<h2 id="basics">Basics</h2>
-<h3 id="header">Header</h3>
-<p><strong>글의 제목</strong>  <br>
-제목들은 <em><strong>메뉴바</strong></em>에 자동으로 등록된다</p>
+<h2 id="level-1-pushpin">LEVEL 1 &#x1f4cc;</h2>
+<h2 id="헤더-headers">헤더 (Headers)</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># h1
 </span></span><span style="display:flex;"><span><span style="color:#75715e">## h2
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">### h3
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#### h4
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">##### h5
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">###### h6
-</span></span></span></code></pre></div><h3 id="paragraphs">Paragraphs</h3>
-<p>문단을 나누기 위해서는 엔터를 두번 사용하면 된다.</p>
-<h3 id="linebreak">Linebreak</h3>
-<p><strong>줄바꿈</strong>이 자동으로 되지 않아서 개인적으로 불편했다.</p>
+</span></span></span></code></pre></div><h1 id="h1">h1</h1>
+<h2 id="h2">h2</h2>
+<h3 id="h3">h3</h3>
+<h4 id="h4">h4</h4>
+<h5 id="h5">h5</h5>
+<h6 id="h6">h6</h6>
+<p>헤더는 &lsquo;#&rsquo; 기호를 사용하여 표시합니다. &lsquo;#&lsquo;의 개수에 따라 h1부터 h6까지 다양한 크기의 헤더를 만들 수 있습니다. <strong>h1은 가장 큰 헤더이며, h6로 갈수록 크기가 작아집니다.</strong></p>
+<h2 id="줄바꿈-line-breaks">줄바꿈 (Line Breaks)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>첫 번째 줄입니다.
+</span></span><span style="display:flex;"><span>두 번째 줄입니다.  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>세 번째 줄입니다.&lt;<span style="color:#f92672">br</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>네 번째 줄입니다.
+</span></span></code></pre></div><p>마크다운에서 줄바꿈을 하려면 문장 끝에서</p>
 <ol>
-<li>공백 2개 + 엔터</li>
-<li>HTML의 <code>&lt;br&gt;</code>태그</li>
+<li>스페이스를 두 번 입력하거나</li>
+<li><code>&lt;br&gt;</code>를 입력합니다.</li>
 </ol>
-<p><small>둘 중에 골라서 사용 할 수 있다. </small></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>hello1  
-</span></span><span style="display:flex;"><span>hello2&lt;<span style="color:#f92672">br</span>&gt;
-</span></span><span style="display:flex;"><span>hello3
-</span></span></code></pre></div><p>hello1<br>
-hello2<br>
-hello3</p>
-<h3 id="quotes">Quotes</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">인용하는 글입니다.
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#66d9ef">&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef"></span><span style="font-style:italic">&gt; 인용하는 글입니다.
-</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span><span style="color:#66d9ef">&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef"></span><span style="font-style:italic">&gt;&gt; 인용 들여쓰기
-</span></span></span></code></pre></div><blockquote>
-<p>인용하는 글입니다.</p>
-<p>인용하는 글입니다.</p>
+<h2 id="인용구-quotes">인용구 (Quotes)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">이것은 인용구입니다.
+</span></span></span><span style="display:flex;"><span><span style="font-style:italic"></span>&gt;&gt; 중첩된 인용구도 가능합니다.
+</span></span></code></pre></div><blockquote>
+<p>이것은 인용구입니다.</p>
 <blockquote>
-<p>인용 들여쓰기</p>
+<p>중첩된 인용구도 가능합니다.</p>
 </blockquote>
 </blockquote>
-<h3 id="list">List</h3>
-<p><strong>unordered list</strong> <br></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> list1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> list2
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> list3
+<p>&lsquo;&gt;&rsquo; 기호를 사용하여 인용구를 만들 수 있습니다. &lsquo;&gt;&lsquo;를 중첩하여 사용하면 인용구 안에 인용구를 넣을 수 있습니다.</p>
+<h2 id="목록-lists">목록 (Lists)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 순서 없는 목록 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> 순서 없는 목록 2
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> 중첩된 목록
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> 순서 있는 목록 1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> 순서 있는 목록 2
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">1.</span> 중첩된 순서 목록
 </span></span></code></pre></div><ul>
-<li>list1</li>
-<li>list2
+<li>순서 없는 목록 1</li>
+<li>순서 없는 목록 2
 <ul>
-<li>list3</li>
+<li>중첩된 목록</li>
 </ul>
 </li>
 </ul>
-<p><strong>ordered list</strong><br></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> list1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> list2
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">3.</span> list3
-</span></span></code></pre></div><ol>
-<li>list1</li>
-<li>list2</li>
-<li>list3</li>
+<ol>
+<li>순서 있는 목록 1</li>
+<li>순서 있는 목록 2
+<ol>
+<li>중첩된 순서 목록</li>
 </ol>
-<h3 id="text-emphasis">Text Emphasis</h3>
-<p><strong>bold</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>**텍스트 강조**하기
-</span></span></code></pre></div><p><strong>텍스트 강조</strong>하기</p>
-<p><strong>italic</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>*기울여* 쓰기
-</span></span></code></pre></div><p><em>기울여</em> 쓰기</p>
-<p><strong>underline</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&lt;<span style="color:#f92672">u</span>&gt;밑줄&lt;/<span style="color:#f92672">u</span>&gt;긋기
-</span></span></code></pre></div><p><u>밑줄</u>긋기</p>
-<p>**line-through</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>~~취소선~~긋기
-</span></span></code></pre></div><p><del>취소선</del>긋기</p>
-<h3 id="horizontal-rule">Horizontal Rule</h3>
-<p>구분선은 dash(<code>-</code>) 3번으로 그린다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>up
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>down
-</span></span></code></pre></div><p>up</p>
+</li>
+</ol>
+<p>&lsquo;-&rsquo;, &lsquo;+&rsquo;, &lsquo;*&lsquo;를 사용하여 순서 없는 목록을, 숫자와 점을 사용하여 순서 있는 목록을 만들 수 있습니다. 들여쓰기를 통해 중첩된 목록을 만들 수 있습니다.</p>
+<h2 id="텍스트-강조-text-emphasis">텍스트 강조 (Text Emphasis)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>*이탤릭체*
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">**볼드체**</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic">**</span>*이탤릭 볼드체***
+</span></span><span style="display:flex;"><span><span style="color:#f92672">~~취소선~~</span>
+</span></span></code></pre></div><p><code>*</code> 또는 <code>_</code>를 사용하여 <em>이탤릭체</em>를,<br>
+<code>**</code> 또는 <code>__</code>를 사용하여 <strong>볼드체</strong>를 만들 수 있습니다.<br>
+<code>***</code>를 사용하면 <em><strong>이탤릭 볼드체</strong></em>가 됩니다.<br>
+<code>~~</code>를 사용하면 <del>취소선</del>을 그을 수 있습니다.</p>
+<h2 id="수평선-horizontal-rule">수평선 (Horizontal Rule)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="font-style:italic">**</span>*
+</span></span><span style="display:flex;"><span>___
+</span></span></code></pre></div><p>&lsquo;-&rsquo;, &lsquo;*&rsquo;, &lsquo;_&rsquo; 중 하나를 3개 이상 연속해서 사용하면 수평선을 만들 수 있습니다. 이는 문단을 구분하거나 섹션을 나누는 데 유용합니다.</p>
 <hr>
-<p>down</p>
-<h2 id="codepushpin">Code&#x1f4cc;</h2>
-<p><strong>Code blocks</strong><br>
-backticks(`)를 사용한다. <small><b>Tab키 위에있음</b></small></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># ```markdown
-</span></span><span style="display:flex;"><span># import numpy as np
-</span></span><span style="display:flex;"><span># x = np.array([1,2,3])
-</span></span><span style="display:flex;"><span># ```
+<h2 id="level-2-pushpin">LEVEL 2 &#x1f4cc;</h2>
+<h2 id="코드-code">코드 (Code)</h2>
+<h3 id="코드-블록-code-block">코드 블록 (Code Block)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>\```python
+</span></span><span style="display:flex;"><span>  def hello_world():
+</span></span><span style="display:flex;"><span>      print(&#34;Hello, World!&#34;)
+</span></span><span style="display:flex;"><span>\```
+</span></span></code></pre></div><p>코드 블록은 <strong>백틱(`) 세 개</strong>로 시작하고 끝냅니다. 언어를 지정하면 문법 강조가 적용됩니다.</p>
+<h3 id="인라인-코드-inline-code">인라인 코드 (Inline Code)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>이것은 <span style="color:#e6db74">`인라인 코드`</span> 예시입니다.
+</span></span></code></pre></div><p>인라인 코드는 <strong>백틱(`) 한 개</strong>로 감싸 표현합니다. 문장 중간에 코드를 넣을 때 사용합니다.</p>
+<h2 id="링크-links">링크 (Links)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[<span style="color:#f92672">GitHub</span>](<span style="color:#a6e22e">https://github.com</span>)
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">마크다운 가이드</span>](<span style="color:#a6e22e">https://www.markdownguide.org/basic-syntax/</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>import numpy as np
-</span></span><span style="display:flex;"><span>x = np.array([1,2,3])
-</span></span></code></pre></div><p><strong>Inline code blocks</strong><br></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">`Inline code block`</span>입니다.
-</span></span></code></pre></div><p><code>Inline code block</code>입니다.</p>
-<h2 id="linkspushpin">Links&#x1f4cc;</h2>
-<p><strong>Link</strong><br>
-[링크설명](<a href="https://www.example.com">https://www.example.com</a>) 과 같이 작성한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>제 [<span style="color:#f92672">블로그</span>](<span style="color:#a6e22e">https://dnjdsxor21.github.io</span>)로 놀러오세요!
-</span></span></code></pre></div><p>제 <a href="https://dnjdsxor21.github.io">블로그</a>로 놀러오세요!</p>
-<p><strong>URL and Email</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&lt;<span style="color:#f92672">https:</span><span style="color:#960050;background-color:#1e0010">//</span><span style="color:#a6e22e">dnjdsxor21</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">github</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">io</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">fake</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">example</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">com</span>&gt;
-</span></span></code></pre></div><p><a href="https://dnjdsxor21.github.io">https://dnjdsxor21.github.io</a><br>
-<a href="mailto:fake@example.com">fake@example.com</a></p>
-<h2 id="images">Images</h2>
-<p><code>![이미지설명](이미지 링크)</code> 처럼 작성 가능.<br>
-<em>이때 이미지 링크는 <code>local path</code> or <code>URL</code> 모두 가능한듯?</em><br>
-<img src="https://i.pinimg.com/564x/2d/cf/63/2dcf63c23e359dd5fec6ced32d4d8805.jpg" alt="고양이"></p>
-<p><strong>Linking Images</strong><br>
-이미지에 링크까지 걸 수 있다.
-<code>[![이미지설명](이미지 링크)](링크)</code></p>
-<p><strong>Escaping Characters</strong><br>
-backslash(\)를 사용하여, 마크다운 문법이 적용되지 않은 <strong>문자 그대로</strong>를 보여준다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>\## h2  
-</span></span><span style="display:flex;"><span>\&lt;https://dnjdsxor21.github.io&gt;  
-</span></span></code></pre></div><p>## h2<br>
-&lt;https://dnjdsxor21.github.io&gt;</p>
+</span></span><span style="display:flex;"><span>[markdown-guide]: https://www.markdownguide.org
+</span></span></code></pre></div><p><a href="https://www.markdownguide.org/basic-syntax/">마크다운 가이드</a></p>
+<p>대괄호 안에 링크 텍스트를, 소괄호 안에 URL을 넣어 링크를 만듭니다.<br>
+참조 링크를 사용하면 문서 끝에 URL을 모아둘 수 있습니다.</p>
+<h2 id="이미지-image">이미지 (Image)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">대체 텍스트</span>](<span style="color:#a6e22e">https://example.com/image.jpg</span>)
+</span></span><span style="display:flex;"><span>![로고][logo]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[logo]: https://example.com/logo.png
+</span></span></code></pre></div><p>링크 문법 앞에 느낌표(!)를 붙여 이미지를 삽입합니다. 대체 텍스트는 이미지를 표시할 수 없을 때 나타납니다.</p>
+<h2 id="이모지-emoji">이모지 (Emoji)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>:smile: 안녕하세요!  
+</span></span><span style="display:flex;"><span>:heart: Hugo로 블로그를 만들어보세요.  
+</span></span><span style="display:flex;"><span>:rocket: 시작하기  
+</span></span></code></pre></div><p>&#x1f604; 안녕하세요!<br>
+&#x2764;&#xfe0f; Hugo로 블로그를 만들어보세요.<br>
+&#x1f680; 시작하기</p>
+<p>Hugo는 기본적으로 이모지를 지원합니다. 별도의 플러그인 설치 없이 이모지를 사용할 수 있습니다.
+Hugo에서 이모지를 활성화하려면 config.toml 파일에 다음 설정을 추가하세요:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>enableEmoji = true
+</span></span></code></pre></div><p>이 설정을 추가하면 마크다운 파일에서 :emoji_name: 형식으로 이모지를 사용할 수 있습니다.</p>
+<p><a href="https://gist.github.com/rxaviers/7360908"><em><strong>&raquo; 더 많은 이모지 보기 &laquo;</strong></em></a></p>
 <h2 id="html">HTML</h2>
-<p>밑줄을 칠 때 사용한 <code>&lt;u&gt;text&lt;/u&gt;</code> 처럼 HTML태그를 안다면, 자유롭게 사용 가능한듯 하다.<br>
-<smalL><del>나는 잘 모름</del></small></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#&#39;</span>&gt;맨위로 이동하기&lt;/<span style="color:#f92672">a</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">small</span>&gt; 작은 텍스트 &lt;/<span style="color:#f92672">small</span>&gt;
-</span></span></code></pre></div><p><a href='#'>맨위로 이동하기</a><br>
-<small> 작은 텍스트 </small></p>
-<h2 id="tablesjekyllx">Tables~~(jekyll[X])~~</h2>
-<p><small><code>|</code>와 <code>-</code>를 조합하여, 간단한 테이블을 작성할 수 있다.<br>
-<code>-</code>의 갯수는 3개이상 자유롭게 작성하면 되며,<br>
-<code>:---</code>는 좌측정렬, <code>:---:</code>는 중앙정렬, <code>---:</code>는 우측정렬이다.  </small></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| Tables  |     Are     |  Cool   |
-</span></span><span style="display:flex;"><span>|:--------|:-----------:|--------:|
-</span></span><span style="display:flex;"><span>| col1 is | left-aligned| $1600   |
-</span></span><span style="display:flex;"><span>| col2 is |   centered  | $12     |
-</span></span><span style="display:flex;"><span>| col3 is |right-aligned| $1      |
-</span></span></code></pre></div><h2 id="checkboxjekyll-blogx">Checkbox~~(jekyll blog[X])~~</h2>
-<p><small>체크박스는 <code>[ ]</code>, <code>[x]</code>로 구현 가능하다.</small></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>[x] Update the website
-</span></span><span style="display:flex;"><span>[  ] Read a [<span style="color:#f92672">paper</span>](<span style="color:#a6e22e">https://arxiv.org/abs/1706.03762</span>)
-</span></span></code></pre></div><p>[x] Update the website<br>
-[ ] Read a <a href="https://arxiv.org/abs/1706.03762">paper</a></p>
-<h2 id="emoji-pushpin1honeybee">Emoji &#x1f4cc;&#x1f44d;&#x1f41d;</h2>
-<small>
-Markdown 문법은 emoji를 지원합니다.  
-**<u>jekyll기반의 블로그에서는 emoji가 작동하지 않습니다.(minimal mistakes포함)</u>**  
-**다음과 같은 설정을 추가합니다.**</small>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 1. Gemfile에 아래 문구를 추가
-</span></span><span style="display:flex;"><span>gem &#39;jemoji&#39;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># 2. _config.yml의 plugins부분에 jemoji를 추가
-</span></span><span style="display:flex;"><span>plugins:
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">-</span> jemoji
-</span></span></code></pre></div><p>설정을 마치면, <code>:</code>text<code>:</code>와 같은 형식으로 이모지를 작성</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">Gone camping! :tent: Be back soon.&lt;br&gt;Thats so funny! :joy:
-</span></span></span></code></pre></div><blockquote>
-<p>Gone camping! &#x26fa; Be back soon.<br>Thats so funny! &#x1f602;</p>
-</blockquote>
-<p><small>이모지 리스트는 여기서 확인할 수 있습니다.<br>
-<a href="https://gist.github.com/rxaviers/7360908">emoji-cheat-sheet</a></small></p>
-<h2 id="mathpushpin">Math&#x1f4cc;</h2>
-<p><small>github는 원래 수식을 작성하는 latex를 지원하지 않았지만<br>
-22년 5월부터 latex를 지원한다고 한다.<br>
-<a href="https://github.blog/2022-05-19-math-support-in-markdown/">https://github.blog/2022-05-19-math-support-in-markdown/</a></small></p>
-<p><small> emoji와 마찬가지로 <code>Jekyll-based-blog</code>에서 LaTex가 적용되지 않기 때문에<br>
-<strong>아래 링크를 통해 해결했습니다.</strong><br>
-<a href="https://shantoroy.com/jekyll/add-latex-math-to-jekyll-blog-minimal-mistakes/">How to Add Latex Math to Jekyll-based Theme- Minimal Mistakes</a></small></p>
-<blockquote>
-<p>한줄 전체에 적용되는 <code>$$ latex formula $$</code><br>
-인라인수식은<code>$ inline formula $</code></p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>$$\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}$$  
-</span></span><span style="display:flex;"><span>RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.
-</span></span></code></pre></div><p>$$\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}$$<br>
-RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.</p>
-<p><small><strong>LaTex</strong>문법을 모르면 아래와 같은 사이트의 도움을 받을 수 있다.</small></p>
-<ul>
-<li><a href="https://www.hostmath.com/">LaTex Editor</a></li>
-<li><a href="https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95">Latex 문법</a></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>마크다운에서 &lt;<span style="color:#f92672">strong</span>&gt;HTML&lt;/<span style="color:#f92672">strong</span>&gt;을 직접 사용할 수 있습니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">table</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">th</span>&gt;열 1&lt;/<span style="color:#f92672">th</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">th</span>&gt;열 2&lt;/<span style="color:#f92672">th</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">td</span>&gt;행 1, 열 1&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">td</span>&gt;행 1, 열 2&lt;/<span style="color:#f92672">td</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">tr</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">table</span>&gt;
+</span></span></code></pre></div><p>마크다운은 HTML을 지원하므로, 복잡한 구조나 마크다운으로 표현하기 어려운 요소는 HTML로 직접 작성할 수 있습니다.</p>
+<h2 id="level-3-pushpin">LEVEL 3 &#x1f4cc;</h2>
+<h2 id="테이블-tables">테이블 (Tables)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>| 제목 1 | 제목 2 | 제목 3 |
+</span></span><span style="display:flex;"><span>|--------|--------|--------|
+</span></span><span style="display:flex;"><span>| 내용 1 | 내용 2 | 내용 3 |
+</span></span><span style="display:flex;"><span>| 행 2   | 열 2   | 열 3   |
+</span></span></code></pre></div><table>
+  <thead>
+      <tr>
+          <th>제목 1</th>
+          <th>제목 2</th>
+          <th>제목 3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>내용 1</td>
+          <td>내용 2</td>
+          <td>내용 3</td>
+      </tr>
+      <tr>
+          <td>행 2</td>
+          <td>열 2</td>
+          <td>열 3</td>
+      </tr>
+  </tbody>
+</table>
+<p>테이블은 정보를 구조화하여 표현할 때 유용합니다. 열을 구분할 때는 파이프(|)를 사용하고, 헤더와 내용을 구분할 때는 대시(-)를 사용합니다.</p>
+<h2 id="작업-목록-task-lists">작업 목록 (Task Lists)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#66d9ef">- [x]</span> 완료된 작업
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> 미완료 작업
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">- [ ]</span> 또 다른 작업
+</span></span></code></pre></div><ul>
+<li><input checked="" disabled="" type="checkbox"> 완료된 작업</li>
+<li><input disabled="" type="checkbox"> 미완료 작업</li>
+<li><input disabled="" type="checkbox"> 또 다른 작업</li>
 </ul>
+<p>작업 목록은 할 일 목록이나 프로젝트 진행 상황을 표시할 때 유용합니다. 대괄호 안에 x를 넣으면 완료된 작업으로 표시됩니다.</p>
+<h2 id="각주-footnotes">각주 (Footnotes)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>여기에 각주가 필요합니다.[^1]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[^1]: 이것이 각주의 내용입니다.
+</span></span></code></pre></div><p>여기에 각주가 필요합니다.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>각주는 본문의 추가 설명이나 참조를 페이지 하단에 표시할 때 사용합니다. 본문에서 각주를 참조하고, 문서 하단에 각주의 내용을 작성합니다.</p>
+<h2 id="접기펼치기-details">접기/펼치기 (Details)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>&lt;<span style="color:#f92672">details</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">summary</span>&gt;더 보기&lt;/<span style="color:#f92672">summary</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>여기에 숨겨진 내용을 작성합니다.
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">details</span>&gt;
+</span></span></code></pre></div><details>
+<summary>더 보기</summary>
+<p>여기에 숨겨진 내용을 작성합니다.</p>
+</details>
+<p>긴 내용을 숨기거나 선택적으로 보여줄 때 유용합니다. HTML의 <code>&lt;details&gt;</code> 태그를 이용합니다.</p>
+<h2 id="수식">수식</h2>
+<p>KaTex를 사용합니다.</p>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://www.markdownguide.org/basic-syntax/">Markdown guide</a></li>
 <li><a href="https://www.tablesgenerator.com/markdown_tables">Markdown tables generator</a></li>
 </ul>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>이것이 각주의 내용입니다.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 </section>
 
   
@@ -677,13 +653,13 @@ RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.</p>
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/blog"
+      href="http://localhost:1313/tags/blog"
       >#Blog</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/markdown"
+      href="http://localhost:1313/tags/markdown"
       >#Markdown</a
     >
     
@@ -711,7 +687,7 @@ RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.</p>
   >
     
     
-    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://dnjdsxor21.github.io/posts/openapi/openapi-1/"
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:1313/posts/openapi/openapi-1/"
       ><span>[공공데이터] 공공데이터포털 / OPENAPI #1</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
     >
     
@@ -763,31 +739,31 @@ RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.</p>
       <ul class="space-y-1">
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/blog/markdown-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/blog/markdown-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Blog] Markdown Syntax 마크다운 가이드
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/openapi/openapi-1/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/openapi/openapi-1/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [공공데이터] 공공데이터포털 / OPENAPI #1
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/docker/docker-container-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/docker/docker-container-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker container 도커 #3
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/docker/docker-image-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/docker/docker-image-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker image 도커 #2
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/docker/what-is-docker/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/docker/what-is-docker/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]What is Docker 도커 #1
             </a>
           </li>
@@ -820,7 +796,7 @@ RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.</p>
         
           <li>
             <a href="/categories/paper" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
-              paper (3)
+              paper (7)
             </a>
           </li>
         
@@ -841,7 +817,7 @@ RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.</p>
   <div class="mr-auto">
   
     &copy; 2024
-    <a class="link" href="https://dnjdsxor21.github.io/">누누타운</a>
+    <a class="link" href="http://localhost:1313/">누누타운</a>
   
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"

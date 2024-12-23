@@ -2012,3 +2012,43 @@ article .highlight {
 .\[\&_svg\]\:block svg {
   display: block;
 }
+
+/* 인라인 코드 스타일 */
+:not(pre) > code {
+  /* 기본 스타일 */
+  font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 85%;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  letter-spacing: normal;
+  white-space: nowrap;
+  vertical-align: text-bottom;
+  
+  /* 라이트 모드 (기본) */
+  background-color: rgba(175, 184, 193, 0.2);
+  color: #24292f;
+  border: none;
+  
+  /* 추가 디자인 요소 */
+  box-shadow: 0 0.5px 1px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+
+/* 다크 모드 */
+:not(pre) > code :is(.dark *) {
+    background-color: rgba(110, 118, 129, 0.4);
+    color: #c9d1d9;
+    border: none;
+    
+    /* 다크 모드 추가 디자인 요소 */
+    box-shadow: 0 1px 3px rgba(255,255,255,0.1);
+}
+
+code::before,
+code::after {
+content: '`';
+opacity: 0;
+position: absolute;
+pointer-events: none;
+}

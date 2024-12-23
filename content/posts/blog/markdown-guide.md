@@ -7,29 +7,17 @@ draft = false
 weight = 1
 +++
 
-## What is Markdown
+## Introduction
 > Markdown is a lightweight markup language that you can use to add formatting elements to plaintext documents.
 
 Markdown은 문서를 작성하는 하나의 언어입니다.<br>
 
 `github`,`notion`,`tistory`, `velog` 등등 다양한 서비스에서 지원하기 때문에 편리하게 작성이 가능합니다.
 
-### Caution
 
+## LEVEL 1 :pushpin:
 
-:monkey_face: Hugo 블로그에서 작동하지 않는 문법들이 있다. <br>
-`이모지`와 `수식작성`은 꼭 필요한 기능들이라 따로 Plug-in을 추가해서 해결했다.
-
-> `jekyll blog` uses `kramdown` as a default markdown converter from 2.0+.
-> And It doesn't support the table cell ...  
->> <https://stackoverflow.com/questions/26844701/lists-in-markdown-table-with-jekyll>
-
-## Basics
-
-### Header
-
-**글의 제목**  <br>
-제목들은 ***메뉴바***에 자동으로 등록된다
+## 헤더 (Headers)
 
 ```markdown
 # h1
@@ -40,259 +28,249 @@ Markdown은 문서를 작성하는 하나의 언어입니다.<br>
 ###### h6
 ```
 
+# h1
+## h2
+### h3
+#### h4
+##### h5
+###### h6
 
-### Paragraphs
-문단을 나누기 위해서는 엔터를 두번 사용하면 된다.  
+헤더는 '#' 기호를 사용하여 표시합니다. '#'의 개수에 따라 h1부터 h6까지 다양한 크기의 헤더를 만들 수 있습니다. **h1은 가장 큰 헤더이며, h6로 갈수록 크기가 작아집니다.**
 
-### Linebreak
-**줄바꿈**이 자동으로 되지 않아서 개인적으로 불편했다.
-1. 공백 2개 + 엔터
-2. HTML의 `<br>`태그
-
-<small>둘 중에 골라서 사용 할 수 있다. </small>
-
-```markdown
-hello1  
-hello2<br>
-hello3
-```  
-
-hello1  
-hello2<br>
-hello3  
-
-### Quotes
+## 줄바꿈 (Line Breaks)
 
 ```markdown
-> 인용하는 글입니다.
->
-> 인용하는 글입니다.
->
->> 인용 들여쓰기
+첫 번째 줄입니다.
+두 번째 줄입니다.  
+
+세 번째 줄입니다.<br>
+
+네 번째 줄입니다.
 ```
 
-> 인용하는 글입니다.
->
-> 인용하는 글입니다.
->
->> 인용 들여쓰기
+마크다운에서 줄바꿈을 하려면 문장 끝에서  
+1. 스페이스를 두 번 입력하거나
+2. `<br>`를 입력합니다.
 
-
-### List
-
-**unordered list** <br>
+## 인용구 (Quotes)
 
 ```markdown
-- list1
-- list2
-  - list3
+> 이것은 인용구입니다.
+>> 중첩된 인용구도 가능합니다.
 ```
 
-- list1
-- list2
-  - list3
+> 이것은 인용구입니다.
+>> 중첩된 인용구도 가능합니다.
 
-**ordered list**<br>
-```markdown
-1. list1
-2. list2
-3. list3
-```  
+'>' 기호를 사용하여 인용구를 만들 수 있습니다. '>'를 중첩하여 사용하면 인용구 안에 인용구를 넣을 수 있습니다.
 
-1. list1
-2. list2
-3. list3
-
-
-### Text Emphasis
-**bold**
+## 목록 (Lists)
 
 ```markdown
-**텍스트 강조**하기
-```  
+- 순서 없는 목록 1
+- 순서 없는 목록 2
+  - 중첩된 목록
 
-**텍스트 강조**하기  
-
-**italic**
-```markdown
-*기울여* 쓰기
-```  
-
-*기울여* 쓰기  
-
-**underline**
-```markdown
-<u>밑줄</u>긋기
+1. 순서 있는 목록 1
+2. 순서 있는 목록 2
+   1. 중첩된 순서 목록
 ```
 
-<u>밑줄</u>긋기  
+- 순서 없는 목록 1
+- 순서 없는 목록 2
+  - 중첩된 목록
 
-**line-through
+1. 순서 있는 목록 1
+2. 순서 있는 목록 2
+   1. 중첩된 순서 목록
+
+'-', '+', '*'를 사용하여 순서 없는 목록을, 숫자와 점을 사용하여 순서 있는 목록을 만들 수 있습니다. 들여쓰기를 통해 중첩된 목록을 만들 수 있습니다.
+
+## 텍스트 강조 (Text Emphasis)
+
 ```markdown
-~~취소선~~긋기
+*이탤릭체*
+**볼드체**
+***이탤릭 볼드체***
+~~취소선~~
 ```
 
-~~취소선~~긋기  
+`*` 또는 `_`를 사용하여 *이탤릭체*를,  
+`**` 또는 `__`를 사용하여 **볼드체**를 만들 수 있습니다.  
+`***`를 사용하면 ***이탤릭 볼드체***가 됩니다.  
+`~~`를 사용하면 ~~취소선~~을 그을 수 있습니다.
 
-### Horizontal Rule
-구분선은 dash(`-`) 3번으로 그린다.  
+## 수평선 (Horizontal Rule)
 
 ```markdown
-up
+---
+***
+___
+```
+
+'-', '*', '_' 중 하나를 3개 이상 연속해서 사용하면 수평선을 만들 수 있습니다. 이는 문단을 구분하거나 섹션을 나누는 데 유용합니다.
 
 ---
 
-down
-```
+## LEVEL 2 :pushpin:
 
-up
+## 코드 (Code)
 
----
-
-down
-
-## Code:pushpin:
-**Code blocks**<br>
-backticks(\`)를 사용한다. <small><b>Tab키 위에있음</b></small>
+### 코드 블록 (Code Block)
 
 ```markdown
-# ```markdown
-# import numpy as np
-# x = np.array([1,2,3])
-# ```
-
-import numpy as np
-x = np.array([1,2,3])
+\```python
+  def hello_world():
+      print("Hello, World!")
+\```
 ```
 
-**Inline code blocks**<br>
-```markdown
-`Inline code block`입니다.
-```
-`Inline code block`입니다.
+코드 블록은 **백틱(`) 세 개**로 시작하고 끝냅니다. 언어를 지정하면 문법 강조가 적용됩니다.
 
-
-## Links:pushpin:
-**Link**<br>
-\[링크설명](https://www.example.com) 과 같이 작성한다.
-```markdown
-제 [블로그](https://dnjdsxor21.github.io)로 놀러오세요!
-```
-제 [블로그](https://dnjdsxor21.github.io)로 놀러오세요!
-
-**URL and Email**
+### 인라인 코드 (Inline Code)
 
 ```markdown
-<https://dnjdsxor21.github.io>
-<fake@example.com>
-```
-<https://dnjdsxor21.github.io>  
-<fake@example.com>
-
-## Images
-`![이미지설명](이미지 링크)` 처럼 작성 가능.  
-*이때 이미지 링크는 `local path` or `URL` 모두 가능한듯?*  
-![고양이](https://i.pinimg.com/564x/2d/cf/63/2dcf63c23e359dd5fec6ced32d4d8805.jpg)
-
-**Linking Images**<br>
-이미지에 링크까지 걸 수 있다.
-`[![이미지설명](이미지 링크)](링크)`
-
-**Escaping Characters**<br>
-backslash(\\)를 사용하여, 마크다운 문법이 적용되지 않은 **문자 그대로**를 보여준다.
-
-```markdown
-\## h2  
-\<https://dnjdsxor21.github.io>  
-```
-\## h2  
-\<https://dnjdsxor21.github.io>  
-
-## HTML 
-밑줄을 칠 때 사용한 `<u>text</u>` 처럼 HTML태그를 안다면, 자유롭게 사용 가능한듯 하다.  
-<smalL>~~나는 잘 모름~~</small>
-```markdown
-<a href='#'>맨위로 이동하기</a><br>
-<small> 작은 텍스트 </small>
-```
-<a href='#'>맨위로 이동하기</a><br>
-<small> 작은 텍스트 </small>
-
-
-## Tables~~(jekyll[X])~~
-<small>`|`와 `-`를 조합하여, 간단한 테이블을 작성할 수 있다.  
-`-`의 갯수는 3개이상 자유롭게 작성하면 되며,  
-`:---`는 좌측정렬, `:---:`는 중앙정렬, `---:`는 우측정렬이다.  </small>
-
-```markdown
-| Tables  |     Are     |  Cool   |
-|:--------|:-----------:|--------:|
-| col1 is | left-aligned| $1600   |
-| col2 is |   centered  | $12     |
-| col3 is |right-aligned| $1      |
+이것은 `인라인 코드` 예시입니다.
 ```
 
-## Checkbox~~(jekyll blog[X])~~
-<small>체크박스는 `[ ]`, `[x]`로 구현 가능하다.</small>
+인라인 코드는 **백틱(`) 한 개**로 감싸 표현합니다. 문장 중간에 코드를 넣을 때 사용합니다.
+
+## 링크 (Links)
 
 ```markdown
-[x] Update the website
-[  ] Read a [paper](https://arxiv.org/abs/1706.03762)
-```
-[x] Update the website  
-[ ] Read a [paper](https://arxiv.org/abs/1706.03762)
+[GitHub](https://github.com)
+[마크다운 가이드](https://www.markdownguide.org/basic-syntax/)
 
-## Emoji :pushpin::+1::honeybee:
-<small>
-Markdown 문법은 emoji를 지원합니다.  
-**<u>jekyll기반의 블로그에서는 emoji가 작동하지 않습니다.(minimal mistakes포함)</u>**  
-**다음과 같은 설정을 추가합니다.**</small>
-
-```markdown
-# 1. Gemfile에 아래 문구를 추가
-gem 'jemoji'
+[markdown-guide]: https://www.markdownguide.org
 ```
 
+[마크다운 가이드](https://www.markdownguide.org/basic-syntax/)
+
+대괄호 안에 링크 텍스트를, 소괄호 안에 URL을 넣어 링크를 만듭니다.  
+참조 링크를 사용하면 문서 끝에 URL을 모아둘 수 있습니다.
+
+## 이미지 (Image)
+
 ```markdown
-# 2. _config.yml의 plugins부분에 jemoji를 추가
-plugins:
-  - jemoji
+![대체 텍스트](https://example.com/image.jpg)
+![로고][logo]
+
+[logo]: https://example.com/logo.png
 ```
-설정을 마치면, `:`text`:`와 같은 형식으로 이모지를 작성
+
+링크 문법 앞에 느낌표(!)를 붙여 이미지를 삽입합니다. 대체 텍스트는 이미지를 표시할 수 없을 때 나타납니다.
+
+## 이모지 (Emoji)
 
 ```markdown
-> Gone camping! :tent: Be back soon.<br>Thats so funny! :joy:
+:smile: 안녕하세요!  
+:heart: Hugo로 블로그를 만들어보세요.  
+:rocket: 시작하기  
 ```
-> Gone camping! :tent: Be back soon.<br>Thats so funny! :joy:
 
+:smile: 안녕하세요!  
+:heart: Hugo로 블로그를 만들어보세요.  
+:rocket: 시작하기  
 
-<small>이모지 리스트는 여기서 확인할 수 있습니다.<br>
-[emoji-cheat-sheet](https://gist.github.com/rxaviers/7360908)</small>
-
-## Math:pushpin:
-
-<small>github는 원래 수식을 작성하는 latex를 지원하지 않았지만<br>
-22년 5월부터 latex를 지원한다고 한다.<br>
-<https://github.blog/2022-05-19-math-support-in-markdown/></small>
-
-<small> emoji와 마찬가지로 `Jekyll-based-blog`에서 LaTex가 적용되지 않기 때문에<br>
-**아래 링크를 통해 해결했습니다.**<br>
-[How to Add Latex Math to Jekyll-based Theme- Minimal Mistakes](https://shantoroy.com/jekyll/add-latex-math-to-jekyll-blog-minimal-mistakes/)</small>
-
-> 한줄 전체에 적용되는 `$$ latex formula $$`  
-인라인수식은`$ inline formula $`
+Hugo는 기본적으로 이모지를 지원합니다. 별도의 플러그인 설치 없이 이모지를 사용할 수 있습니다.
+Hugo에서 이모지를 활성화하려면 config.toml 파일에 다음 설정을 추가하세요:
 
 ```markdown
-$$\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}$$  
-RNN의 hidden state는 $ h_t = f_{w} (h_{t-1}, x_{t}) $ 입니다.
-```  
+enableEmoji = true
+```
 
-$$\frac{1}{n} \sum_{i=1}^{n} Q_{i} * K_{i}$$  
-RNN의 hidden state는 $h_t = f_{w} (h_{t-1}, x_{t})$ 입니다.  
+이 설정을 추가하면 마크다운 파일에서 :emoji_name: 형식으로 이모지를 사용할 수 있습니다.
 
-<small>**LaTex**문법을 모르면 아래와 같은 사이트의 도움을 받을 수 있다.</small>
-- [LaTex Editor](https://www.hostmath.com/)
-- [Latex 문법](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95)
+[***>> 더 많은 이모지 보기 <<***](https://gist.github.com/rxaviers/7360908)
+
+
+## HTML
+
+```markdown
+마크다운에서 <strong>HTML</strong>을 직접 사용할 수 있습니다.
+
+<table>
+  <tr>
+    <th>열 1</th>
+    <th>열 2</th>
+  </tr>
+  <tr>
+    <td>행 1, 열 1</td>
+    <td>행 1, 열 2</td>
+  </tr>
+</table>
+```
+
+마크다운은 HTML을 지원하므로, 복잡한 구조나 마크다운으로 표현하기 어려운 요소는 HTML로 직접 작성할 수 있습니다.
+
+## LEVEL 3 :pushpin:
+
+## 테이블 (Tables)
+
+```markdown
+| 제목 1 | 제목 2 | 제목 3 |
+|--------|--------|--------|
+| 내용 1 | 내용 2 | 내용 3 |
+| 행 2   | 열 2   | 열 3   |
+```
+
+| 제목 1 | 제목 2 | 제목 3 |
+|--------|--------|--------|
+| 내용 1 | 내용 2 | 내용 3 |
+| 행 2   | 열 2   | 열 3   |
+
+테이블은 정보를 구조화하여 표현할 때 유용합니다. 열을 구분할 때는 파이프(|)를 사용하고, 헤더와 내용을 구분할 때는 대시(-)를 사용합니다.
+
+## 작업 목록 (Task Lists)
+
+```markdown
+- [x] 완료된 작업
+- [ ] 미완료 작업
+- [ ] 또 다른 작업
+```
+
+- [x] 완료된 작업
+- [ ] 미완료 작업
+- [ ] 또 다른 작업
+
+작업 목록은 할 일 목록이나 프로젝트 진행 상황을 표시할 때 유용합니다. 대괄호 안에 x를 넣으면 완료된 작업으로 표시됩니다.
+
+## 각주 (Footnotes)
+
+```markdown
+여기에 각주가 필요합니다.[^1]
+
+[^1]: 이것이 각주의 내용입니다.
+```
+
+여기에 각주가 필요합니다.[^1]
+
+[^1]: 이것이 각주의 내용입니다.
+
+각주는 본문의 추가 설명이나 참조를 페이지 하단에 표시할 때 사용합니다. 본문에서 각주를 참조하고, 문서 하단에 각주의 내용을 작성합니다.
+
+## 접기/펼치기 (Details)
+
+```markdown
+<details>
+<summary>더 보기</summary>
+
+여기에 숨겨진 내용을 작성합니다.
+</details>
+```
+
+<details>
+<summary>더 보기</summary>
+
+여기에 숨겨진 내용을 작성합니다.
+</details>
+
+긴 내용을 숨기거나 선택적으로 보여줄 때 유용합니다. HTML의 `<details>` 태그를 이용합니다.
+
+## 수식
+
+KaTex를 사용합니다.
+
 
 ## Reference
 - [Markdown guide](https://www.markdownguide.org/basic-syntax/)

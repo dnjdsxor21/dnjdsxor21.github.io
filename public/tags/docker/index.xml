@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on 누누타운</title>
-    <link>https://dnjdsxor21.github.io/tags/docker/</link>
+    <link>http://localhost:1313/tags/docker/</link>
     <description>Recent content in Docker on 누누타운</description>
     <generator>Hugo</generator>
     <language>ko-KR</language>
     <lastBuildDate>Tue, 18 Jul 2023 15:52:10 +0900</lastBuildDate>
-    <atom:link href="https://dnjdsxor21.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Docker]docker container 도커 #3</title>
-      <link>https://dnjdsxor21.github.io/posts/docker/docker-container-guide/</link>
+      <link>http://localhost:1313/posts/docker/docker-container-guide/</link>
       <pubDate>Tue, 18 Jul 2023 15:52:10 +0900</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/docker/docker-container-guide/</guid>
+      <guid>http://localhost:1313/posts/docker/docker-container-guide/</guid>
       <description>&lt;h2 id=&#34;docker-container&#34;&gt;Docker Container&lt;/h2&gt;&#xA;&lt;p&gt;도커 이미지를 만들었다면, 이미지 기반의 컨테이너를 생성할 차례&lt;/p&gt;&#xA;&lt;p&gt;먼저 docker image를 local로 가져오기(나는 local에 있기 때문에 생략 가능)&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker pull dnjdsxor21/fastapi:v1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이미지 확인! &lt;code&gt;docker images&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;container-run&#34;&gt;Container run&lt;/h2&gt;&#xA;&lt;p&gt;본격적으로 컨테이너 띄워보기&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run &amp;lt;image_name&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;이때 줄 수 있는 옵션이 굉장히 많다.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -p 3000:80 --name my-container -d &amp;lt;image_name&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;-p&lt;/code&gt; : port옵션, &lt;code&gt;Dockerfile&lt;/code&gt;에서 작성했던 port80을 실제로 열어주는 작업. 내 컴퓨터(또는 AWS EC2, GCP VM instance)의 포트 3000과 컨테이너의 포트 80을 연결&lt;br&gt;&#xA;&lt;code&gt;--name&lt;/code&gt; : 컨테이너의 이름을 지정. 안하면 랜덤으로 이름 지정&lt;br&gt;&#xA;&lt;code&gt;d&lt;/code&gt;: detach모드를 의미, &lt;code&gt;docker run&lt;/code&gt;는 디폴트로 attach모드를 가진다. attach모드는 컨테이너의 터미널과 연결 되는 것을 의미한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>[Docker]docker image 도커 #2</title>
-      <link>https://dnjdsxor21.github.io/posts/docker/docker-image-guide/</link>
+      <link>http://localhost:1313/posts/docker/docker-image-guide/</link>
       <pubDate>Sun, 16 Jul 2023 15:52:10 +0900</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/docker/docker-image-guide/</guid>
+      <guid>http://localhost:1313/posts/docker/docker-image-guide/</guid>
       <description>&lt;h2 id=&#34;도커-설치&#34;&gt;도커 설치&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;Windows&lt;/code&gt;, &lt;code&gt;MacOS&lt;/code&gt;의 경우 &lt;strong&gt;Docker Desktop&lt;/strong&gt;을 설치&lt;br&gt;&#xA;&lt;code&gt;Linux&lt;/code&gt;의 경우 &lt;strong&gt;Docker Engine&lt;/strong&gt;을 설치한다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;이미지-image&#34;&gt;이미지 Image&lt;/h2&gt;&#xA;&lt;p&gt;도커는 이미지와 컨테이너의 개념만 알면 일단 사용이 가능하다. 컨테이너의 기반이 되는 이미지가 필요한데, dockerhub에서 가져오거나 직접 만들 수 있다.&lt;br&gt;&#xA;이미지의 이름은 &lt;code&gt;name:tag&lt;/code&gt;의 방식을 가진다.(&lt;code&gt;python:3.9&lt;/code&gt;, &lt;code&gt;node:14&lt;/code&gt;)&lt;br&gt;&#xA;tag는 보통 버전을 명시&lt;/p&gt;&#xA;&lt;h4 id=&#34;dockerhub에서-가져오기&#34;&gt;dockerhub에서 가져오기&lt;/h4&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ docker pull python:3.9&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;dockerfile-작성&#34;&gt;Dockerfile 작성&lt;/h4&gt;&#xA;&lt;p&gt;보통 자신의 개발환경에 맞게 세팅해야 하므로, 기존의 pre-built Image를 가져와서 커스터마이징 한다.&lt;br&gt;&#xA;이를 위해서는 자신의 코드, 패키지 정보 등을 준비하고, &lt;code&gt;Dockerfile&lt;/code&gt;이라는 이름의 파일을 생성한다(이름은 고정)&lt;/p&gt;</description>
     </item>
     <item>
       <title>[Docker]What is Docker 도커 #1</title>
-      <link>https://dnjdsxor21.github.io/posts/docker/what-is-docker/</link>
+      <link>http://localhost:1313/posts/docker/what-is-docker/</link>
       <pubDate>Sat, 15 Jul 2023 15:52:10 +0900</pubDate>
-      <guid>https://dnjdsxor21.github.io/posts/docker/what-is-docker/</guid>
+      <guid>http://localhost:1313/posts/docker/what-is-docker/</guid>
       <description>&lt;h2 id=&#34;what-is-docker&#34;&gt;What is Docker?&lt;/h2&gt;&#xA;&lt;p&gt;A tool for creating and managing &lt;strong&gt;containers&lt;/strong&gt;&lt;br&gt;&#xA;컨테이너를 관리하는 툴&lt;/p&gt;&#xA;&lt;h2 id=&#34;컨테이너는-무엇인가&#34;&gt;컨테이너는 무엇인가?&lt;/h2&gt;&#xA;&lt;p&gt;A Standardized unit of software. A Package of code and dependencies to run that code&lt;br&gt;&#xA;컨테이너는 라이브러리, 코드, 시스템 도구 등을 포함하는 독립적인 환경으로, 마치 하나의 VM(virtual machine)처럼 작동한다고 생각하면 이해하기 쉽다.&lt;/p&gt;&#xA;&lt;p&gt;같은 코드를 공유하다보면 패키지의 버전이 맞지 않거나, OS가 달라서 작동 결과가 다른 경우가 있다. 이때 같은 OS, 같은 패키지 버전에서 어플리케이션을 실행 할 수 있다!&lt;br&gt;&#xA;컨테이너는 **&amp;ldquo;이미지&amp;rdquo;**라는 일종의 템플릿으로부터 실행 할 수 있다.&lt;/p&gt;</description>
     </item>
   </channel>

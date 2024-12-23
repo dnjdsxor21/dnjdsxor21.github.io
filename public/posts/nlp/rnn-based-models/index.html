@@ -50,7 +50,7 @@
   lang="ko-KR"
   dir="ltr"
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -89,14 +89,14 @@ $h \rightarrow h$
   
   
   
-  <link rel="preload stylesheet" as="style" href="https://dnjdsxor21.github.io/main.min.css" />
+  <link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
 
   
   
   
   
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/theme.png" />
+  <link rel="preload" as="image" href="http://localhost:1313/theme.png" />
 
   
   
@@ -108,9 +108,9 @@ $h \rightarrow h$
 
   
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/github.svg" />
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
   
-  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/rss.svg" />
+  <link rel="preload" as="image" href="http://localhost:1313/rss.svg" />
   
   
 
@@ -118,7 +118,7 @@ $h \rightarrow h$
   
   <script
     defer
-    src="https://dnjdsxor21.github.io/highlight.min.js"
+    src="http://localhost:1313/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
   
@@ -169,11 +169,11 @@ $h \rightarrow h$
   
   <link
     rel="icon"
-    href="https://dnjdsxor21.github.io/img/favicons/favicon.ico"
+    href="http://localhost:1313/img/favicons/favicon.ico"
   />
   <link
     rel="apple-touch-icon"
-    href="https://dnjdsxor21.github.io/img/favicons/apple-touch-icon.png"
+    href="http://localhost:1313/img/favicons/apple-touch-icon.png"
   />
 
   
@@ -182,66 +182,12 @@ $h \rightarrow h$
   
   
   
-  
-  
-  
-  <meta itemprop="name" content="[RNN, LSTM, GRU] RNN 기반 모델 구조">
-  <meta itemprop="description" content="RNN (Recurrent Nueral Network) 은닉층에서 나온 결과값이 다시 은닉층으로 돌아가 새로운 입력값과 연산을 하는 구조
-시계열 데이터, 텍스트 데이터같은 가변길이의 데이터에 적합한 모델
-학습을 통해 각 단어 다음에 나올 단어를 예측
-LSTM hiddne state는 벡터값이고, $y = W*h$
-LSTM의 경우 과거 정보를 가져갈지 말지를 정하는 cell state가 존재. 여기서 c, h는 같은 크기의 벡터이다. 따라서 가중치행렬 사이즈는 두가지 종류임.
-$x \rightarrow h$ $h \rightarrow h$
-각각의 연산에서 행렬의 곱셈부분이 inner product인지 element-wise product인지 확인할 필요가 있다.">
-  <meta itemprop="datePublished" content="2023-03-03T15:52:10+09:00">
-  <meta itemprop="dateModified" content="2023-03-03T15:52:10+09:00">
-  <meta itemprop="wordCount" content="94">
-  <meta itemprop="keywords" content="RNN,LSTM,GRU">
-  
-  <meta property="og:url" content="https://dnjdsxor21.github.io/posts/nlp/rnn-based-models/">
-  <meta property="og:site_name" content="누누타운">
-  <meta property="og:title" content="[RNN, LSTM, GRU] RNN 기반 모델 구조">
-  <meta property="og:description" content="RNN (Recurrent Nueral Network) 은닉층에서 나온 결과값이 다시 은닉층으로 돌아가 새로운 입력값과 연산을 하는 구조
-시계열 데이터, 텍스트 데이터같은 가변길이의 데이터에 적합한 모델
-학습을 통해 각 단어 다음에 나올 단어를 예측
-LSTM hiddne state는 벡터값이고, $y = W*h$
-LSTM의 경우 과거 정보를 가져갈지 말지를 정하는 cell state가 존재. 여기서 c, h는 같은 크기의 벡터이다. 따라서 가중치행렬 사이즈는 두가지 종류임.
-$x \rightarrow h$ $h \rightarrow h$
-각각의 연산에서 행렬의 곱셈부분이 inner product인지 element-wise product인지 확인할 필요가 있다.">
-  <meta property="og:locale" content="ko_KR">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-03-03T15:52:10+09:00">
-    <meta property="article:modified_time" content="2023-03-03T15:52:10+09:00">
-    <meta property="article:tag" content="RNN">
-    <meta property="article:tag" content="LSTM">
-    <meta property="article:tag" content="GRU">
-
-  
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="[RNN, LSTM, GRU] RNN 기반 모델 구조">
-  <meta name="twitter:description" content="RNN (Recurrent Nueral Network) 은닉층에서 나온 결과값이 다시 은닉층으로 돌아가 새로운 입력값과 연산을 하는 구조
-시계열 데이터, 텍스트 데이터같은 가변길이의 데이터에 적합한 모델
-학습을 통해 각 단어 다음에 나올 단어를 예측
-LSTM hiddne state는 벡터값이고, $y = W*h$
-LSTM의 경우 과거 정보를 가져갈지 말지를 정하는 cell state가 존재. 여기서 c, h는 같은 크기의 벡터이다. 따라서 가중치행렬 사이즈는 두가지 종류임.
-$x \rightarrow h$ $h \rightarrow h$
-각각의 연산에서 행렬의 곱셈부분이 inner product인지 element-wise product인지 확인할 필요가 있다.">
-
-  
-  
-
-  
-  <link rel="canonical" href="https://dnjdsxor21.github.io/posts/nlp/rnn-based-models/" />
-  
-  
 </head>
 
   <body class="text-black duration-200 ease-out dark:text-white">
     <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
   <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
-    <a class="-translate-y-[1px] text-2xl font-medium" href="https://dnjdsxor21.github.io/"
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:1313/"
       >누누타운</a
     >
     <div
@@ -354,7 +300,7 @@ $x \rightarrow h$ $h \rightarrow h$
       <a
         class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
         style="--url: url(./rss.svg)"
-        href="https://dnjdsxor21.github.io/index.xml"
+        href="http://localhost:1313/index.xml"
         target="_blank"
         rel="alternate"
       >
@@ -488,19 +434,19 @@ $h \rightarrow h$</p>
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/rnn"
+      href="http://localhost:1313/tags/rnn"
       >#RNN</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/lstm"
+      href="http://localhost:1313/tags/lstm"
       >#LSTM</a
     >
      
     <a
       class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
-      href="https://dnjdsxor21.github.io/tags/gru"
+      href="http://localhost:1313/tags/gru"
       >#GRU</a
     >
     
@@ -516,13 +462,13 @@ $h \rightarrow h$</p>
         
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/nlp/how-to-save-and-load-huggingface/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="http://localhost:1313/posts/nlp/how-to-save-and-load-huggingface/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
               Huggingface 모델 저장하고 불러오기
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/nlp/huggingface-bert-model/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+            <a href="http://localhost:1313/posts/nlp/huggingface-bert-model/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
               Huggingface BERT 모델(BertModel, BertForSequenceClassification, BertForMaskedLM, BertForTokenClassification)
             </a>
           </li>
@@ -539,8 +485,8 @@ $h \rightarrow h$</p>
     class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
   >
     
-    <a class="ltr:pr-3 rtl:pl-3" href="https://dnjdsxor21.github.io/posts/paper/attention-is-all-you-need-1/"
-      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>[논문리뷰] Attention is all you need #1</span></a
+    <a class="ltr:pr-3 rtl:pl-3" href="http://localhost:1313/posts/paper/attention-is-all-you-need-0/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>[논문리뷰] Attention is all you need #0</span></a
     >
     
     
@@ -592,31 +538,31 @@ $h \rightarrow h$</p>
       <ul class="space-y-1">
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/blog/markdown-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/blog/markdown-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Blog] Markdown Syntax 마크다운 가이드
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/openapi/openapi-1/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/openapi/openapi-1/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [공공데이터] 공공데이터포털 / OPENAPI #1
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/docker/docker-container-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/docker/docker-container-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker container 도커 #3
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/docker/docker-image-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/docker/docker-image-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]docker image 도커 #2
             </a>
           </li>
         
           <li>
-            <a href="https://dnjdsxor21.github.io/posts/docker/what-is-docker/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="http://localhost:1313/posts/docker/what-is-docker/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
               [Docker]What is Docker 도커 #1
             </a>
           </li>
@@ -649,7 +595,7 @@ $h \rightarrow h$</p>
         
           <li>
             <a href="/categories/paper" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
-              paper (3)
+              paper (7)
             </a>
           </li>
         
@@ -670,7 +616,7 @@ $h \rightarrow h$</p>
   <div class="mr-auto">
   
     &copy; 2024
-    <a class="link" href="https://dnjdsxor21.github.io/">누누타운</a>
+    <a class="link" href="http://localhost:1313/">누누타운</a>
   
   </div>
   <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
