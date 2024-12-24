@@ -73,3 +73,8 @@ enableRobotsTXT = true
   mapping = 'pathname'
   theme = 'preferred_color_scheme'
   lang = 'ko'
+
+[sitemap]
+    changefreq = "weekly"
+    filename = "sitemap.xml"
+    priority = 0.5
