@@ -82,3 +82,11 @@ enableRobotsTXT = true
 [services]
     [services.googleAnalytics]
         id = 'G-SW5RDFVP82'
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
+[outputFormats.RSS]
+    baseName = "rss"
