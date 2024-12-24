@@ -78,3 +78,7 @@ enableRobotsTXT = true
     changefreq = "weekly"
     filename = "sitemap.xml"
     priority = 0.5
+
+[services]
+    [services.googleAnalytics]
+        id = 'G-SW5RDFVP82'
