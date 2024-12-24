@@ -2,3 +2,4 @@ user-agent: *
 Disallow: /about
 Disallow: /archive
 Disallow: /tags
+Sitemap: https://dnjdsxor21.github.io/sitemap.xml
