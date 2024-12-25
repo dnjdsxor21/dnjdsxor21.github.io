@@ -88,5 +88,3 @@ enableRobotsTXT = true
   section = ['html', 'rss']
   taxonomy = ['html']
   term = ['html']
-[outputFormats.RSS]
-    baseName = "rss"    # 'rss.xml' (default 'index.xml')

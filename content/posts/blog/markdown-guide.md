@@ -2,7 +2,7 @@
 title = "[Blog] Markdown Syntax 마크다운 가이드"
 categories = ["Blog"]
 tags = ["Blog", "Markdown"] 
-date = '2023-03-01T15:52:10+09:00'
+date = '2024-12-12'
 draft = false
 weight = 1
 +++
