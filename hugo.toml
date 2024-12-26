@@ -51,17 +51,17 @@ enableRobotsTXT = true
         weight = 1                            # order
     [[menu.main]]
         identifier = "categories"
-        name = "categories"
+        name = "Categories"
         url = "/categories/"
         weight = 2
     [[menu.main]]
         identifier = "series"
-        name = "series"
+        name = "Series"
         url = "/series/"
         weight = 3
     [[menu.main]]
         identifier = "archives"
-        name = "archives"
+        name = "Archives"
         url = "/archives/"
         weight = 4
 
