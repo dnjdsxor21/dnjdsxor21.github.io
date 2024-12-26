@@ -1,0 +1,910 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="ko-KR"
+  dir="ltr"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Github 블로그 with Hugo #1 - 누누타운</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="
+
+애플 실리콘(M1) &#43; Homebrew &#43; vscode를 사용하여 진행했습니다.
+
+paper 테마에 tailwind로 커스터마이징 했습니다.
+
+
+1. Hugo를 선택한 이유
+Hugo 1는 강력하고 빠른 정적 사이트 생성기로, 블로그 제작에 탁월한 선택입니다. Go 언어로 작성되어 빠른 빌드 속도를 자랑하며, 다양한 테마와 플러그인을 지원합니다.
+Hugo vs Jekyll 비교
+
+  
+      
+          특징
+          Hugo
+          Jekyll
+      
+  
+  
+      
+          프로그래밍 언어
+          Go
+          Ruby
+      
+      
+          빌드 속도
+          매우 빠름
+          상대적으로 느림
+      
+      
+          한글 레퍼런스
+          적음
+          많음
+      
+      
+          커뮤니티
+          성장 중
+          큰 커뮤니티
+      
+      
+          테마
+          다양함
+          매우 다양함
+      
+  
+
+Hugo는 Jekyll에 비해 빌드 속도가 훨씬 빠르며, 문서화(Documentation)가 잘 되어있습니다." />
+  <meta name="author" content="Nunu" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://dnjdsxor21.github.io/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/b36b25ee4e567b6817a807d01980a628?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/github.svg" />
+  
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="https://dnjdsxor21.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="https://dnjdsxor21.github.io/img/favicons/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://dnjdsxor21.github.io/img/favicons/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.140.0">
+
+  
+  
+  
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW5RDFVP82"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SW5RDFVP82');
+        }
+      </script>
+  
+  
+  <meta itemprop="name" content="Github 블로그 with Hugo #1">
+  <meta itemprop="description" content="애플 실리콘(M1) &#43; Homebrew &#43; vscode를 사용하여 진행했습니다.
+paper 테마에 tailwind로 커스터마이징 했습니다.
+1. Hugo를 선택한 이유 Hugo 1는 강력하고 빠른 정적 사이트 생성기로, 블로그 제작에 탁월한 선택입니다. Go 언어로 작성되어 빠른 빌드 속도를 자랑하며, 다양한 테마와 플러그인을 지원합니다.
+Hugo vs Jekyll 비교
+특징 Hugo Jekyll 프로그래밍 언어 Go Ruby 빌드 속도 매우 빠름 상대적으로 느림 한글 레퍼런스 적음 많음 커뮤니티 성장 중 큰 커뮤니티 테마 다양함 매우 다양함 Hugo는 Jekyll에 비해 빌드 속도가 훨씬 빠르며, 문서화(Documentation)가 잘 되어있습니다.">
+  <meta itemprop="datePublished" content="2024-12-13T00:15:04+09:00">
+  <meta itemprop="dateModified" content="2024-12-13T00:15:04+09:00">
+  <meta itemprop="wordCount" content="440">
+  <meta itemprop="keywords" content="Hugo,Github">
+  
+  <meta property="og:url" content="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-1/">
+  <meta property="og:site_name" content="누누타운">
+  <meta property="og:title" content="Github 블로그 with Hugo #1">
+  <meta property="og:description" content="애플 실리콘(M1) &#43; Homebrew &#43; vscode를 사용하여 진행했습니다.
+paper 테마에 tailwind로 커스터마이징 했습니다.
+1. Hugo를 선택한 이유 Hugo 1는 강력하고 빠른 정적 사이트 생성기로, 블로그 제작에 탁월한 선택입니다. Go 언어로 작성되어 빠른 빌드 속도를 자랑하며, 다양한 테마와 플러그인을 지원합니다.
+Hugo vs Jekyll 비교
+특징 Hugo Jekyll 프로그래밍 언어 Go Ruby 빌드 속도 매우 빠름 상대적으로 느림 한글 레퍼런스 적음 많음 커뮤니티 성장 중 큰 커뮤니티 테마 다양함 매우 다양함 Hugo는 Jekyll에 비해 빌드 속도가 훨씬 빠르며, 문서화(Documentation)가 잘 되어있습니다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-13T00:15:04+09:00">
+    <meta property="article:modified_time" content="2024-12-13T00:15:04+09:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Github">
+      <meta property="og:see_also" content="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-2/">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Github 블로그 with Hugo #1">
+  <meta name="twitter:description" content="애플 실리콘(M1) &#43; Homebrew &#43; vscode를 사용하여 진행했습니다.
+paper 테마에 tailwind로 커스터마이징 했습니다.
+1. Hugo를 선택한 이유 Hugo 1는 강력하고 빠른 정적 사이트 생성기로, 블로그 제작에 탁월한 선택입니다. Go 언어로 작성되어 빠른 빌드 속도를 자랑하며, 다양한 테마와 플러그인을 지원합니다.
+Hugo vs Jekyll 비교
+특징 Hugo Jekyll 프로그래밍 언어 Go Ruby 빌드 속도 매우 빠름 상대적으로 느림 한글 레퍼런스 적음 많음 커뮤니티 성장 중 큰 커뮤니티 테마 다양함 매우 다양함 Hugo는 Jekyll에 비해 빌드 속도가 훨씬 빠르며, 문서화(Documentation)가 잘 되어있습니다.">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-1/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="https://dnjdsxor21.github.io/"
+      >누누타운</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/categories/"
+        >categories</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/series/"
+        >series</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/archives/"
+        >archives</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/dnjdsxor21"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="https://dnjdsxor21.github.io/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname === '/') { 
+    const clearCacheBtn = document.getElementById('clearCacheBtn');
+    if (clearCacheBtn) {
+      clearCacheBtn.addEventListener('click', function(e) {
+        console.log("Reload cache");
+        
+        caches.keys().then(function(names) {
+                  for (let name of names) {
+                      caches.delete(name);
+                  }
+              }).then(function() {
+                  
+                  window.location.reload(true);
+              });
+      });
+      
+    } else {
+      console.log('Reload Button not found');
+    }
+  }
+});
+</script>
+  
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+
+  
+
+
+<main class="relative">
+
+
+<aside id="toc" class="toc fixed left-4 top-14 hidden w-40 xl:w-56 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-md backdrop-blur-sm hidden lg:block leading-tight">
+  <h4 class="text-s font-medium pb-2 mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider border-b border-gray-400 dark:border-gray-500">Contents</h4>
+  <nav id="TableOfContents">
+  <ul class='space-y-1 list-none pl-0'>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#1-hugo를-선택한-이유">1. Hugo를 선택한 이유</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#2-prerequisite">2. Prerequisite</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#3-github-레포지토리-생성">3. Github 레포지토리 생성</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#4-hugo-프로젝트-생성">4. Hugo 프로젝트 생성</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#5-github-레포지토리와-연결">5. Github 레포지토리와 연결</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#6-테마-불러오기-submodule">6. 테마 불러오기 (submodule)</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#7-configuration-설정">7. Configuration 설정</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#8-post-작성해보기">8. Post 작성해보기</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#9-github-actions-워크플로우-설정">9. Github Actions 워크플로우 설정</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#10-빌드와-테스트">10. 빌드와 테스트</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#11-배포">11. 배포</a></li>
+  </ul>
+</nav>
+</aside>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var toc = document.getElementById('toc');
+    if (toc) {
+      toc.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          e.preventDefault();
+          var targetId = e.target.getAttribute('href').substring(1);
+          var targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    }
+  });
+  </script>
+
+
+
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">Github 블로그 with Hugo #1</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>2024. 12. 13.</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p><img src="/img/posts/hugo-logo-square.png" alt="hugo-logo"></p>
+<blockquote>
+<p>애플 실리콘(M1) + Homebrew + vscode를 사용하여 진행했습니다.</p>
+<blockquote>
+<p>paper 테마에 tailwind로 커스터마이징 했습니다.</p>
+</blockquote>
+</blockquote>
+<h2 id="1-hugo를-선택한-이유">1. Hugo를 선택한 이유</h2>
+<p><a href="https://gohugo.io/">Hugo</a> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>는 강력하고 빠른 정적 사이트 생성기로, 블로그 제작에 탁월한 선택입니다. <strong>Go 언어</strong>로 작성되어 빠른 빌드 속도를 자랑하며, 다양한 테마와 플러그인을 지원합니다.</p>
+<p><strong>Hugo vs Jekyll 비교</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>특징</th>
+          <th>Hugo</th>
+          <th>Jekyll</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>프로그래밍 언어</td>
+          <td>Go</td>
+          <td>Ruby</td>
+      </tr>
+      <tr>
+          <td>빌드 속도</td>
+          <td>매우 빠름</td>
+          <td>상대적으로 느림</td>
+      </tr>
+      <tr>
+          <td>한글 레퍼런스</td>
+          <td>적음</td>
+          <td>많음</td>
+      </tr>
+      <tr>
+          <td>커뮤니티</td>
+          <td>성장 중</td>
+          <td>큰 커뮤니티</td>
+      </tr>
+      <tr>
+          <td>테마</td>
+          <td>다양함</td>
+          <td>매우 다양함</td>
+      </tr>
+  </tbody>
+</table>
+<p>Hugo는 Jekyll에 비해 빌드 속도가 훨씬 빠르며, 문서화(Documentation)가 잘 되어있습니다.</p>
+<h2 id="2-prerequisite">2. Prerequisite</h2>
+<ol>
+<li>Git 설치</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install git    <span style="color:#75715e"># homebrew로 설치</span>
+</span></span><span style="display:flex;"><span>git --version       <span style="color:#75715e"># 설치 확인</span>
+</span></span></code></pre></div><ol start="2">
+<li>Hugo 설치</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo   <span style="color:#75715e"># 설치</span>
+</span></span><span style="display:flex;"><span>hugo version        <span style="color:#75715e"># 설치 확인</span>
+</span></span></code></pre></div><ol start="3">
+<li>원하는 Hugo 테마 선택(<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>) <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></li>
+</ol>
+<blockquote>
+<p><strong>저는 <a href="https://github.com/nanxiaobei/hugo-paper">&lsquo;paper&rsquo; 테마</a> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>를 선택했습니다.(심플한 디자인, tailwind 기반)</strong></p>
+</blockquote>
+<p><em><strong>Windows설치법: <a href="https://gohugo.io/installation/windows/">https://gohugo.io/installation/windows/</a></strong></em></p>
+<h2 id="3-github-레포지토리-생성">3. Github 레포지토리 생성</h2>
+<ol>
+<li><a href="https://github.com">Github</a>에 로그인</li>
+<li>새 레포지토리 생성 (이름: <code>username.github.io</code>)<br>
+<strong><code>username</code>은 본인의 Github ID 입니다.</strong></li>
+<li>공개 설정 선택(public)</li>
+</ol>
+<h2 id="4-hugo-프로젝트-생성">4. Hugo 프로젝트 생성</h2>
+<p>터미널에서 다음 명령어 실행:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site my-blog
+</span></span><span style="display:flex;"><span>cd my-blog
+</span></span></code></pre></div><p><img src="/img/posts/hugo-new-site.png" alt="hugo-new-site"></p>
+<details>
+<summary>(option) `README.md`를 생성하고 소개글을 작성합니다.</summary>
+<blockquote>
+<p>아무말이나 작성해도 좋습니다.</p>
+</blockquote>
+</details>
+<details>
+<summary>(option) `.gitignore`를 생성하고 내용을 작성합니다.</summary>
+<blockquote>
+<p><a href="https://discourse.gohugo.io/t/the-best-gitignore-for-hugo/20283">hugo community</a>를 참고했습니다.</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># .gitignore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Generated files by hugo
+</span></span><span style="display:flex;"><span>/resources/_gen/
+</span></span><span style="display:flex;"><span>/assets/jsconfig.json
+</span></span><span style="display:flex;"><span>hugo_stats.json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Executable may be added to repository
+</span></span><span style="display:flex;"><span>hugo.exe
+</span></span><span style="display:flex;"><span>hugo.darwin
+</span></span><span style="display:flex;"><span>hugo.linux
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Temporary lock file while building
+</span></span><span style="display:flex;"><span>/.hugo_build.lock
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.DS_Store
+</span></span><span style="display:flex;"><span>node_modules
+</span></span><span style="display:flex;"><span>dist
+</span></span><span style="display:flex;"><span>tmp
+</span></span></code></pre></div></details>
+<h2 id="5-github-레포지토리와-연결">5. Github 레포지토리와 연결</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/username/username.github.io.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#39;feat: create hugo new site&#39;</span>
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><h2 id="6-테마-불러오기-submodule">6. 테마 불러오기 (submodule)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+</span></span></code></pre></div><p><code>paper</code>테마를 submodule로 불러와서 <code>themes/paper/</code>로 저장합니다.</p>
+<p><img src="/img/posts/hugo-submodule-theme.png" alt="hugo-submodule-theme"></p>
+<h2 id="7-configuration-설정">7. Configuration 설정</h2>
+<p><code>hugo.toml</code> 파일을 열고 기본 설정 수정:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://username.github.io/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;ko-KR&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;My Hugo Blog&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;paper&#34;</span>  <span style="color:#75715e"># theme-name</span>
+</span></span></code></pre></div><h2 id="8-post-작성해보기">8. Post 작성해보기</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/my-first-post.md
+</span></span></code></pre></div><p><code>content/</code> 폴더가 생성되었습니다.<br>
+모든 게시글은 &lsquo;content/&rsquo; 폴더에서 작성합니다.<br>
+생성된 마크다운 파일을 편집하여 내용 작성해봅니다.</p>
+<p><img src="/img/posts/hugo-first-post.png" alt="hugo-first-post"></p>
+<p>제일 윗부분을 <a href="https://gohugo.io/content-management/front-matter/">&lsquo;front-matter&rsquo;</a> <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>라고 하며, 게시글의 메타데이터를 설정합니다.</p>
+<ul>
+<li><code>date</code> : 글 작성 날짜</li>
+<li><code>draft</code> : 초안 작성 중일 때 <code>true</code>, 배포를 원할때 <code>false</code></li>
+<li><code>title</code> : 글 제목</li>
+</ul>
+<h2 id="9-github-actions-워크플로우-설정">9. Github Actions 워크플로우 설정</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <em><strong><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#procedure">Hosting-on-github</a> <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>의 Step5, Step6을 참고</strong></em>하여 따라합니다.</li>
+</ul>
+<ol>
+<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#procedure">Step5</a> - hugo.yaml 생성</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p .github/workflows <span style="color:#f92672">&amp;&amp;</span> touch .github/workflows/hugo.yaml
+</span></span></code></pre></div><ol start="2">
+<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#procedure">Step6</a> - 내용 추가 &amp; 저장<br>
+<em><code>HUGO_VERSION</code>를 최신 버전(0.140.0)으로 변경했습니다.</em></li>
+</ol>
+<h2 id="10-빌드와-테스트">10. 빌드와 테스트</h2>
+<ol>
+<li>Hugo로 사이트 빌드:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><p>지금까지 수정한 모든 내용을 반영하여 <code>public/</code> 폴더를 생성합니다.<br>
+<code>public/</code> : 블로그를 생성 할 때 참고하는 최종 결과물입니다.</p>
+<ol start="2">
+<li>Local환경에서 서버 실행:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><ul>
+<li><code>-D</code> 커맨드: draft를 포함하여 서버를 실행합니다.</li>
+<li><a href="http://localhost:1313/">http://localhost:1313/</a> 에서 블로그를 확인합니다.</li>
+<li><code>Ctrl+C</code> 로 서버를 종료합니다.</li>
+</ul>
+<p><em><strong>서버 실행 화면</strong></em></p>
+<p><img src="/img/posts/hugo-server-first.png" alt="hugo-server-first"></p>
+<h2 id="11-배포">11. 배포</h2>
+<ol>
+<li>배포를 원하는 게시글은 <code>draft = false</code>로 설정</li>
+<li>생성된 <code>public</code> 폴더의 내용을 Github에 푸시:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;feat: my first post&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><p>이제 <code>https://username.github.io</code>에서 블로그를 확인할 수 있습니다.</p>
+<p>이해가 되지 않는 부분은 <a href="https://gohugo.io/getting-started/quick-start/">HUGO Documentation</a> <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>를 확인해주세요.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://gohugo.io/">https://gohugo.io/</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://github.com/nanxiaobei/hugo-paper">https://github.com/nanxiaobei/hugo-paper</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://gohugo.io/content-management/front-matter/">https://gohugo.io/content-management/front-matter/</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#procedure">https://gohugo.io/hosting-and-deployment/hosting-on-github/#procedure</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://dnjdsxor21.github.io/tags/hugo"
+      >#hugo</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://dnjdsxor21.github.io/tags/github"
+      >#github</a
+    >
+    
+  </footer>
+  
+
+   
+   <div class="mt-16 pt-8 border-t">
+    
+    
+      <h3 class="text-xl font-semibold mb-4">More in "gitblog" series</h3>
+      <ul class="space-y-2">
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-1/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              Github 블로그 with Hugo #1
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-2/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              Github 블로그 with Hugo #2
+            </a>
+          </li>
+        
+      </ul>
+    
+  </div>
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://dnjdsxor21.github.io/posts/blog/markdown-guide/"
+      ><span>Markdown Syntax 마크다운 가이드</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="dnjdsxor21/dnjdsxor21.github.io"
+    data-repo-id="R_kgDONgrX0Q"
+    data-category="General"
+    data-category-id="DIC_kwDONgrX0c4CldTm"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+</article>
+</main>
+
+
+
+    </main>
+    
+    
+<aside class="fixed top-14 right-4 w-[12rem] xl:w-[15rem] max-h-[calc(100vh-5rem)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 shadow-md rounded-lg p-4 text-sm hidden lg:block">
+    
+    <div class="mb-6">
+      <h3 class="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300 border-b pb-1 uppercase">Recent Posts</h3>
+      <ul class="space-y-1">
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-1/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              Github 블로그 with Hugo #1
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/markdown-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              Markdown Syntax 마크다운 가이드
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-2/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              Github 블로그 with Hugo #2
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/openapi/openapi-1/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              [공공데이터] 공공데이터포털 / OPENAPI #1
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/docker/docker-container-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              [Docker]docker container 도커 #3
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+
+    
+    <div class="mb-6">
+      <h3 class="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300 border-b pb-1 uppercase">Categories</h3>
+      <ul class="space-y-1">
+        
+          <li>
+            <a href="/categories/blog" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              blog (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/docker" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              docker (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/nlp" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              nlp (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/paper" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              paper (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              공공데이터 (1)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</aside>
+
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    &copy; 2024
+    <a class="link" href="https://dnjdsxor21.github.io/">누누타운</a>
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+    
+</footer>
+
+  </body>
+</html>

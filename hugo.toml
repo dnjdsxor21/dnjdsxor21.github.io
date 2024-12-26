@@ -24,7 +24,7 @@ enableRobotsTXT = true
     # home page profile
     avatar = 'dnjdsxor21@gmail.com' # gravater email or image url
     name = 'Nunu'
-    bio = '하이요'
+    bio = 'Biomedical AI Developer'
 
     # misc
     math = true  # KaTex math types

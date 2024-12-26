@@ -1,0 +1,789 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="ko-KR"
+  dir="ltr"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Github 블로그 with Hugo #2 - 누누타운</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="
+Hugo 블로그 추가 설정하기
+1. Introduction
+기본적인 Hugo 블로그 설정 후, 더욱 멋진 블로그로 만들기 위해 추가 설정을 해봅시다. 이 과정을 통해 블로그의 기능을 확장하고 개성을 더할 수 있습니다.
+2. Configuration
+Hugo의 핵심 설정 파일인 hugo.toml을 수정하여 블로그를 커스터마이징합니다.
+아래는 주요 설정 항목들입니다.
+1. HTML 태그 허용, 이모지 사용, 경고 무시
+# hugo.toml
+ignoreLogs = [&#39;warning-goldmark-raw-html&#39;]
+enableEmoji = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+        unsafe = true  # raw HTML 렌더링
+이 설정으로 게시글 작성 시 HTML 태그 사용이 가능해지고, 이모지를 활용할 수 있습니다.
+또한, 일부 경고 메시지를 무시하여 빌드 과정을 더 깔끔하게 만듭니다." />
+  <meta name="author" content="Nunu" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://dnjdsxor21.github.io/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/b36b25ee4e567b6817a807d01980a628?s=160&amp;d=identicon" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/github.svg" />
+  
+  <link rel="preload" as="image" href="https://dnjdsxor21.github.io/rss.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="https://dnjdsxor21.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="https://dnjdsxor21.github.io/img/favicons/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://dnjdsxor21.github.io/img/favicons/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.140.0">
+
+  
+  
+  
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW5RDFVP82"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SW5RDFVP82');
+        }
+      </script>
+  
+  
+  <meta itemprop="name" content="Github 블로그 with Hugo #2">
+  <meta itemprop="description" content="Hugo 블로그 추가 설정하기 1. Introduction 기본적인 Hugo 블로그 설정 후, 더욱 멋진 블로그로 만들기 위해 추가 설정을 해봅시다. 이 과정을 통해 블로그의 기능을 확장하고 개성을 더할 수 있습니다.
+2. Configuration Hugo의 핵심 설정 파일인 hugo.toml을 수정하여 블로그를 커스터마이징합니다.
+아래는 주요 설정 항목들입니다.
+1. HTML 태그 허용, 이모지 사용, 경고 무시 # hugo.toml ignoreLogs = [&#39;warning-goldmark-raw-html&#39;] enableEmoji = true [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # raw HTML 렌더링 이 설정으로 게시글 작성 시 HTML 태그 사용이 가능해지고, 이모지를 활용할 수 있습니다.
+또한, 일부 경고 메시지를 무시하여 빌드 과정을 더 깔끔하게 만듭니다.">
+  <meta itemprop="datePublished" content="2024-12-15T03:15:11+09:00">
+  <meta itemprop="dateModified" content="2024-12-15T03:15:11+09:00">
+  <meta itemprop="wordCount" content="404">
+  <meta itemprop="keywords" content="Hugo,Github">
+  
+  <meta property="og:url" content="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-2/">
+  <meta property="og:site_name" content="누누타운">
+  <meta property="og:title" content="Github 블로그 with Hugo #2">
+  <meta property="og:description" content="Hugo 블로그 추가 설정하기 1. Introduction 기본적인 Hugo 블로그 설정 후, 더욱 멋진 블로그로 만들기 위해 추가 설정을 해봅시다. 이 과정을 통해 블로그의 기능을 확장하고 개성을 더할 수 있습니다.
+2. Configuration Hugo의 핵심 설정 파일인 hugo.toml을 수정하여 블로그를 커스터마이징합니다.
+아래는 주요 설정 항목들입니다.
+1. HTML 태그 허용, 이모지 사용, 경고 무시 # hugo.toml ignoreLogs = [&#39;warning-goldmark-raw-html&#39;] enableEmoji = true [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # raw HTML 렌더링 이 설정으로 게시글 작성 시 HTML 태그 사용이 가능해지고, 이모지를 활용할 수 있습니다.
+또한, 일부 경고 메시지를 무시하여 빌드 과정을 더 깔끔하게 만듭니다.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-15T03:15:11+09:00">
+    <meta property="article:modified_time" content="2024-12-15T03:15:11+09:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Github">
+      <meta property="og:see_also" content="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-1/">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Github 블로그 with Hugo #2">
+  <meta name="twitter:description" content="Hugo 블로그 추가 설정하기 1. Introduction 기본적인 Hugo 블로그 설정 후, 더욱 멋진 블로그로 만들기 위해 추가 설정을 해봅시다. 이 과정을 통해 블로그의 기능을 확장하고 개성을 더할 수 있습니다.
+2. Configuration Hugo의 핵심 설정 파일인 hugo.toml을 수정하여 블로그를 커스터마이징합니다.
+아래는 주요 설정 항목들입니다.
+1. HTML 태그 허용, 이모지 사용, 경고 무시 # hugo.toml ignoreLogs = [&#39;warning-goldmark-raw-html&#39;] enableEmoji = true [markup] [markup.goldmark] [markup.goldmark.renderer] unsafe = true # raw HTML 렌더링 이 설정으로 게시글 작성 시 HTML 태그 사용이 가능해지고, 이모지를 활용할 수 있습니다.
+또한, 일부 경고 메시지를 무시하여 빌드 과정을 더 깔끔하게 만듭니다.">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-2/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="https://dnjdsxor21.github.io/"
+      >누누타운</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/categories/"
+        >categories</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/series/"
+        >series</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/archives/"
+        >archives</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/dnjdsxor21"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href="https://dnjdsxor21.github.io/index.xml"
+        target="_blank"
+        rel="alternate"
+      >
+        rss
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+<script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname === '/') { 
+    const clearCacheBtn = document.getElementById('clearCacheBtn');
+    if (clearCacheBtn) {
+      clearCacheBtn.addEventListener('click', function(e) {
+        console.log("Reload cache");
+        
+        caches.keys().then(function(names) {
+                  for (let name of names) {
+                      caches.delete(name);
+                  }
+              }).then(function() {
+                  
+                  window.location.reload(true);
+              });
+      });
+      
+    } else {
+      console.log('Reload Button not found');
+    }
+  }
+});
+</script>
+  
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+
+  
+
+
+<main class="relative">
+
+
+<aside id="toc" class="toc fixed left-4 top-14 hidden w-40 xl:w-56 max-h-[calc(100vh-120px)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 p-3 rounded-lg shadow-md backdrop-blur-sm hidden lg:block leading-tight">
+  <h4 class="text-s font-medium pb-2 mb-2 text-gray-400 dark:text-gray-500 uppercase tracking-wider border-b border-gray-400 dark:border-gray-500">Contents</h4>
+  <nav id="TableOfContents">
+  <ul class='space-y-1 list-none pl-0'>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#1-introduction">1. Introduction</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#2-configuration">2. Configuration</a>
+      <ul class='space-y-1 list-none pl-0'>
+        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#1-html-태그-허용-이모지-사용-경고-무시">1. HTML 태그 허용, 이모지 사용, 경고 무시</a></li>
+        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#2-pagination-설정">2. Pagination 설정</a></li>
+        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#3-taxonomies-및-메뉴-설정">3. Taxonomies 및 메뉴 설정</a></li>
+        <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#4-테마별-추가-설정">4. 테마별 추가 설정</a></li>
+      </ul>
+    </li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#3-front-matter-활용하기">3. Front-matter 활용하기</a></li>
+    <li class='text-gray-600 dark:text-gray-400 my-[1rem]'><a class='text-xs no-underline hover:text-gray-800 hover:font-bold dark:hover:text-gray-200'href="#4-마무리">4. 마무리</a></li>
+  </ul>
+</nav>
+</aside>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var toc = document.getElementById('toc');
+    if (toc) {
+      toc.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+          e.preventDefault();
+          var targetId = e.target.getAttribute('href').substring(1);
+          var targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    }
+  });
+  </script>
+
+
+
+
+<article class="max-w-3xl mx-auto">
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">Github 블로그 with Hugo #2</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>2024. 12. 15.</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p><img src="/img/posts/hugo-logo-square.png" alt="hugo-logo"></p>
+<h1 id="hugo-블로그-추가-설정하기">Hugo 블로그 추가 설정하기</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>기본적인 Hugo 블로그 설정 후, 더욱 멋진 블로그로 만들기 위해 추가 설정을 해봅시다. 이 과정을 통해 블로그의 기능을 확장하고 개성을 더할 수 있습니다.</p>
+<h2 id="2-configuration">2. Configuration</h2>
+<p>Hugo의 핵심 설정 파일인 <code>hugo.toml</code>을 수정하여 블로그를 커스터마이징합니다.<br>
+아래는 주요 설정 항목들입니다.</p>
+<h3 id="1-html-태그-허용-이모지-사용-경고-무시">1. HTML 태그 허용, 이모지 사용, 경고 무시</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># hugo.toml</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ignoreLogs</span> = [<span style="color:#e6db74">&#39;warning-goldmark-raw-html&#39;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">enableEmoji</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">markup</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># raw HTML 렌더링</span>
+</span></span></code></pre></div><p>이 설정으로 게시글 작성 시 HTML 태그 사용이 가능해지고, 이모지를 활용할 수 있습니다.<br>
+또한, 일부 경고 메시지를 무시하여 빌드 과정을 더 깔끔하게 만듭니다.</p>
+<h3 id="2-pagination-설정">2. Pagination 설정</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># hugo.toml</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">pagination</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pagerSize</span> = <span style="color:#ae81ff">5</span>
+</span></span></code></pre></div><p><strong>pagination</strong>을 통해 게시글을 효과적으로 관리할 수 있습니다. <code>pagerSize</code>는 한 페이지에 표시될 게시글의 수를 지정합니다.</p>
+<p><em>e.g.</em>
+<img src="/img/posts/google-pagination.png" alt="google-pagination"></p>
+<h3 id="3-taxonomies-및-메뉴-설정">3. Taxonomies 및 메뉴 설정</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># hugo.toml</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">taxonomies</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">category</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">series</span> = <span style="color:#e6db74">&#34;series&#34;</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">menu</span>]
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]                             
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>                  
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>                        
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>                       
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>                            
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;series&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;series&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/series/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;archives&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;archives&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/archives/&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</span></span></code></pre></div><p><strong>taxonomies</strong>를 통해 게시글을 체계적으로 분류하고, 상단 메뉴 바를 설정하여 사용자 경험을 향상시킬 수 있습니다.</p>
+<h3 id="4-테마별-추가-설정">4. 테마별 추가 설정</h3>
+<p>선택한 테마에 따라 다양한 추가 설정이 가능합니다. 예를 들어, <a href="https://github.com/nanxiaobei/hugo-paper">Paper 테마</a>를 사용한다면 다음과 같은 설정을 추가할 수 있습니다:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75715e"># hugo.toml</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#39;linen&#39;</span> <span style="color:#75715e"># &#39;linen&#39;, &#39;wheat&#39;, &#39;gray&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># header social icons</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">twitter</span> = <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">github</span> = <span style="color:#e6db74">&#39;dnjdsxor21&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">instagram</span> = <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">linkedin</span> = <span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">rss</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># homepage profile</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">avatar</span> = <span style="color:#e6db74">&#39;dnjdsxor21@gmail.com&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#39;Nunu&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">bio</span> = <span style="color:#e6db74">&#39;Biomedical AI Developer&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># icon</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 이미지 파일은 &#39;static/img/favicons/&#39;, &#39;static/img/posts/&#39; 에 저장</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">favicon</span> = <span style="color:#e6db74">&#39;img/favicons/favicon.ico&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">appleTouchIcon</span> = <span style="color:#e6db74">&#39;img/favicons/apple-touch-icon.png&#39;</span>
+</span></span></code></pre></div><p>이러한 설정을 통해 블로그의 색상, 소셜 미디어 링크, 프로필 정보 등을 맞춤 설정할 수 있습니다.</p>
+<hr>
+<p><img src="/img/posts/hugo-menubar.png" alt="hugo-menubar"></p>
+<p><em>결과</em></p>
+<h2 id="3-front-matter-활용하기">3. Front-matter 활용하기</h2>
+<p><img src="/img/posts/hugo-first-post.png" alt="hugo-first-post"></p>
+<p>게시글의 메타데이터를 정의하는 front-matter는 블로그 포스트 관리에 매우 중요합니다. 다음은 front-matter의 예시입니다:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>date = &#39;2024-12-01&#39;
+</span></span><span style="display:flex;"><span>draft = false
+</span></span><span style="display:flex;"><span>title = &#39;python에서 openai 공부&#39;
+</span></span><span style="display:flex;"><span>categories = [&#39;python&#39;]
+</span></span><span style="display:flex;"><span>tags = [&#39;python&#39;,&#39;openai&#39;]
+</span></span><span style="display:flex;"><span>series = [&#39;python&#39;]
+</span></span><span style="display:flex;"><span>weight = 10
+</span></span><span style="display:flex;"><span>+++
+</span></span></code></pre></div><p>이를 통해 게시글의 날짜, 제목, 카테고리, 태그, 시리즈 등을 지정할 수 있습니다.<br>
+<code>weight</code> 를 지정하여 게시글을 상단에 고정할 수 있습니다.</p>
+<h2 id="4-마무리">4. 마무리</h2>
+<p>설정을 완료한 후, 다음 명령어로 변경사항을 적용하고 배포합니다:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#39;feat: edit hugo.toml&#39;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><p>이러한 추가 설정을 통해 Hugo 블로그를 더욱 풍성하고 개성 있게 만들 수 있습니다.<br>
+더 자세한 내용은 <strong>공식 문서</strong>, <strong>테마별 문서</strong>에서 확인하세요.</p>
+<ul>
+<li><a href="https://gohugo.io/getting-started/configuration/">hugo 공식 문서</a></li>
+<li><a href="https://github.com/nanxiaobei/hugo-paper">Paper theme</a></li>
+</ul>
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://dnjdsxor21.github.io/tags/hugo"
+      >#hugo</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://dnjdsxor21.github.io/tags/github"
+      >#github</a
+    >
+    
+  </footer>
+  
+
+   
+   <div class="mt-16 pt-8 border-t">
+    
+    
+      <h3 class="text-xl font-semibold mb-4">More in "gitblog" series</h3>
+      <ul class="space-y-2">
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-1/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              Github 블로그 with Hugo #1
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-2/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200">
+              Github 블로그 with Hugo #2
+            </a>
+          </li>
+        
+      </ul>
+    
+  </div>
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="https://dnjdsxor21.github.io/posts/blog/markdown-guide/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Markdown Syntax 마크다운 가이드</span></a
+    >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://dnjdsxor21.github.io/posts/openapi/openapi-1/"
+      ><span>[공공데이터] 공공데이터포털 / OPENAPI #1</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <div class="giscus mt-24"></div>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="dnjdsxor21/dnjdsxor21.github.io"
+    data-repo-id="R_kgDONgrX0Q"
+    data-category="General"
+    data-category-id="DIC_kwDONgrX0c4CldTm"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+  
+</article>
+</main>
+
+
+
+    </main>
+    
+    
+<aside class="fixed top-14 right-4 w-[12rem] xl:w-[15rem] max-h-[calc(100vh-5rem)] overflow-y-auto bg-white/80 dark:bg-gray-900/80 shadow-md rounded-lg p-4 text-sm hidden lg:block">
+    
+    <div class="mb-6">
+      <h3 class="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300 border-b pb-1 uppercase">Recent Posts</h3>
+      <ul class="space-y-1">
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-1/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              Github 블로그 with Hugo #1
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/markdown-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              Markdown Syntax 마크다운 가이드
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/blog/hugo-gitblog-2/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              Github 블로그 with Hugo #2
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/openapi/openapi-1/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              [공공데이터] 공공데이터포털 / OPENAPI #1
+            </a>
+          </li>
+        
+          <li>
+            <a href="https://dnjdsxor21.github.io/posts/docker/docker-container-guide/" class="hover:font-semibold text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              [Docker]docker container 도커 #3
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+
+    
+    <div class="mb-6">
+      <h3 class="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300 border-b pb-1 uppercase">Categories</h3>
+      <ul class="space-y-1">
+        
+          <li>
+            <a href="/categories/blog" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              blog (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/docker" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              docker (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/nlp" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              nlp (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/paper" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              paper (3)
+            </a>
+          </li>
+        
+          <li>
+            <a href="/categories/%EA%B3%B5%EA%B3%B5%EB%8D%B0%EC%9D%B4%ED%84%B0" class="hover:font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200">
+              공공데이터 (1)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</aside>
+
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    &copy; 2024
+    <a class="link" href="https://dnjdsxor21.github.io/">누누타운</a>
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+    
+</footer>
+
+  </body>
+</html>

@@ -1,10 +1,10 @@
 +++
-title = "[Blog] Markdown Syntax 마크다운 가이드"
+title = "Markdown Syntax 마크다운 가이드"
 categories = ["Blog"]
 tags = ["Blog", "Markdown"] 
 date = '2024-12-12'
 draft = false
-weight = 1
+weight = 2
 +++
 
 ## Introduction
